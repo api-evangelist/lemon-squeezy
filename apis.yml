@@ -7,7 +7,6 @@ apis:
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.lemonsqueezy.com/
-    overlays: []
     properties:
       - url: https://docs.lemonsqueezy.com/
         type: Documentation

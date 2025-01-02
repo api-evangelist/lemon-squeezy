@@ -191,7 +191,8 @@ paths:
             application/json: {}
   /v1/affiliates/1:
     get:
-      tags: []
+      tags:
+        - Affiliates
       summary: Retrieve an affiliate
       responses:
         '200':
@@ -200,7 +201,8 @@ paths:
             application/json: {}
   /v1/affiliates:
     get:
-      tags: []
+      tags:
+        - Affiliates
       summary: List all affiliates
       responses:
         '200':

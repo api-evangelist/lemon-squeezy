@@ -1,28 +1,11 @@
 openapi: 3.0.0
 info:
   title: Lemon Squeezy API
-  description: >-
-    ## Step 1: Fork this collection
+  description: |-
 
-
-    [](https://god.gw.postman.com/run-collection/24909116-c51bdb53-42c2-40c3-bf1e-0c67af6d0561?action=collection/fork&source=rip_markdown&collection-url=entityId=24909116-c51bdb53-42c2-40c3-bf1e-0c67af6d0561&entityType=collection&workspaceId=5d229114-c0b1-40ec-8bab-f171fbda8aaf)
-
-
-    <img src="https://run.pstmn.io/button.svg" alt="">
-
-
-    ## Step 2: Get your API key
-
-
-    Generate an API key via the [Lemon Squeezy
-    dashboard](https://app.lemonsqueezy.com/settings/api)
-
-
-    ## Step 3: Make your first API call
-
-
-    Follow our [API documentation](https://docs.lemonsqueezy.com/api) to make
-    your first API call.
+    Welcome to Lemon Squeezy! Whether you're launching a brand new store, a
+    newsletter, or you're interested in using Lemon Squeezy as your ecommerce
+    platform, you can find everything you need to know here.
   version: 1.0.0
 servers:
   - url: http://{{api_url}}
@@ -59,6 +42,7 @@ paths:
     get:
       tags:
         - Users
+        - Me
       summary: Retrieve the authenticated user
       responses:
         '200':
@@ -207,8 +191,7 @@ paths:
             application/json: {}
   /v1/affiliates/1:
     get:
-      tags:
-        - Affiliates
+      tags: []
       summary: Retrieve an affiliate
       responses:
         '200':
@@ -217,8 +200,7 @@ paths:
             application/json: {}
   /v1/affiliates:
     get:
-      tags:
-        - Affiliates
+      tags: []
       summary: List all affiliates
       responses:
         '200':
@@ -228,7 +210,8 @@ paths:
   /v1/order-items/1:
     get:
       tags:
-        - Order Items
+        - Order
+        - Items
       summary: Retrieve an order item
       responses:
         '200':
@@ -238,7 +221,8 @@ paths:
   /v1/order-items:
     get:
       tags:
-        - Order Items
+        - Order
+        - Items
       summary: List all order items
       responses:
         '200':
@@ -297,7 +281,8 @@ paths:
   /v1/subscription-items/1:
     get:
       tags:
-        - Subscripiton Items
+        - Subscription
+        - Items
       summary: Retrieve a subscription item
       responses:
         '200':
@@ -306,7 +291,8 @@ paths:
             application/json: {}
     patch:
       tags:
-        - Subscripiton Items
+        - Subscription
+        - Items
       summary: Update a subscription item
       requestBody:
         content:
@@ -327,7 +313,8 @@ paths:
   /v1/subscription-items:
     get:
       tags:
-        - Subscripiton Items
+        - Subscription
+        - Items
       summary: List all subscription items
       responses:
         '200':
@@ -337,7 +324,10 @@ paths:
   /v1/subscription-items/1/current-usage:
     get:
       tags:
-        - Subscripiton Items
+        - Subscription
+        - Items
+        - Current
+        - Usage
       summary: Retrieve a subscription items current usage
       responses:
         '200':
@@ -347,7 +337,8 @@ paths:
   /v1/subscription-invoices/1:
     get:
       tags:
-        - Subscripiton Invoices
+        - Subscription
+        - Invoices
       summary: Retrieve a subscription invoice
       responses:
         '200':
@@ -357,7 +348,8 @@ paths:
   /v1/subscription-invoices:
     get:
       tags:
-        - Subscripiton Invoices
+        - Subscription
+        - Invoices
       summary: List all subscription invoices
       responses:
         '200':
@@ -367,7 +359,8 @@ paths:
   /v1/usage-records/1:
     get:
       tags:
-        - Usage Records
+        - Usage
+        - Records
       summary: Retrieve a usage-record
       responses:
         '200':
@@ -377,7 +370,8 @@ paths:
   /v1/usage-records:
     get:
       tags:
-        - Usage Records
+        - Usage
+        - Records
       summary: List all usage records
       responses:
         '200':
@@ -386,7 +380,8 @@ paths:
             application/json: {}
     post:
       tags:
-        - Usage Records
+        - Usage
+        - Records
       summary: Create a usage record
       requestBody:
         content:
@@ -468,7 +463,8 @@ paths:
   /v1/discount-redemptions/1:
     get:
       tags:
-        - Discount Redemptions
+        - Discount
+        - Redemptions
       summary: Retrieve a discount redemption
       responses:
         '200':
@@ -478,7 +474,8 @@ paths:
   /v1/discount-redemptions:
     get:
       tags:
-        - Discount Redemptions
+        - Discount
+        - Redemptions
       summary: List all discount redemptions
       responses:
         '200':
@@ -488,7 +485,8 @@ paths:
   /v1/license-keys/1:
     get:
       tags:
-        - License Keys
+        - License
+        - Keys
       summary: Retrieve a license key
       responses:
         '200':
@@ -498,7 +496,8 @@ paths:
   /v1/license-keys:
     get:
       tags:
-        - License Keys
+        - License
+        - Keys
       summary: List all license keys
       responses:
         '200':
@@ -508,7 +507,9 @@ paths:
   /v1/license-key-instances/1:
     get:
       tags:
-        - License Key Instances
+        - License
+        - Keys
+        - Instances
       summary: Retrieve a license key instance
       responses:
         '200':
@@ -518,7 +519,9 @@ paths:
   /v1/license-key-instances:
     get:
       tags:
-        - License Key Instances
+        - License
+        - Keys
+        - Instances
       summary: List all license key instances
       responses:
         '200':
@@ -529,6 +532,8 @@ paths:
     get:
       tags:
         - Checkouts
+        - 7c41
+        - B6cd
       summary: Retrieve a checkout
       responses:
         '200':
@@ -660,7 +665,8 @@ paths:
   /v1/health:
     get:
       tags:
-        - default
+        - Health
+        - Default
       summary: Health
       responses:
         '200':
@@ -670,7 +676,7 @@ paths:
   /v1/404:
     get:
       tags:
-        - default
+        - Default
       summary: '404'
       responses:
         '200':

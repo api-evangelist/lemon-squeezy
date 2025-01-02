@@ -11,6 +11,8 @@ apis:
     properties:
       - url: https://docs.lemonsqueezy.com/
         type: Documentation
+      - type: OpenAPI
+        url: properties/lemon-squeezy-api-openapi.yml
     description: |-
 
       Welcome to Lemon Squeezy! Whether you're launching a brand new store, a

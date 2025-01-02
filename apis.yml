@@ -7,10 +7,12 @@ apis:
     image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.example.com
     humanURL: https://docs.lemonsqueezy.com/
+    overlays: []
     properties:
       - url: https://docs.lemonsqueezy.com/
         type: Documentation
-    description: >-
+    description: |-
+
       Welcome to Lemon Squeezy! Whether you're launching a brand new store, a
       newsletter, or you're interested in using Lemon Squeezy as your ecommerce
       platform, you can find everything you need to know here.
@@ -19,13 +21,16 @@ tags:
   - Digital Products
   - Products
   - Goods
+type: Contract
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+access: 3rd-Party
 common:
   - url: https://example.com
     type: Property
 created: 2024/01/01
-modified: '2024-11-15'
-description: >-
+modified: '2025-01-01'
+position: Consuming
+description: |-
   Lemon Squeezy is on a mission to make selling digital products easy-peasy. We
   know first-hand the challenges of selling digital goods globally and are here
   to shake that up for the better.
@@ -34,6 +39,3 @@ maintainers:
     url: http://apievangelist.com
     email: info@apievangelist.com
 specificationVersion: '0.16'
-type: Index
-position: Consumer
-access: 3rd-Party

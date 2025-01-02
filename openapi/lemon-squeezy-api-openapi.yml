@@ -1,0 +1,679 @@
+openapi: 3.0.0
+info:
+  title: Lemon Squeezy API
+  description: >-
+    ## Step 1: Fork this collection
+
+
+    [](https://god.gw.postman.com/run-collection/24909116-c51bdb53-42c2-40c3-bf1e-0c67af6d0561?action=collection/fork&source=rip_markdown&collection-url=entityId=24909116-c51bdb53-42c2-40c3-bf1e-0c67af6d0561&entityType=collection&workspaceId=5d229114-c0b1-40ec-8bab-f171fbda8aaf)
+
+
+    <img src="https://run.pstmn.io/button.svg" alt="">
+
+
+    ## Step 2: Get your API key
+
+
+    Generate an API key via the [Lemon Squeezy
+    dashboard](https://app.lemonsqueezy.com/settings/api)
+
+
+    ## Step 3: Make your first API call
+
+
+    Follow our [API documentation](https://docs.lemonsqueezy.com/api) to make
+    your first API call.
+  version: 1.0.0
+servers:
+  - url: http://{{api_url}}
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+security:
+  - bearerAuth: []
+tags:
+  - name: Users
+  - name: Stores
+  - name: Customers
+  - name: Products
+  - name: Variants
+  - name: Prices
+  - name: Files
+  - name: Orders
+  - name: Affiliates
+  - name: Order Items
+  - name: Subscriptions
+  - name: Subscripiton Items
+  - name: Subscripiton Invoices
+  - name: Usage Records
+  - name: Discounts
+  - name: Discount Redemptions
+  - name: License Keys
+  - name: License Key Instances
+  - name: Checkouts
+  - name: Webhooks
+paths:
+  /v1/users/me:
+    get:
+      tags:
+        - Users
+      summary: Retrieve the authenticated user
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/stores/1:
+    get:
+      tags:
+        - Stores
+      summary: Retrieve a store
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/stores:
+    get:
+      tags:
+        - Stores
+      summary: List all stores
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/customers/1:
+    get:
+      tags:
+        - Customers
+      summary: Retrieve a customer
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/customers:
+    get:
+      tags:
+        - Customers
+      summary: List all customers
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/products/1:
+    get:
+      tags:
+        - Products
+      summary: Retrieve a product
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/products:
+    get:
+      tags:
+        - Products
+      summary: List all products
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/variants/1:
+    get:
+      tags:
+        - Variants
+      summary: Retrieve a variant
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/variants:
+    get:
+      tags:
+        - Variants
+      summary: List all variants
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/prices/1:
+    get:
+      tags:
+        - Prices
+      summary: Retrieve a price
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/prices:
+    get:
+      tags:
+        - Prices
+      summary: List all prices
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/files/1:
+    get:
+      tags:
+        - Files
+      summary: Retrieve a file
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/files:
+    get:
+      tags:
+        - Files
+      summary: List all files
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/orders/1:
+    get:
+      tags:
+        - Orders
+      summary: Retrieve an order
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/orders:
+    get:
+      tags:
+        - Orders
+      summary: List all orders
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/affiliates/1:
+    get:
+      tags:
+        - Affiliates
+      summary: Retrieve an affiliate
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/affiliates:
+    get:
+      tags:
+        - Affiliates
+      summary: List all affiliates
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/order-items/1:
+    get:
+      tags:
+        - Order Items
+      summary: Retrieve an order item
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/order-items:
+    get:
+      tags:
+        - Order Items
+      summary: List all order items
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/subscriptions/1:
+    get:
+      tags:
+        - Subscriptions
+      summary: Retrieve a subscription
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    patch:
+      tags:
+        - Subscriptions
+      summary: Update a subscription
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                data:
+                  type: subscriptions
+                  id: '1'
+                  attributes:
+                    variant_id: 1
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - Subscriptions
+      summary: Cancel a Subscription
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/subscriptions:
+    get:
+      tags:
+        - Subscriptions
+      summary: List all subscriptions
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/subscription-items/1:
+    get:
+      tags:
+        - Subscripiton Items
+      summary: Retrieve a subscription item
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    patch:
+      tags:
+        - Subscripiton Items
+      summary: Update a subscription item
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                data:
+                  type: subscription-items
+                  id: '1'
+                  attributes:
+                    quantity: 5
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/subscription-items:
+    get:
+      tags:
+        - Subscripiton Items
+      summary: List all subscription items
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/subscription-items/1/current-usage:
+    get:
+      tags:
+        - Subscripiton Items
+      summary: Retrieve a subscription items current usage
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/subscription-invoices/1:
+    get:
+      tags:
+        - Subscripiton Invoices
+      summary: Retrieve a subscription invoice
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/subscription-invoices:
+    get:
+      tags:
+        - Subscripiton Invoices
+      summary: List all subscription invoices
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/usage-records/1:
+    get:
+      tags:
+        - Usage Records
+      summary: Retrieve a usage-record
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/usage-records:
+    get:
+      tags:
+        - Usage Records
+      summary: List all usage records
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Usage Records
+      summary: Create a usage record
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                data:
+                  type: usage-records
+                  attributes:
+                    quantity: 1
+                    action: increment
+                  relationships:
+                    subscription-item:
+                      data:
+                        type: subscription-items
+                        id: '1'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/discounts/1:
+    get:
+      tags:
+        - Discounts
+      summary: Retrieve a discount
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - Discounts
+      summary: Delete a discount
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/discounts:
+    get:
+      tags:
+        - Discounts
+      summary: List all discounts
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Discounts
+      summary: Create a discount
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                data:
+                  type: discounts
+                  attributes:
+                    name: 10%
+                    code: 10PERC
+                    amount: 10
+                    amount_type: percent
+                  relationships:
+                    store:
+                      data:
+                        type: stores
+                        id: '1'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/discount-redemptions/1:
+    get:
+      tags:
+        - Discount Redemptions
+      summary: Retrieve a discount redemption
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/discount-redemptions:
+    get:
+      tags:
+        - Discount Redemptions
+      summary: List all discount redemptions
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/license-keys/1:
+    get:
+      tags:
+        - License Keys
+      summary: Retrieve a license key
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/license-keys:
+    get:
+      tags:
+        - License Keys
+      summary: List all license keys
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/license-key-instances/1:
+    get:
+      tags:
+        - License Key Instances
+      summary: Retrieve a license key instance
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/license-key-instances:
+    get:
+      tags:
+        - License Key Instances
+      summary: List all license key instances
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/checkouts/ac470bd4-7c41-474d-b6cd-0f296f5be02a:
+    get:
+      tags:
+        - Checkouts
+      summary: Retrieve a checkout
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/checkouts:
+    get:
+      tags:
+        - Checkouts
+      summary: List all checkouts
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Checkouts
+      summary: Create a checkout
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                data:
+                  type: checkouts
+                  relationships:
+                    store:
+                      data:
+                        type: stores
+                        id: '1'
+                    variant:
+                      data:
+                        type: variants
+                        id: '1'
+                  attributes:
+                    custom_price: 2000
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/webhooks/1:
+    get:
+      tags:
+        - Webhooks
+      summary: Retrieve a webhook
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    patch:
+      tags:
+        - Webhooks
+      summary: Update a webhook
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                data:
+                  type: webhooks
+                  id: '1'
+                  attributes:
+                    events:
+                      - order_created
+                      - order_refunded
+                      - subscription_created
+                      - subscription_updated
+                      - subscription_expired
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    delete:
+      tags:
+        - Webhooks
+      summary: Delete a webhook
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/webhooks:
+    get:
+      tags:
+        - Webhooks
+      summary: List all webhooks
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+    post:
+      tags:
+        - Webhooks
+      summary: Create a webhook
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                data:
+                  type: webhooks
+                  attributes:
+                    url: https://mysite.com/webhooks/
+                    events:
+                      - order_created
+                      - subscription_created
+                      - subscription_updated
+                      - subscription_expired
+                    secret: SIGNING_SECRET
+                  relationships:
+                    store:
+                      data:
+                        type: stores
+                        id: '1'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/health:
+    get:
+      tags:
+        - default
+      summary: Health
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}
+  /v1/404:
+    get:
+      tags:
+        - default
+      summary: '404'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json: {}

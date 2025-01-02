@@ -33,6 +33,9 @@ access: 3rd-Party
 common:
   - url: https://example.com
     type: Property
+  - name: Postman Workspace
+    url: https://www.postman.com/lemonsqueezyapp/lemon-squeezy-workspace/overview
+    type: PostmanWorkspace
 created: 2024/01/01
 modified: '2025-01-01'
 position: Consuming

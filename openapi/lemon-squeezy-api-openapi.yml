@@ -17,32 +17,41 @@ components:
 security:
   - bearerAuth: []
 tags:
-  - name: Users
-  - name: Stores
-  - name: Customers
-  - name: Products
-  - name: Variants
-  - name: Prices
-  - name: Files
-  - name: Orders
+  - name: 7c41
   - name: Affiliates
-  - name: Order Items
-  - name: Subscriptions
-  - name: Subscripiton Items
-  - name: Subscripiton Invoices
-  - name: Usage Records
-  - name: Discounts
-  - name: Discount Redemptions
-  - name: License Keys
-  - name: License Key Instances
+  - name: B6cd
   - name: Checkouts
+  - name: Current
+  - name: Customers
+  - name: Discount
+  - name: Discounts
+  - name: Files
+  - name: Health
+  - name: Instances
+  - name: Invoices
+  - name: Items
+  - name: Keys
+  - name: License
+  - name: Me
+  - name: Order
+  - name: Orders
+  - name: Prices
+  - name: Products
+  - name: Records
+  - name: Redemptions
+  - name: Stores
+  - name: Subscription
+  - name: Subscriptions
+  - name: Usage
+  - name: Users
+  - name: Variants
   - name: Webhooks
 paths:
   /v1/users/me:
     get:
       tags:
-        - Users
         - Me
+        - Users
       summary: Lemon Squeezy Retrieve the authenticated user
       responses:
         '200':
@@ -212,8 +221,8 @@ paths:
   /v1/order-items/1:
     get:
       tags:
-        - Order
         - Items
+        - Order
       summary: Lemon Squeezy Retrieve an order item
       responses:
         '200':
@@ -223,8 +232,8 @@ paths:
   /v1/order-items:
     get:
       tags:
-        - Order
         - Items
+        - Order
       summary: Lemon Squeezy List all order items
       responses:
         '200':
@@ -283,8 +292,8 @@ paths:
   /v1/subscription-items/1:
     get:
       tags:
-        - Subscription
         - Items
+        - Subscription
       summary: Lemon Squeezy Retrieve a subscription item
       responses:
         '200':
@@ -293,8 +302,8 @@ paths:
             application/json: {}
     patch:
       tags:
-        - Subscription
         - Items
+        - Subscription
       summary: Lemon Squeezy Update a subscription item
       requestBody:
         content:
@@ -315,8 +324,8 @@ paths:
   /v1/subscription-items:
     get:
       tags:
-        - Subscription
         - Items
+        - Subscription
       summary: Lemon Squeezy List all subscription items
       responses:
         '200':
@@ -326,9 +335,9 @@ paths:
   /v1/subscription-items/1/current-usage:
     get:
       tags:
-        - Subscription
-        - Items
         - Current
+        - Items
+        - Subscription
         - Usage
       summary: Lemon Squeezy Retrieve a subscription items current usage
       responses:
@@ -339,8 +348,8 @@ paths:
   /v1/subscription-invoices/1:
     get:
       tags:
-        - Subscription
         - Invoices
+        - Subscription
       summary: Lemon Squeezy Retrieve a subscription invoice
       responses:
         '200':
@@ -350,8 +359,8 @@ paths:
   /v1/subscription-invoices:
     get:
       tags:
-        - Subscription
         - Invoices
+        - Subscription
       summary: Lemon Squeezy List all subscription invoices
       responses:
         '200':
@@ -361,8 +370,8 @@ paths:
   /v1/usage-records/1:
     get:
       tags:
-        - Usage
         - Records
+        - Usage
       summary: Lemon Squeezy Retrieve a usage-record
       responses:
         '200':
@@ -372,8 +381,8 @@ paths:
   /v1/usage-records:
     get:
       tags:
-        - Usage
         - Records
+        - Usage
       summary: Lemon Squeezy List all usage records
       responses:
         '200':
@@ -382,8 +391,8 @@ paths:
             application/json: {}
     post:
       tags:
-        - Usage
         - Records
+        - Usage
       summary: Lemon Squeezy Create a usage record
       requestBody:
         content:
@@ -487,8 +496,8 @@ paths:
   /v1/license-keys/1:
     get:
       tags:
-        - License
         - Keys
+        - License
       summary: Lemon Squeezy Retrieve a license key
       responses:
         '200':
@@ -498,8 +507,8 @@ paths:
   /v1/license-keys:
     get:
       tags:
-        - License
         - Keys
+        - License
       summary: Lemon Squeezy List all license keys
       responses:
         '200':
@@ -509,9 +518,9 @@ paths:
   /v1/license-key-instances/1:
     get:
       tags:
-        - License
-        - Keys
         - Instances
+        - Keys
+        - License
       summary: Lemon Squeezy Retrieve a license key instance
       responses:
         '200':
@@ -521,9 +530,9 @@ paths:
   /v1/license-key-instances:
     get:
       tags:
-        - License
-        - Keys
         - Instances
+        - Keys
+        - License
       summary: Lemon Squeezy List all license key instances
       responses:
         '200':
@@ -533,9 +542,9 @@ paths:
   /v1/checkouts/ac470bd4-7c41-474d-b6cd-0f296f5be02a:
     get:
       tags:
-        - Checkouts
         - 7c41
         - B6cd
+        - Checkouts
       summary: Lemon Squeezy Retrieve a checkout
       responses:
         '200':
@@ -668,7 +677,6 @@ paths:
     get:
       tags:
         - Health
-        - Default
       summary: Lemon Squeezy Health
       responses:
         '200':
@@ -677,8 +685,7 @@ paths:
             application/json: {}
   /v1/404:
     get:
-      tags:
-        - Default
+      tags: []
       summary: 'Lemon Squeezy 404'
       responses:
         '200':

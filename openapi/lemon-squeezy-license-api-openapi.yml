@@ -20,8 +20,7 @@ servers:
 paths:
   /v1/licenses/activate:
     post:
-      tags:
-        - default
+      tags: []
       summary: Lemon Squeezy Activate a license key
       description: Activate a license key and receive an instance ID in return.
       requestBody:
@@ -42,8 +41,7 @@ paths:
             application/json: {}
   /v1/licenses/validate:
     post:
-      tags:
-        - default
+      tags: []
       summary: Lemon Squeezy Validate a license key
       description: Validate a license key or license key instance.
       requestBody:
@@ -67,8 +65,7 @@ paths:
             application/json: {}
   /v1/licenses/deactivate:
     post:
-      tags:
-        - default
+      tags: []
       summary: Lemon Squeezy Deactivate a license key instance
       description: Deactivate a license key instance.
       requestBody:

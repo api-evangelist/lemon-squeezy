@@ -22,7 +22,7 @@ paths:
     post:
       tags:
         - default
-      summary: Activate a license key
+      summary: Lemon Squeezy Activate a license key
       description: Activate a license key and receive an instance ID in return.
       requestBody:
         content:
@@ -44,7 +44,7 @@ paths:
     post:
       tags:
         - default
-      summary: Validate a license key
+      summary: Lemon Squeezy Validate a license key
       description: Validate a license key or license key instance.
       requestBody:
         content:
@@ -69,7 +69,7 @@ paths:
     post:
       tags:
         - default
-      summary: Deactivate a license key instance
+      summary: Lemon Squeezy Deactivate a license key instance
       description: Deactivate a license key instance.
       requestBody:
         content:

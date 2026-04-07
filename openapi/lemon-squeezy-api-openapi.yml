@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Lemon Squeezy API
-  description: |-
+  description: |2-
 
     Welcome to Lemon Squeezy! Whether you're launching a brand new store, a
     newsletter, or you're interested in using Lemon Squeezy as your ecommerce
@@ -43,7 +43,7 @@ paths:
       tags:
         - Users
         - Me
-      summary: Retrieve the authenticated user
+      summary: Lemon Squeezy Retrieve the authenticated user
       responses:
         '200':
           description: Successful response
@@ -53,7 +53,7 @@ paths:
     get:
       tags:
         - Stores
-      summary: Retrieve a store
+      summary: Lemon Squeezy Retrieve a store
       responses:
         '200':
           description: Successful response
@@ -63,7 +63,7 @@ paths:
     get:
       tags:
         - Stores
-      summary: List all stores
+      summary: Lemon Squeezy List all stores
       responses:
         '200':
           description: Successful response
@@ -73,7 +73,7 @@ paths:
     get:
       tags:
         - Customers
-      summary: Retrieve a customer
+      summary: Lemon Squeezy Retrieve a customer
       responses:
         '200':
           description: Successful response
@@ -83,7 +83,7 @@ paths:
     get:
       tags:
         - Customers
-      summary: List all customers
+      summary: Lemon Squeezy List all customers
       responses:
         '200':
           description: Successful response
@@ -93,7 +93,7 @@ paths:
     get:
       tags:
         - Products
-      summary: Retrieve a product
+      summary: Lemon Squeezy Retrieve a product
       responses:
         '200':
           description: Successful response
@@ -103,7 +103,7 @@ paths:
     get:
       tags:
         - Products
-      summary: List all products
+      summary: Lemon Squeezy List all products
       responses:
         '200':
           description: Successful response
@@ -113,7 +113,7 @@ paths:
     get:
       tags:
         - Variants
-      summary: Retrieve a variant
+      summary: Lemon Squeezy Retrieve a variant
       responses:
         '200':
           description: Successful response
@@ -123,7 +123,7 @@ paths:
     get:
       tags:
         - Variants
-      summary: List all variants
+      summary: Lemon Squeezy List all variants
       responses:
         '200':
           description: Successful response
@@ -133,7 +133,7 @@ paths:
     get:
       tags:
         - Prices
-      summary: Retrieve a price
+      summary: Lemon Squeezy Retrieve a price
       responses:
         '200':
           description: Successful response
@@ -143,7 +143,7 @@ paths:
     get:
       tags:
         - Prices
-      summary: List all prices
+      summary: Lemon Squeezy List all prices
       responses:
         '200':
           description: Successful response
@@ -153,7 +153,7 @@ paths:
     get:
       tags:
         - Files
-      summary: Retrieve a file
+      summary: Lemon Squeezy Retrieve a file
       responses:
         '200':
           description: Successful response
@@ -163,7 +163,7 @@ paths:
     get:
       tags:
         - Files
-      summary: List all files
+      summary: Lemon Squeezy List all files
       responses:
         '200':
           description: Successful response
@@ -173,7 +173,7 @@ paths:
     get:
       tags:
         - Orders
-      summary: Retrieve an order
+      summary: Lemon Squeezy Retrieve an order
       responses:
         '200':
           description: Successful response
@@ -183,7 +183,7 @@ paths:
     get:
       tags:
         - Orders
-      summary: List all orders
+      summary: Lemon Squeezy List all orders
       responses:
         '200':
           description: Successful response
@@ -193,7 +193,7 @@ paths:
     get:
       tags:
         - Affiliates
-      summary: Retrieve an affiliate
+      summary: Lemon Squeezy Retrieve an affiliate
       responses:
         '200':
           description: Successful response
@@ -203,7 +203,7 @@ paths:
     get:
       tags:
         - Affiliates
-      summary: List all affiliates
+      summary: Lemon Squeezy List all affiliates
       responses:
         '200':
           description: Successful response
@@ -214,7 +214,7 @@ paths:
       tags:
         - Order
         - Items
-      summary: Retrieve an order item
+      summary: Lemon Squeezy Retrieve an order item
       responses:
         '200':
           description: Successful response
@@ -225,7 +225,7 @@ paths:
       tags:
         - Order
         - Items
-      summary: List all order items
+      summary: Lemon Squeezy List all order items
       responses:
         '200':
           description: Successful response
@@ -235,7 +235,7 @@ paths:
     get:
       tags:
         - Subscriptions
-      summary: Retrieve a subscription
+      summary: Lemon Squeezy Retrieve a subscription
       responses:
         '200':
           description: Successful response
@@ -244,7 +244,7 @@ paths:
     patch:
       tags:
         - Subscriptions
-      summary: Update a subscription
+      summary: Lemon Squeezy Update a subscription
       requestBody:
         content:
           application/json:
@@ -264,7 +264,7 @@ paths:
     delete:
       tags:
         - Subscriptions
-      summary: Cancel a Subscription
+      summary: Lemon Squeezy Cancel a Subscription
       responses:
         '200':
           description: Successful response
@@ -274,7 +274,7 @@ paths:
     get:
       tags:
         - Subscriptions
-      summary: List all subscriptions
+      summary: Lemon Squeezy List all subscriptions
       responses:
         '200':
           description: Successful response
@@ -285,7 +285,7 @@ paths:
       tags:
         - Subscription
         - Items
-      summary: Retrieve a subscription item
+      summary: Lemon Squeezy Retrieve a subscription item
       responses:
         '200':
           description: Successful response
@@ -295,7 +295,7 @@ paths:
       tags:
         - Subscription
         - Items
-      summary: Update a subscription item
+      summary: Lemon Squeezy Update a subscription item
       requestBody:
         content:
           application/json:
@@ -317,7 +317,7 @@ paths:
       tags:
         - Subscription
         - Items
-      summary: List all subscription items
+      summary: Lemon Squeezy List all subscription items
       responses:
         '200':
           description: Successful response
@@ -330,7 +330,7 @@ paths:
         - Items
         - Current
         - Usage
-      summary: Retrieve a subscription items current usage
+      summary: Lemon Squeezy Retrieve a subscription items current usage
       responses:
         '200':
           description: Successful response
@@ -341,7 +341,7 @@ paths:
       tags:
         - Subscription
         - Invoices
-      summary: Retrieve a subscription invoice
+      summary: Lemon Squeezy Retrieve a subscription invoice
       responses:
         '200':
           description: Successful response
@@ -352,7 +352,7 @@ paths:
       tags:
         - Subscription
         - Invoices
-      summary: List all subscription invoices
+      summary: Lemon Squeezy List all subscription invoices
       responses:
         '200':
           description: Successful response
@@ -363,7 +363,7 @@ paths:
       tags:
         - Usage
         - Records
-      summary: Retrieve a usage-record
+      summary: Lemon Squeezy Retrieve a usage-record
       responses:
         '200':
           description: Successful response
@@ -374,7 +374,7 @@ paths:
       tags:
         - Usage
         - Records
-      summary: List all usage records
+      summary: Lemon Squeezy List all usage records
       responses:
         '200':
           description: Successful response
@@ -384,7 +384,7 @@ paths:
       tags:
         - Usage
         - Records
-      summary: Create a usage record
+      summary: Lemon Squeezy Create a usage record
       requestBody:
         content:
           application/json:
@@ -410,7 +410,7 @@ paths:
     get:
       tags:
         - Discounts
-      summary: Retrieve a discount
+      summary: Lemon Squeezy Retrieve a discount
       responses:
         '200':
           description: Successful response
@@ -419,7 +419,7 @@ paths:
     delete:
       tags:
         - Discounts
-      summary: Delete a discount
+      summary: Lemon Squeezy Delete a discount
       responses:
         '200':
           description: Successful response
@@ -429,7 +429,7 @@ paths:
     get:
       tags:
         - Discounts
-      summary: List all discounts
+      summary: Lemon Squeezy List all discounts
       responses:
         '200':
           description: Successful response
@@ -438,7 +438,7 @@ paths:
     post:
       tags:
         - Discounts
-      summary: Create a discount
+      summary: Lemon Squeezy Create a discount
       requestBody:
         content:
           application/json:
@@ -467,7 +467,7 @@ paths:
       tags:
         - Discount
         - Redemptions
-      summary: Retrieve a discount redemption
+      summary: Lemon Squeezy Retrieve a discount redemption
       responses:
         '200':
           description: Successful response
@@ -478,7 +478,7 @@ paths:
       tags:
         - Discount
         - Redemptions
-      summary: List all discount redemptions
+      summary: Lemon Squeezy List all discount redemptions
       responses:
         '200':
           description: Successful response
@@ -489,7 +489,7 @@ paths:
       tags:
         - License
         - Keys
-      summary: Retrieve a license key
+      summary: Lemon Squeezy Retrieve a license key
       responses:
         '200':
           description: Successful response
@@ -500,7 +500,7 @@ paths:
       tags:
         - License
         - Keys
-      summary: List all license keys
+      summary: Lemon Squeezy List all license keys
       responses:
         '200':
           description: Successful response
@@ -512,7 +512,7 @@ paths:
         - License
         - Keys
         - Instances
-      summary: Retrieve a license key instance
+      summary: Lemon Squeezy Retrieve a license key instance
       responses:
         '200':
           description: Successful response
@@ -524,7 +524,7 @@ paths:
         - License
         - Keys
         - Instances
-      summary: List all license key instances
+      summary: Lemon Squeezy List all license key instances
       responses:
         '200':
           description: Successful response
@@ -536,7 +536,7 @@ paths:
         - Checkouts
         - 7c41
         - B6cd
-      summary: Retrieve a checkout
+      summary: Lemon Squeezy Retrieve a checkout
       responses:
         '200':
           description: Successful response
@@ -546,7 +546,7 @@ paths:
     get:
       tags:
         - Checkouts
-      summary: List all checkouts
+      summary: Lemon Squeezy List all checkouts
       responses:
         '200':
           description: Successful response
@@ -555,7 +555,7 @@ paths:
     post:
       tags:
         - Checkouts
-      summary: Create a checkout
+      summary: Lemon Squeezy Create a checkout
       requestBody:
         content:
           application/json:
@@ -584,7 +584,7 @@ paths:
     get:
       tags:
         - Webhooks
-      summary: Retrieve a webhook
+      summary: Lemon Squeezy Retrieve a webhook
       responses:
         '200':
           description: Successful response
@@ -593,7 +593,7 @@ paths:
     patch:
       tags:
         - Webhooks
-      summary: Update a webhook
+      summary: Lemon Squeezy Update a webhook
       requestBody:
         content:
           application/json:
@@ -618,7 +618,7 @@ paths:
     delete:
       tags:
         - Webhooks
-      summary: Delete a webhook
+      summary: Lemon Squeezy Delete a webhook
       responses:
         '200':
           description: Successful response
@@ -628,7 +628,7 @@ paths:
     get:
       tags:
         - Webhooks
-      summary: List all webhooks
+      summary: Lemon Squeezy List all webhooks
       responses:
         '200':
           description: Successful response
@@ -637,7 +637,7 @@ paths:
     post:
       tags:
         - Webhooks
-      summary: Create a webhook
+      summary: Lemon Squeezy Create a webhook
       requestBody:
         content:
           application/json:
@@ -669,7 +669,7 @@ paths:
       tags:
         - Health
         - Default
-      summary: Health
+      summary: Lemon Squeezy Health
       responses:
         '200':
           description: Successful response
@@ -679,7 +679,7 @@ paths:
     get:
       tags:
         - Default
-      summary: '404'
+      summary: 'Lemon Squeezy 404'
       responses:
         '200':
           description: Successful response

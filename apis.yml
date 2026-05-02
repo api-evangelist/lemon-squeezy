@@ -13,7 +13,7 @@ tags:
   - Products
 url: https://raw.githubusercontent.com/apis-json/artisanal/main/apis/lemon-squeezy.yml
 created: '2024-01-01'
-modified: '2026-03-16'
+modified: '2026-04-28'
 specificationVersion: '0.19'
 apis:
   - aid: lemon-squeezy:lemon-squeezy-api
@@ -35,7 +35,7 @@ apis:
     properties:
       - url: https://docs.lemonsqueezy.com/api
         type: Documentation
-      - url: properties/lemon-squeezy-api-openapi.yml
+      - url: openapi/lemon-squeezy-api-openapi.yml
         type: OpenAPI
   - aid: lemon-squeezy:lemon-squeezy-license-api
     name: Lemon Squeezy License API
@@ -48,7 +48,7 @@ apis:
     properties:
       - url: https://docs.lemonsqueezy.com/api/license-api
         type: Documentation
-      - url: properties/lemon-squeezy-license-api-openapi.yml
+      - url: openapi/lemon-squeezy-license-api-openapi.yml
         type: OpenAPI
 common:
   - url: https://www.lemonsqueezy.com/

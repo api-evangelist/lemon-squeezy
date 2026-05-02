@@ -8,7 +8,7 @@ info:
     platform, you can find everything you need to know here.
   version: 1.0.0
 servers:
-  - url: http://{{api_url}}
+  - url: https://api.lemonsqueezy.com
 components:
   securitySchemes:
     bearerAuth:

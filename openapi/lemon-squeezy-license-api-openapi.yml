@@ -16,7 +16,7 @@ info:
     make your first API call.
   version: 1.0.0
 servers:
-  - url: http://{{api_url}}
+  - url: https://api.lemonsqueezy.com
 paths:
   /v1/licenses/activate:
     post:

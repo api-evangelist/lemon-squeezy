@@ -1,0 +1,29 @@
+specification: API Commons Rate Limits
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/RateLimits
+provider: Lemon Squeezy
+providerId: lemon-squeezy
+created: '2026-05-04'
+modified: '2026-05-04'
+reconciled: true
+tags:
+  - Rate Limiting
+  - Payments
+description: Lemon Squeezy API rate limits per token.
+sources:
+  - https://www.lemonsqueezy.com/pricing
+  - https://docs.lemonsqueezy.com/api
+headers:
+  retryAfter: Retry-After
+responseCodes:
+  throttled: 429
+limits:
+  - name: REST API
+    scope: token
+    metric: requests_per_minute
+    limit: 300
+    timeFrame: minute
+  - name: Webhook deliveries
+    scope: webhook
+    metric: concurrent
+    limit: high

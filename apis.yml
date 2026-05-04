@@ -1,9 +1,7 @@
 aid: lemon-squeezy
 name: Lemon Squeezy
-description: >-
-  Lemon Squeezy is on a mission to make selling digital products easy-peasy. We know
-  first-hand the challenges of selling digital goods globally and are here to shake
-  that up for the better.
+description: Lemon Squeezy is on a mission to make selling digital products easy-peasy. We know first-hand
+  the challenges of selling digital goods globally and are here to shake that up for the better.
 type: Contract
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 access: 3rd-Party
@@ -13,15 +11,14 @@ tags:
   - Products
 url: https://raw.githubusercontent.com/apis-json/artisanal/main/apis/lemon-squeezy.yml
 created: '2024-01-01'
-modified: '2026-04-28'
+modified: '2026-05-04'
 specificationVersion: '0.19'
 apis:
   - aid: lemon-squeezy:lemon-squeezy-api
     name: Lemon Squeezy API
-    description: >-
-      Welcome to Lemon Squeezy! Whether you're launching a brand new store, a newsletter,
-      or you're interested in using Lemon Squeezy as your ecommerce platform, you
-      can find everything you need to know here.
+    description: Welcome to Lemon Squeezy! Whether you're launching a brand new store, a newsletter, or
+      you're interested in using Lemon Squeezy as your ecommerce platform, you can find everything you
+      need to know here.
     humanURL: https://docs.lemonsqueezy.com/api
     tags:
       - Checkouts
@@ -71,6 +68,27 @@ common:
     type: TermsOfService
   - url: https://www.postman.com/lemonsqueezyapp/lemon-squeezy-workspace/overview
     type: PostmanWorkspace
+  - type: Features
+    data:
+      - 5% + 50¢ per transaction base fee
+      - +1.5% international surcharge
+      - +1.5% PayPal payments
+      - +0.5% subscription payments
+      - +5% abandoned cart recoveries
+      - +3% affiliate referrals
+      - US bank payouts free; 1% on international payouts
+      - Merchant of Record (handles global tax/compliance)
+      - Stripe Managed Payments integration (2026 update)
+      - REST API at api.lemonsqueezy.com
+      - 'REST API: 300 req/min/token'
+      - Webhooks for order, subscription, license events
+      - API keys (Bearer)
+      - Subscriptions with proration, free trials, downgrades
+      - Software license keys built-in
+      - Custom pricing for $25K-$50K/mo+ revenue
+    sources:
+      - https://www.lemonsqueezy.com/pricing
+    updated: '2026-05-04'
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com

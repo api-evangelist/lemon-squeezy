@@ -1,0 +1,123 @@
+specification: API Commons Plans
+specificationVersion: '0.1'
+schema: https://raw.githubusercontent.com/api-evangelist/interface-research/main/schema/api-commons.yml#/$defs/Plans
+provider: Lemon Squeezy
+providerId: lemon-squeezy
+created: '2026-05-04'
+modified: '2026-05-04'
+reconciled: true
+tags:
+  - Payments
+  - Merchant of Record
+  - SaaS Billing
+description: 'Lemon Squeezy Merchant-of-Record: 5% + 50¢ per transaction with stacking add-on fees.'
+sources:
+  - https://www.lemonsqueezy.com/pricing
+plans:
+  - id: lemon-squeezy-payg
+    name: Pay As You Go
+    type: usage-based
+    description: 5% + 50¢ per transaction; no monthly fee.
+    entries:
+      - label: Base transaction fee
+        name: base
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: 5% + $0.50
+        userMultiplied: false
+      - label: International surcharge
+        name: intl
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: +1.5%
+        userMultiplied: false
+      - label: PayPal payments
+        name: paypal
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: +1.5%
+        userMultiplied: false
+      - label: Subscription payments
+        name: sub
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: +0.5%
+        userMultiplied: false
+      - label: Abandoned cart recovery
+        name: cart
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: +5%
+        userMultiplied: false
+      - label: Affiliate referrals
+        name: affiliate
+        type: metered
+        metric: transaction
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: +3%
+        userMultiplied: false
+      - label: US bank payout
+        name: payout_us
+        type: metered
+        metric: payout
+        limit: -1
+        timeFrame: usage
+        geo: US
+        unit: 1
+        price: '0.00'
+        userMultiplied: false
+      - label: International bank payout
+        name: payout_intl
+        type: metered
+        metric: payout
+        limit: -1
+        timeFrame: usage
+        geo: global
+        unit: 1
+        price: 1%
+        userMultiplied: false
+    elements:
+      - name: Merchant of Record (handles tax/compliance)
+      - name: No monthly fee
+      - name: Pay only on sales
+  - id: lemon-squeezy-custom
+    name: Custom (Volume)
+    type: enterprise
+    description: '$25K-$50K/mo+ revenue: contact for volume rate.'
+    entries:
+      - label: Annual (custom)
+        name: annual
+        type: subscription
+        metric: year
+        limit: -1
+        timeFrame: year
+        geo: global
+        unit: 1
+        price: custom
+        userMultiplied: false
+    elements:
+      - name: Volume-based effective rate reduction
+      - name: Negotiated terms

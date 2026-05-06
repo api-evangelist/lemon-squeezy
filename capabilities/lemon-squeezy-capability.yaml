@@ -1,0 +1,1619 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Lemon Squeezy API
+  description: Welcome to Lemon Squeezy! Whether you're launching a brand new store, a newsletter, or you're interested in
+    using Lemon Squeezy as your ecommerce platform, you can find everything you need to know here.
+  tags:
+  - Lemon
+  - Squeezy
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: lemon-squeezy
+    baseUri: https://api.lemonsqueezy.com
+    description: Lemon Squeezy API HTTP API.
+    authentication:
+      type: bearer
+      token: '{{LEMON_SQUEEZY_TOKEN}}'
+    resources:
+    - name: v1-users-me
+      path: /v1/users/me
+      operations:
+      - name: get-v1-users-me
+        method: GET
+        description: Lemon Squeezy Retrieve the authenticated user
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-stores-1
+      path: /v1/stores/1
+      operations:
+      - name: get-v1-stores-1
+        method: GET
+        description: Lemon Squeezy Retrieve a store
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-stores
+      path: /v1/stores
+      operations:
+      - name: get-v1-stores
+        method: GET
+        description: Lemon Squeezy List all stores
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-customers-1
+      path: /v1/customers/1
+      operations:
+      - name: get-v1-customers-1
+        method: GET
+        description: Lemon Squeezy Retrieve a customer
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-customers
+      path: /v1/customers
+      operations:
+      - name: get-v1-customers
+        method: GET
+        description: Lemon Squeezy List all customers
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-products-1
+      path: /v1/products/1
+      operations:
+      - name: get-v1-products-1
+        method: GET
+        description: Lemon Squeezy Retrieve a product
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-products
+      path: /v1/products
+      operations:
+      - name: get-v1-products
+        method: GET
+        description: Lemon Squeezy List all products
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-variants-1
+      path: /v1/variants/1
+      operations:
+      - name: get-v1-variants-1
+        method: GET
+        description: Lemon Squeezy Retrieve a variant
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-variants
+      path: /v1/variants
+      operations:
+      - name: get-v1-variants
+        method: GET
+        description: Lemon Squeezy List all variants
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-prices-1
+      path: /v1/prices/1
+      operations:
+      - name: get-v1-prices-1
+        method: GET
+        description: Lemon Squeezy Retrieve a price
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-prices
+      path: /v1/prices
+      operations:
+      - name: get-v1-prices
+        method: GET
+        description: Lemon Squeezy List all prices
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-files-1
+      path: /v1/files/1
+      operations:
+      - name: get-v1-files-1
+        method: GET
+        description: Lemon Squeezy Retrieve a file
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-files
+      path: /v1/files
+      operations:
+      - name: get-v1-files
+        method: GET
+        description: Lemon Squeezy List all files
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-orders-1
+      path: /v1/orders/1
+      operations:
+      - name: get-v1-orders-1
+        method: GET
+        description: Lemon Squeezy Retrieve an order
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-orders
+      path: /v1/orders
+      operations:
+      - name: get-v1-orders
+        method: GET
+        description: Lemon Squeezy List all orders
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-affiliates-1
+      path: /v1/affiliates/1
+      operations:
+      - name: get-v1-affiliates-1
+        method: GET
+        description: Lemon Squeezy Retrieve an affiliate
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-affiliates
+      path: /v1/affiliates
+      operations:
+      - name: get-v1-affiliates
+        method: GET
+        description: Lemon Squeezy List all affiliates
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-order-items-1
+      path: /v1/order-items/1
+      operations:
+      - name: get-v1-order-items-1
+        method: GET
+        description: Lemon Squeezy Retrieve an order item
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-order-items
+      path: /v1/order-items
+      operations:
+      - name: get-v1-order-items
+        method: GET
+        description: Lemon Squeezy List all order items
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-subscriptions-1
+      path: /v1/subscriptions/1
+      operations:
+      - name: get-v1-subscriptions-1
+        method: GET
+        description: Lemon Squeezy Retrieve a subscription
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: patch-v1-subscriptions-1
+        method: PATCH
+        description: Lemon Squeezy Update a subscription
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete-v1-subscriptions-1
+        method: DELETE
+        description: Lemon Squeezy Cancel a Subscription
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-subscriptions
+      path: /v1/subscriptions
+      operations:
+      - name: get-v1-subscriptions
+        method: GET
+        description: Lemon Squeezy List all subscriptions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-subscription-items-1
+      path: /v1/subscription-items/1
+      operations:
+      - name: get-v1-subscription-items-1
+        method: GET
+        description: Lemon Squeezy Retrieve a subscription item
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: patch-v1-subscription-items-1
+        method: PATCH
+        description: Lemon Squeezy Update a subscription item
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-subscription-items
+      path: /v1/subscription-items
+      operations:
+      - name: get-v1-subscription-items
+        method: GET
+        description: Lemon Squeezy List all subscription items
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-subscription-items-1-current-usage
+      path: /v1/subscription-items/1/current-usage
+      operations:
+      - name: get-v1-subscription-items-1-current-usage
+        method: GET
+        description: Lemon Squeezy Retrieve a subscription items current usage
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-subscription-invoices-1
+      path: /v1/subscription-invoices/1
+      operations:
+      - name: get-v1-subscription-invoices-1
+        method: GET
+        description: Lemon Squeezy Retrieve a subscription invoice
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-subscription-invoices
+      path: /v1/subscription-invoices
+      operations:
+      - name: get-v1-subscription-invoices
+        method: GET
+        description: Lemon Squeezy List all subscription invoices
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-usage-records-1
+      path: /v1/usage-records/1
+      operations:
+      - name: get-v1-usage-records-1
+        method: GET
+        description: Lemon Squeezy Retrieve a usage-record
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-usage-records
+      path: /v1/usage-records
+      operations:
+      - name: get-v1-usage-records
+        method: GET
+        description: Lemon Squeezy List all usage records
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post-v1-usage-records
+        method: POST
+        description: Lemon Squeezy Create a usage record
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-discounts-1
+      path: /v1/discounts/1
+      operations:
+      - name: get-v1-discounts-1
+        method: GET
+        description: Lemon Squeezy Retrieve a discount
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete-v1-discounts-1
+        method: DELETE
+        description: Lemon Squeezy Delete a discount
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-discounts
+      path: /v1/discounts
+      operations:
+      - name: get-v1-discounts
+        method: GET
+        description: Lemon Squeezy List all discounts
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post-v1-discounts
+        method: POST
+        description: Lemon Squeezy Create a discount
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-discount-redemptions-1
+      path: /v1/discount-redemptions/1
+      operations:
+      - name: get-v1-discount-redemptions-1
+        method: GET
+        description: Lemon Squeezy Retrieve a discount redemption
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-discount-redemptions
+      path: /v1/discount-redemptions
+      operations:
+      - name: get-v1-discount-redemptions
+        method: GET
+        description: Lemon Squeezy List all discount redemptions
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-license-keys-1
+      path: /v1/license-keys/1
+      operations:
+      - name: get-v1-license-keys-1
+        method: GET
+        description: Lemon Squeezy Retrieve a license key
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-license-keys
+      path: /v1/license-keys
+      operations:
+      - name: get-v1-license-keys
+        method: GET
+        description: Lemon Squeezy List all license keys
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-license-key-instances-1
+      path: /v1/license-key-instances/1
+      operations:
+      - name: get-v1-license-key-instances-1
+        method: GET
+        description: Lemon Squeezy Retrieve a license key instance
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-license-key-instances
+      path: /v1/license-key-instances
+      operations:
+      - name: get-v1-license-key-instances
+        method: GET
+        description: Lemon Squeezy List all license key instances
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-checkouts-ac470bd4-7c41-474d-b6cd-0f296f5be02
+      path: /v1/checkouts/ac470bd4-7c41-474d-b6cd-0f296f5be02a
+      operations:
+      - name: get-v1-checkouts-ac470bd4-7c41-474d-b6cd-0f296f5
+        method: GET
+        description: Lemon Squeezy Retrieve a checkout
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-checkouts
+      path: /v1/checkouts
+      operations:
+      - name: get-v1-checkouts
+        method: GET
+        description: Lemon Squeezy List all checkouts
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post-v1-checkouts
+        method: POST
+        description: Lemon Squeezy Create a checkout
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-webhooks-1
+      path: /v1/webhooks/1
+      operations:
+      - name: get-v1-webhooks-1
+        method: GET
+        description: Lemon Squeezy Retrieve a webhook
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: patch-v1-webhooks-1
+        method: PATCH
+        description: Lemon Squeezy Update a webhook
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: delete-v1-webhooks-1
+        method: DELETE
+        description: Lemon Squeezy Delete a webhook
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-webhooks
+      path: /v1/webhooks
+      operations:
+      - name: get-v1-webhooks
+        method: GET
+        description: Lemon Squeezy List all webhooks
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post-v1-webhooks
+        method: POST
+        description: Lemon Squeezy Create a webhook
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-health
+      path: /v1/health
+      operations:
+      - name: get-v1-health
+        method: GET
+        description: Lemon Squeezy Health
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-404
+      path: /v1/404
+      operations:
+      - name: get-v1-404
+        method: GET
+        description: Lemon Squeezy 404
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: lemon-squeezy-rest
+    description: REST adapter for Lemon Squeezy API.
+    resources:
+    - path: /v1/users/me
+      name: get-v1-users-me
+      operations:
+      - method: GET
+        name: get-v1-users-me
+        description: Lemon Squeezy Retrieve the authenticated user
+        call: lemon-squeezy.get-v1-users-me
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/stores/1
+      name: get-v1-stores-1
+      operations:
+      - method: GET
+        name: get-v1-stores-1
+        description: Lemon Squeezy Retrieve a store
+        call: lemon-squeezy.get-v1-stores-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/stores
+      name: get-v1-stores
+      operations:
+      - method: GET
+        name: get-v1-stores
+        description: Lemon Squeezy List all stores
+        call: lemon-squeezy.get-v1-stores
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/customers/1
+      name: get-v1-customers-1
+      operations:
+      - method: GET
+        name: get-v1-customers-1
+        description: Lemon Squeezy Retrieve a customer
+        call: lemon-squeezy.get-v1-customers-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/customers
+      name: get-v1-customers
+      operations:
+      - method: GET
+        name: get-v1-customers
+        description: Lemon Squeezy List all customers
+        call: lemon-squeezy.get-v1-customers
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/products/1
+      name: get-v1-products-1
+      operations:
+      - method: GET
+        name: get-v1-products-1
+        description: Lemon Squeezy Retrieve a product
+        call: lemon-squeezy.get-v1-products-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/products
+      name: get-v1-products
+      operations:
+      - method: GET
+        name: get-v1-products
+        description: Lemon Squeezy List all products
+        call: lemon-squeezy.get-v1-products
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/variants/1
+      name: get-v1-variants-1
+      operations:
+      - method: GET
+        name: get-v1-variants-1
+        description: Lemon Squeezy Retrieve a variant
+        call: lemon-squeezy.get-v1-variants-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/variants
+      name: get-v1-variants
+      operations:
+      - method: GET
+        name: get-v1-variants
+        description: Lemon Squeezy List all variants
+        call: lemon-squeezy.get-v1-variants
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/prices/1
+      name: get-v1-prices-1
+      operations:
+      - method: GET
+        name: get-v1-prices-1
+        description: Lemon Squeezy Retrieve a price
+        call: lemon-squeezy.get-v1-prices-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/prices
+      name: get-v1-prices
+      operations:
+      - method: GET
+        name: get-v1-prices
+        description: Lemon Squeezy List all prices
+        call: lemon-squeezy.get-v1-prices
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/files/1
+      name: get-v1-files-1
+      operations:
+      - method: GET
+        name: get-v1-files-1
+        description: Lemon Squeezy Retrieve a file
+        call: lemon-squeezy.get-v1-files-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/files
+      name: get-v1-files
+      operations:
+      - method: GET
+        name: get-v1-files
+        description: Lemon Squeezy List all files
+        call: lemon-squeezy.get-v1-files
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/orders/1
+      name: get-v1-orders-1
+      operations:
+      - method: GET
+        name: get-v1-orders-1
+        description: Lemon Squeezy Retrieve an order
+        call: lemon-squeezy.get-v1-orders-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/orders
+      name: get-v1-orders
+      operations:
+      - method: GET
+        name: get-v1-orders
+        description: Lemon Squeezy List all orders
+        call: lemon-squeezy.get-v1-orders
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/affiliates/1
+      name: get-v1-affiliates-1
+      operations:
+      - method: GET
+        name: get-v1-affiliates-1
+        description: Lemon Squeezy Retrieve an affiliate
+        call: lemon-squeezy.get-v1-affiliates-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/affiliates
+      name: get-v1-affiliates
+      operations:
+      - method: GET
+        name: get-v1-affiliates
+        description: Lemon Squeezy List all affiliates
+        call: lemon-squeezy.get-v1-affiliates
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/order-items/1
+      name: get-v1-order-items-1
+      operations:
+      - method: GET
+        name: get-v1-order-items-1
+        description: Lemon Squeezy Retrieve an order item
+        call: lemon-squeezy.get-v1-order-items-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/order-items
+      name: get-v1-order-items
+      operations:
+      - method: GET
+        name: get-v1-order-items
+        description: Lemon Squeezy List all order items
+        call: lemon-squeezy.get-v1-order-items
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscriptions/1
+      name: get-v1-subscriptions-1
+      operations:
+      - method: GET
+        name: get-v1-subscriptions-1
+        description: Lemon Squeezy Retrieve a subscription
+        call: lemon-squeezy.get-v1-subscriptions-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscriptions/1
+      name: patch-v1-subscriptions-1
+      operations:
+      - method: PATCH
+        name: patch-v1-subscriptions-1
+        description: Lemon Squeezy Update a subscription
+        call: lemon-squeezy.patch-v1-subscriptions-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscriptions/1
+      name: delete-v1-subscriptions-1
+      operations:
+      - method: DELETE
+        name: delete-v1-subscriptions-1
+        description: Lemon Squeezy Cancel a Subscription
+        call: lemon-squeezy.delete-v1-subscriptions-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscriptions
+      name: get-v1-subscriptions
+      operations:
+      - method: GET
+        name: get-v1-subscriptions
+        description: Lemon Squeezy List all subscriptions
+        call: lemon-squeezy.get-v1-subscriptions
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscription-items/1
+      name: get-v1-subscription-items-1
+      operations:
+      - method: GET
+        name: get-v1-subscription-items-1
+        description: Lemon Squeezy Retrieve a subscription item
+        call: lemon-squeezy.get-v1-subscription-items-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscription-items/1
+      name: patch-v1-subscription-items-1
+      operations:
+      - method: PATCH
+        name: patch-v1-subscription-items-1
+        description: Lemon Squeezy Update a subscription item
+        call: lemon-squeezy.patch-v1-subscription-items-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscription-items
+      name: get-v1-subscription-items
+      operations:
+      - method: GET
+        name: get-v1-subscription-items
+        description: Lemon Squeezy List all subscription items
+        call: lemon-squeezy.get-v1-subscription-items
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscription-items/1/current-usage
+      name: get-v1-subscription-items-1-current-usage
+      operations:
+      - method: GET
+        name: get-v1-subscription-items-1-current-usage
+        description: Lemon Squeezy Retrieve a subscription items current usage
+        call: lemon-squeezy.get-v1-subscription-items-1-current-usage
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscription-invoices/1
+      name: get-v1-subscription-invoices-1
+      operations:
+      - method: GET
+        name: get-v1-subscription-invoices-1
+        description: Lemon Squeezy Retrieve a subscription invoice
+        call: lemon-squeezy.get-v1-subscription-invoices-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/subscription-invoices
+      name: get-v1-subscription-invoices
+      operations:
+      - method: GET
+        name: get-v1-subscription-invoices
+        description: Lemon Squeezy List all subscription invoices
+        call: lemon-squeezy.get-v1-subscription-invoices
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/usage-records/1
+      name: get-v1-usage-records-1
+      operations:
+      - method: GET
+        name: get-v1-usage-records-1
+        description: Lemon Squeezy Retrieve a usage-record
+        call: lemon-squeezy.get-v1-usage-records-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/usage-records
+      name: get-v1-usage-records
+      operations:
+      - method: GET
+        name: get-v1-usage-records
+        description: Lemon Squeezy List all usage records
+        call: lemon-squeezy.get-v1-usage-records
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/usage-records
+      name: post-v1-usage-records
+      operations:
+      - method: POST
+        name: post-v1-usage-records
+        description: Lemon Squeezy Create a usage record
+        call: lemon-squeezy.post-v1-usage-records
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/discounts/1
+      name: get-v1-discounts-1
+      operations:
+      - method: GET
+        name: get-v1-discounts-1
+        description: Lemon Squeezy Retrieve a discount
+        call: lemon-squeezy.get-v1-discounts-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/discounts/1
+      name: delete-v1-discounts-1
+      operations:
+      - method: DELETE
+        name: delete-v1-discounts-1
+        description: Lemon Squeezy Delete a discount
+        call: lemon-squeezy.delete-v1-discounts-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/discounts
+      name: get-v1-discounts
+      operations:
+      - method: GET
+        name: get-v1-discounts
+        description: Lemon Squeezy List all discounts
+        call: lemon-squeezy.get-v1-discounts
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/discounts
+      name: post-v1-discounts
+      operations:
+      - method: POST
+        name: post-v1-discounts
+        description: Lemon Squeezy Create a discount
+        call: lemon-squeezy.post-v1-discounts
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/discount-redemptions/1
+      name: get-v1-discount-redemptions-1
+      operations:
+      - method: GET
+        name: get-v1-discount-redemptions-1
+        description: Lemon Squeezy Retrieve a discount redemption
+        call: lemon-squeezy.get-v1-discount-redemptions-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/discount-redemptions
+      name: get-v1-discount-redemptions
+      operations:
+      - method: GET
+        name: get-v1-discount-redemptions
+        description: Lemon Squeezy List all discount redemptions
+        call: lemon-squeezy.get-v1-discount-redemptions
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/license-keys/1
+      name: get-v1-license-keys-1
+      operations:
+      - method: GET
+        name: get-v1-license-keys-1
+        description: Lemon Squeezy Retrieve a license key
+        call: lemon-squeezy.get-v1-license-keys-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/license-keys
+      name: get-v1-license-keys
+      operations:
+      - method: GET
+        name: get-v1-license-keys
+        description: Lemon Squeezy List all license keys
+        call: lemon-squeezy.get-v1-license-keys
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/license-key-instances/1
+      name: get-v1-license-key-instances-1
+      operations:
+      - method: GET
+        name: get-v1-license-key-instances-1
+        description: Lemon Squeezy Retrieve a license key instance
+        call: lemon-squeezy.get-v1-license-key-instances-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/license-key-instances
+      name: get-v1-license-key-instances
+      operations:
+      - method: GET
+        name: get-v1-license-key-instances
+        description: Lemon Squeezy List all license key instances
+        call: lemon-squeezy.get-v1-license-key-instances
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/checkouts/ac470bd4-7c41-474d-b6cd-0f296f5be02a
+      name: get-v1-checkouts-ac470bd4-7c41-474d-b6cd-0f296f5
+      operations:
+      - method: GET
+        name: get-v1-checkouts-ac470bd4-7c41-474d-b6cd-0f296f5
+        description: Lemon Squeezy Retrieve a checkout
+        call: lemon-squeezy.get-v1-checkouts-ac470bd4-7c41-474d-b6cd-0f296f5
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/checkouts
+      name: get-v1-checkouts
+      operations:
+      - method: GET
+        name: get-v1-checkouts
+        description: Lemon Squeezy List all checkouts
+        call: lemon-squeezy.get-v1-checkouts
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/checkouts
+      name: post-v1-checkouts
+      operations:
+      - method: POST
+        name: post-v1-checkouts
+        description: Lemon Squeezy Create a checkout
+        call: lemon-squeezy.post-v1-checkouts
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/webhooks/1
+      name: get-v1-webhooks-1
+      operations:
+      - method: GET
+        name: get-v1-webhooks-1
+        description: Lemon Squeezy Retrieve a webhook
+        call: lemon-squeezy.get-v1-webhooks-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/webhooks/1
+      name: patch-v1-webhooks-1
+      operations:
+      - method: PATCH
+        name: patch-v1-webhooks-1
+        description: Lemon Squeezy Update a webhook
+        call: lemon-squeezy.patch-v1-webhooks-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/webhooks/1
+      name: delete-v1-webhooks-1
+      operations:
+      - method: DELETE
+        name: delete-v1-webhooks-1
+        description: Lemon Squeezy Delete a webhook
+        call: lemon-squeezy.delete-v1-webhooks-1
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/webhooks
+      name: get-v1-webhooks
+      operations:
+      - method: GET
+        name: get-v1-webhooks
+        description: Lemon Squeezy List all webhooks
+        call: lemon-squeezy.get-v1-webhooks
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/webhooks
+      name: post-v1-webhooks
+      operations:
+      - method: POST
+        name: post-v1-webhooks
+        description: Lemon Squeezy Create a webhook
+        call: lemon-squeezy.post-v1-webhooks
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/health
+      name: get-v1-health
+      operations:
+      - method: GET
+        name: get-v1-health
+        description: Lemon Squeezy Health
+        call: lemon-squeezy.get-v1-health
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/404
+      name: get-v1-404
+      operations:
+      - method: GET
+        name: get-v1-404
+        description: Lemon Squeezy 404
+        call: lemon-squeezy.get-v1-404
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: lemon-squeezy-mcp
+    transport: http
+    description: MCP adapter for Lemon Squeezy API for AI agent use.
+    tools:
+    - name: get-v1-users-me
+      description: Lemon Squeezy Retrieve the authenticated user
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-users-me
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-stores-1
+      description: Lemon Squeezy Retrieve a store
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-stores-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-stores
+      description: Lemon Squeezy List all stores
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-stores
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-customers-1
+      description: Lemon Squeezy Retrieve a customer
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-customers-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-customers
+      description: Lemon Squeezy List all customers
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-customers
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-products-1
+      description: Lemon Squeezy Retrieve a product
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-products-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-products
+      description: Lemon Squeezy List all products
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-products
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-variants-1
+      description: Lemon Squeezy Retrieve a variant
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-variants-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-variants
+      description: Lemon Squeezy List all variants
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-variants
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-prices-1
+      description: Lemon Squeezy Retrieve a price
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-prices-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-prices
+      description: Lemon Squeezy List all prices
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-prices
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-files-1
+      description: Lemon Squeezy Retrieve a file
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-files-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-files
+      description: Lemon Squeezy List all files
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-files
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-orders-1
+      description: Lemon Squeezy Retrieve an order
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-orders-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-orders
+      description: Lemon Squeezy List all orders
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-orders
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-affiliates-1
+      description: Lemon Squeezy Retrieve an affiliate
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-affiliates-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-affiliates
+      description: Lemon Squeezy List all affiliates
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-affiliates
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-order-items-1
+      description: Lemon Squeezy Retrieve an order item
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-order-items-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-order-items
+      description: Lemon Squeezy List all order items
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-order-items
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-subscriptions-1
+      description: Lemon Squeezy Retrieve a subscription
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-subscriptions-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: patch-v1-subscriptions-1
+      description: Lemon Squeezy Update a subscription
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: lemon-squeezy.patch-v1-subscriptions-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-v1-subscriptions-1
+      description: Lemon Squeezy Cancel a Subscription
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: lemon-squeezy.delete-v1-subscriptions-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-subscriptions
+      description: Lemon Squeezy List all subscriptions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-subscriptions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-subscription-items-1
+      description: Lemon Squeezy Retrieve a subscription item
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-subscription-items-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: patch-v1-subscription-items-1
+      description: Lemon Squeezy Update a subscription item
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: lemon-squeezy.patch-v1-subscription-items-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-subscription-items
+      description: Lemon Squeezy List all subscription items
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-subscription-items
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-subscription-items-1-current-usage
+      description: Lemon Squeezy Retrieve a subscription items current usage
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-subscription-items-1-current-usage
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-subscription-invoices-1
+      description: Lemon Squeezy Retrieve a subscription invoice
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-subscription-invoices-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-subscription-invoices
+      description: Lemon Squeezy List all subscription invoices
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-subscription-invoices
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-usage-records-1
+      description: Lemon Squeezy Retrieve a usage-record
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-usage-records-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-usage-records
+      description: Lemon Squeezy List all usage records
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-usage-records
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-v1-usage-records
+      description: Lemon Squeezy Create a usage record
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: lemon-squeezy.post-v1-usage-records
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-discounts-1
+      description: Lemon Squeezy Retrieve a discount
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-discounts-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-v1-discounts-1
+      description: Lemon Squeezy Delete a discount
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: lemon-squeezy.delete-v1-discounts-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-discounts
+      description: Lemon Squeezy List all discounts
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-discounts
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-v1-discounts
+      description: Lemon Squeezy Create a discount
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: lemon-squeezy.post-v1-discounts
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-discount-redemptions-1
+      description: Lemon Squeezy Retrieve a discount redemption
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-discount-redemptions-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-discount-redemptions
+      description: Lemon Squeezy List all discount redemptions
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-discount-redemptions
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-license-keys-1
+      description: Lemon Squeezy Retrieve a license key
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-license-keys-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-license-keys
+      description: Lemon Squeezy List all license keys
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-license-keys
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-license-key-instances-1
+      description: Lemon Squeezy Retrieve a license key instance
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-license-key-instances-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-license-key-instances
+      description: Lemon Squeezy List all license key instances
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-license-key-instances
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-checkouts-ac470bd4-7c41-474d-b6cd-0f296f5
+      description: Lemon Squeezy Retrieve a checkout
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-checkouts-ac470bd4-7c41-474d-b6cd-0f296f5
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-checkouts
+      description: Lemon Squeezy List all checkouts
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-checkouts
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-v1-checkouts
+      description: Lemon Squeezy Create a checkout
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: lemon-squeezy.post-v1-checkouts
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-webhooks-1
+      description: Lemon Squeezy Retrieve a webhook
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-webhooks-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: patch-v1-webhooks-1
+      description: Lemon Squeezy Update a webhook
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: lemon-squeezy.patch-v1-webhooks-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: delete-v1-webhooks-1
+      description: Lemon Squeezy Delete a webhook
+      hints:
+        readOnly: false
+        destructive: true
+        idempotent: true
+      call: lemon-squeezy.delete-v1-webhooks-1
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-webhooks
+      description: Lemon Squeezy List all webhooks
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-webhooks
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: post-v1-webhooks
+      description: Lemon Squeezy Create a webhook
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: lemon-squeezy.post-v1-webhooks
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-health
+      description: Lemon Squeezy Health
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-health
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: get-v1-404
+      description: Lemon Squeezy 404
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy.get-v1-404
+      outputParameters:
+      - type: object
+        mapping: $.
+binds:
+- namespace: env
+  keys:
+    LEMON_SQUEEZY_TOKEN: LEMON_SQUEEZY_TOKEN

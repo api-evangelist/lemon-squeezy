@@ -1,0 +1,166 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Lemon Squeezy API — License
+  description: 'Lemon Squeezy API — License. 4 operations. Lead operation: Lemon Squeezy List all license key instances. Self-contained
+    Naftiko capability covering one Lemon Squeezy business surface.'
+  tags:
+  - Lemon Squeezy
+  - License
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    LEMON_SQUEEZY_API_KEY: LEMON_SQUEEZY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: lemon-squeezy-license
+    baseUri: https://api.lemonsqueezy.com
+    description: Lemon Squeezy API — License business capability. Self-contained, no shared references.
+    resources:
+    - name: v1-license-key-instances
+      path: /v1/license-key-instances
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy List all license key instances
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-license-key-instances-1
+      path: /v1/license-key-instances/1
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy Retrieve a license key instance
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-license-keys
+      path: /v1/license-keys
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy List all license keys
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-license-keys-1
+      path: /v1/license-keys/1
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy Retrieve a license key
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.LEMON_SQUEEZY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: lemon-squeezy-license-rest
+    port: 8080
+    description: REST adapter for Lemon Squeezy API — License. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/v1/license-key-instances
+      name: v1-license-key-instances
+      description: REST surface for v1-license-key-instances.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy List all license key instances
+        call: lemon-squeezy-license.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/license-key-instances/1
+      name: v1-license-key-instances-1
+      description: REST surface for v1-license-key-instances-1.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy Retrieve a license key instance
+        call: lemon-squeezy-license.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/license-keys
+      name: v1-license-keys
+      description: REST surface for v1-license-keys.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy List all license keys
+        call: lemon-squeezy-license.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/license-keys/1
+      name: v1-license-keys-1
+      description: REST surface for v1-license-keys-1.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy Retrieve a license key
+        call: lemon-squeezy-license.get
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: lemon-squeezy-license-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Lemon Squeezy API — License. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: lemon-squeezy-list-all-license
+      description: Lemon Squeezy List all license key instances
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-license.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: lemon-squeezy-retrieve-license-key
+      description: Lemon Squeezy Retrieve a license key instance
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-license.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: lemon-squeezy-list-all-license-2
+      description: Lemon Squeezy List all license keys
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-license.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: lemon-squeezy-retrieve-license-key-2
+      description: Lemon Squeezy Retrieve a license key
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-license.get
+      outputParameters:
+      - type: object
+        mapping: $.

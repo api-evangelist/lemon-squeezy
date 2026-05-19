@@ -1,0 +1,137 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Lemon Squeezy API — Records
+  description: 'Lemon Squeezy API — Records. 3 operations. Lead operation: Lemon Squeezy List all usage records. Self-contained
+    Naftiko capability covering one Lemon Squeezy business surface.'
+  tags:
+  - Lemon Squeezy
+  - Records
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    LEMON_SQUEEZY_API_KEY: LEMON_SQUEEZY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: lemon-squeezy-records
+    baseUri: https://api.lemonsqueezy.com
+    description: Lemon Squeezy API — Records business capability. Self-contained, no shared references.
+    resources:
+    - name: v1-usage-records
+      path: /v1/usage-records
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy List all usage records
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Lemon Squeezy Create a usage record
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: v1-usage-records-1
+      path: /v1/usage-records/1
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy Retrieve a usage-record
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.LEMON_SQUEEZY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: lemon-squeezy-records-rest
+    port: 8080
+    description: REST adapter for Lemon Squeezy API — Records. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/v1/usage-records
+      name: v1-usage-records
+      description: REST surface for v1-usage-records.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy List all usage records
+        call: lemon-squeezy-records.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Lemon Squeezy Create a usage record
+        call: lemon-squeezy-records.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/usage-records/1
+      name: v1-usage-records-1
+      description: REST surface for v1-usage-records-1.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy Retrieve a usage-record
+        call: lemon-squeezy-records.get
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: lemon-squeezy-records-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Lemon Squeezy API — Records. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: lemon-squeezy-list-all-usage
+      description: Lemon Squeezy List all usage records
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-records.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: lemon-squeezy-create-usage-record
+      description: Lemon Squeezy Create a usage record
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: lemon-squeezy-records.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: lemon-squeezy-retrieve-usage-record
+      description: Lemon Squeezy Retrieve a usage-record
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-records.get
+      outputParameters:
+      - type: object
+        mapping: $.

@@ -1,0 +1,137 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Lemon Squeezy API — Checkouts
+  description: 'Lemon Squeezy API — Checkouts. 3 operations. Lead operation: Lemon Squeezy List all checkouts. Self-contained
+    Naftiko capability covering one Lemon Squeezy business surface.'
+  tags:
+  - Lemon Squeezy
+  - Checkouts
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    LEMON_SQUEEZY_API_KEY: LEMON_SQUEEZY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: lemon-squeezy-checkouts
+    baseUri: https://api.lemonsqueezy.com
+    description: Lemon Squeezy API — Checkouts business capability. Self-contained, no shared references.
+    resources:
+    - name: v1-checkouts
+      path: /v1/checkouts
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy List all checkouts
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: post
+        method: POST
+        description: Lemon Squeezy Create a checkout
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: v1-checkouts-ac470bd4-7c41-474d-b6cd-0f296f5be02a
+      path: /v1/checkouts/ac470bd4-7c41-474d-b6cd-0f296f5be02a
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy Retrieve a checkout
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.LEMON_SQUEEZY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: lemon-squeezy-checkouts-rest
+    port: 8080
+    description: REST adapter for Lemon Squeezy API — Checkouts. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/v1/checkouts
+      name: v1-checkouts
+      description: REST surface for v1-checkouts.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy List all checkouts
+        call: lemon-squeezy-checkouts.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: POST
+        name: post
+        description: Lemon Squeezy Create a checkout
+        call: lemon-squeezy-checkouts.post
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/checkouts/ac470bd4-7c41-474d-b6cd-0f296f5be02a
+      name: v1-checkouts-ac470bd4-7c41-474d-b6cd-0f296f5be02a
+      description: REST surface for v1-checkouts-ac470bd4-7c41-474d-b6cd-0f296f5be02a.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy Retrieve a checkout
+        call: lemon-squeezy-checkouts.get
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: lemon-squeezy-checkouts-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Lemon Squeezy API — Checkouts. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: lemon-squeezy-list-all-checkouts
+      description: Lemon Squeezy List all checkouts
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-checkouts.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: lemon-squeezy-create-checkout
+      description: Lemon Squeezy Create a checkout
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: false
+      call: lemon-squeezy-checkouts.post
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: lemon-squeezy-retrieve-checkout
+      description: Lemon Squeezy Retrieve a checkout
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-checkouts.get
+      outputParameters:
+      - type: object
+        mapping: $.

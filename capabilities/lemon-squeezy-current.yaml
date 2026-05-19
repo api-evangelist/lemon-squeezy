@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Lemon Squeezy API — Current
+  description: 'Lemon Squeezy API — Current. 1 operations. Lead operation: Lemon Squeezy Retrieve a subscription items current
+    usage. Self-contained Naftiko capability covering one Lemon Squeezy business surface.'
+  tags:
+  - Lemon Squeezy
+  - Current
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    LEMON_SQUEEZY_API_KEY: LEMON_SQUEEZY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: lemon-squeezy-current
+    baseUri: https://api.lemonsqueezy.com
+    description: Lemon Squeezy API — Current business capability. Self-contained, no shared references.
+    resources:
+    - name: v1-subscription-items-1-current-usage
+      path: /v1/subscription-items/1/current-usage
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy Retrieve a subscription items current usage
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.LEMON_SQUEEZY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: lemon-squeezy-current-rest
+    port: 8080
+    description: REST adapter for Lemon Squeezy API — Current. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/v1/subscription-items/1/current-usage
+      name: v1-subscription-items-1-current-usage
+      description: REST surface for v1-subscription-items-1-current-usage.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy Retrieve a subscription items current usage
+        call: lemon-squeezy-current.get
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: lemon-squeezy-current-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Lemon Squeezy API — Current. One tool per consumed operation, routed inline through this
+      capability's consumes block.
+    tools:
+    - name: lemon-squeezy-retrieve-subscription-items
+      description: Lemon Squeezy Retrieve a subscription items current usage
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-current.get
+      outputParameters:
+      - type: object
+        mapping: $.

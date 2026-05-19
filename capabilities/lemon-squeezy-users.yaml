@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Lemon Squeezy API — Users
+  description: 'Lemon Squeezy API — Users. 1 operations. Lead operation: Lemon Squeezy Retrieve the authenticated user. Self-contained
+    Naftiko capability covering one Lemon Squeezy business surface.'
+  tags:
+  - Lemon Squeezy
+  - Users
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    LEMON_SQUEEZY_API_KEY: LEMON_SQUEEZY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: lemon-squeezy-users
+    baseUri: https://api.lemonsqueezy.com
+    description: Lemon Squeezy API — Users business capability. Self-contained, no shared references.
+    resources:
+    - name: v1-users-me
+      path: /v1/users/me
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy Retrieve the authenticated user
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.LEMON_SQUEEZY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: lemon-squeezy-users-rest
+    port: 8080
+    description: REST adapter for Lemon Squeezy API — Users. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/v1/users/me
+      name: v1-users-me
+      description: REST surface for v1-users-me.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy Retrieve the authenticated user
+        call: lemon-squeezy-users.get
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: lemon-squeezy-users-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Lemon Squeezy API — Users. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: lemon-squeezy-retrieve-authenticated-user
+      description: Lemon Squeezy Retrieve the authenticated user
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-users.get
+      outputParameters:
+      - type: object
+        mapping: $.

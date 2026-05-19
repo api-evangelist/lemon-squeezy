@@ -1,0 +1,70 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Lemon Squeezy API — Health
+  description: 'Lemon Squeezy API — Health. 1 operations. Lead operation: Lemon Squeezy Health. Self-contained Naftiko capability
+    covering one Lemon Squeezy business surface.'
+  tags:
+  - Lemon Squeezy
+  - Health
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    LEMON_SQUEEZY_API_KEY: LEMON_SQUEEZY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: lemon-squeezy-health
+    baseUri: https://api.lemonsqueezy.com
+    description: Lemon Squeezy API — Health business capability. Self-contained, no shared references.
+    resources:
+    - name: v1-health
+      path: /v1/health
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy Health
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.LEMON_SQUEEZY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: lemon-squeezy-health-rest
+    port: 8080
+    description: REST adapter for Lemon Squeezy API — Health. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/v1/health
+      name: v1-health
+      description: REST surface for v1-health.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy Health
+        call: lemon-squeezy-health.get
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: lemon-squeezy-health-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Lemon Squeezy API — Health. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: lemon-squeezy-health
+      description: Lemon Squeezy Health
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-health.get
+      outputParameters:
+      - type: object
+        mapping: $.

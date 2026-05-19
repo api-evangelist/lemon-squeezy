@@ -1,0 +1,102 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Lemon Squeezy API — Orders
+  description: 'Lemon Squeezy API — Orders. 2 operations. Lead operation: Lemon Squeezy List all orders. Self-contained Naftiko
+    capability covering one Lemon Squeezy business surface.'
+  tags:
+  - Lemon Squeezy
+  - Orders
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    LEMON_SQUEEZY_API_KEY: LEMON_SQUEEZY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: lemon-squeezy-orders
+    baseUri: https://api.lemonsqueezy.com
+    description: Lemon Squeezy API — Orders business capability. Self-contained, no shared references.
+    resources:
+    - name: v1-orders
+      path: /v1/orders
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy List all orders
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-orders-1
+      path: /v1/orders/1
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy Retrieve an order
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.LEMON_SQUEEZY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: lemon-squeezy-orders-rest
+    port: 8080
+    description: REST adapter for Lemon Squeezy API — Orders. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/v1/orders
+      name: v1-orders
+      description: REST surface for v1-orders.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy List all orders
+        call: lemon-squeezy-orders.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/orders/1
+      name: v1-orders-1
+      description: REST surface for v1-orders-1.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy Retrieve an order
+        call: lemon-squeezy-orders.get
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: lemon-squeezy-orders-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Lemon Squeezy API — Orders. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: lemon-squeezy-list-all-orders
+      description: Lemon Squeezy List all orders
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-orders.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: lemon-squeezy-retrieve-order
+      description: Lemon Squeezy Retrieve an order
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-orders.get
+      outputParameters:
+      - type: object
+        mapping: $.

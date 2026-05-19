@@ -1,0 +1,233 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: Lemon Squeezy API — Items
+  description: 'Lemon Squeezy API — Items. 6 operations. Lead operation: Lemon Squeezy List all order items. Self-contained
+    Naftiko capability covering one Lemon Squeezy business surface.'
+  tags:
+  - Lemon Squeezy
+  - Items
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    LEMON_SQUEEZY_API_KEY: LEMON_SQUEEZY_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: lemon-squeezy-items
+    baseUri: https://api.lemonsqueezy.com
+    description: Lemon Squeezy API — Items business capability. Self-contained, no shared references.
+    resources:
+    - name: v1-order-items
+      path: /v1/order-items
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy List all order items
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-order-items-1
+      path: /v1/order-items/1
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy Retrieve an order item
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-subscription-items
+      path: /v1/subscription-items
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy List all subscription items
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: v1-subscription-items-1
+      path: /v1/subscription-items/1
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy Retrieve a subscription item
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+      - name: patch
+        method: PATCH
+        description: Lemon Squeezy Update a subscription item
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+        inputParameters:
+        - name: body
+          in: body
+          type: object
+          description: Request body (JSON).
+          required: false
+    - name: v1-subscription-items-1-current-usage
+      path: /v1/subscription-items/1/current-usage
+      operations:
+      - name: get
+        method: GET
+        description: Lemon Squeezy Retrieve a subscription items current usage
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    authentication:
+      type: bearer
+      token: '{{env.LEMON_SQUEEZY_API_KEY}}'
+  exposes:
+  - type: rest
+    namespace: lemon-squeezy-items-rest
+    port: 8080
+    description: REST adapter for Lemon Squeezy API — Items. One Spectral-compliant resource per consumed operation, prefixed
+      with /v1.
+    resources:
+    - path: /v1/v1/order-items
+      name: v1-order-items
+      description: REST surface for v1-order-items.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy List all order items
+        call: lemon-squeezy-items.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/order-items/1
+      name: v1-order-items-1
+      description: REST surface for v1-order-items-1.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy Retrieve an order item
+        call: lemon-squeezy-items.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/subscription-items
+      name: v1-subscription-items
+      description: REST surface for v1-subscription-items.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy List all subscription items
+        call: lemon-squeezy-items.get
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/subscription-items/1
+      name: v1-subscription-items-1
+      description: REST surface for v1-subscription-items-1.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy Retrieve a subscription item
+        call: lemon-squeezy-items.get
+        outputParameters:
+        - type: object
+          mapping: $.
+      - method: PATCH
+        name: patch
+        description: Lemon Squeezy Update a subscription item
+        call: lemon-squeezy-items.patch
+        with:
+          body: rest.body
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /v1/v1/subscription-items/1/current-usage
+      name: v1-subscription-items-1-current-usage
+      description: REST surface for v1-subscription-items-1-current-usage.
+      operations:
+      - method: GET
+        name: get
+        description: Lemon Squeezy Retrieve a subscription items current usage
+        call: lemon-squeezy-items.get
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: lemon-squeezy-items-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for Lemon Squeezy API — Items. One tool per consumed operation, routed inline through this capability's
+      consumes block.
+    tools:
+    - name: lemon-squeezy-list-all-order
+      description: Lemon Squeezy List all order items
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-items.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: lemon-squeezy-retrieve-order-item
+      description: Lemon Squeezy Retrieve an order item
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-items.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: lemon-squeezy-list-all-subscription
+      description: Lemon Squeezy List all subscription items
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-items.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: lemon-squeezy-retrieve-subscription-item
+      description: Lemon Squeezy Retrieve a subscription item
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-items.get
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: lemon-squeezy-update-subscription-item
+      description: Lemon Squeezy Update a subscription item
+      hints:
+        readOnly: false
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-items.patch
+      with:
+        body: tools.body
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: lemon-squeezy-retrieve-subscription-items
+      description: Lemon Squeezy Retrieve a subscription items current usage
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: lemon-squeezy-items.get
+      outputParameters:
+      - type: object
+        mapping: $.

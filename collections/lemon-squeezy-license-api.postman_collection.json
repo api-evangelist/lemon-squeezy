@@ -1,0 +1,372 @@
+{
+  "item": [
+    {
+      "id": "1cca7f0d-8ee9-434d-8ade-d5a73a21f125",
+      "name": "Lemon Squeezy Activate a license key",
+      "request": {
+        "name": "Lemon Squeezy Activate a license key",
+        "description": {
+          "content": "Activate a license key and receive an instance ID in return.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "v1",
+            "licenses",
+            "activate"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "disabled": false,
+              "key": "license_key",
+              "value": "<string>",
+              "description": "The license key"
+            },
+            {
+              "disabled": false,
+              "key": "instance_name",
+              "value": "<string>",
+              "description": "A label for the new instance to identify it in Lemon Squeezy"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "3c539bc7-5763-46c5-91bb-330d88b85000",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v1",
+                "licenses",
+                "activate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "The license key",
+                    "type": "text/plain"
+                  },
+                  "key": "license_key",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "A label for the new instance to identify it in Lemon Squeezy",
+                    "type": "text/plain"
+                  },
+                  "key": "instance_name",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "\"\"",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "0b93d089-7e15-4a68-a229-592f1736d8b6",
+      "name": "Lemon Squeezy Validate a license key",
+      "request": {
+        "name": "Lemon Squeezy Validate a license key",
+        "description": {
+          "content": "Validate a license key or license key instance.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "v1",
+            "licenses",
+            "validate"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "disabled": false,
+              "key": "license_key",
+              "value": "<string>",
+              "description": "The license key"
+            },
+            {
+              "disabled": false,
+              "key": "instance_id",
+              "value": "<string>",
+              "description": "If included, validate a license key instance, otherwise a license key. If no `instance_id` is provided, the response will contain `\"instance\": null`."
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "5ad93987-845d-43ba-8476-8ff9f1569209",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v1",
+                "licenses",
+                "validate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "The license key",
+                    "type": "text/plain"
+                  },
+                  "key": "license_key",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "If included, validate a license key instance, otherwise a license key. If no `instance_id` is provided, the response will contain `\"instance\": null`.",
+                    "type": "text/plain"
+                  },
+                  "key": "instance_id",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "\"\"",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    },
+    {
+      "id": "eb9a1dd4-3938-4e44-b4f9-1acbf041af52",
+      "name": "Lemon Squeezy Deactivate a license key instance",
+      "request": {
+        "name": "Lemon Squeezy Deactivate a license key instance",
+        "description": {
+          "content": "Deactivate a license key instance.",
+          "type": "text/plain"
+        },
+        "url": {
+          "path": [
+            "v1",
+            "licenses",
+            "deactivate"
+          ],
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "method": "POST",
+        "auth": null,
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "disabled": false,
+              "key": "license_key",
+              "value": "<string>",
+              "description": "The license key"
+            },
+            {
+              "disabled": false,
+              "key": "instance_id",
+              "value": "<string>",
+              "description": "The instance ID returned when activating a license key"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "id": "be133882-0abb-4613-ac7d-8aa0f28426eb",
+          "name": "Successful response",
+          "originalRequest": {
+            "url": {
+              "path": [
+                "v1",
+                "licenses",
+                "deactivate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "The license key",
+                    "type": "text/plain"
+                  },
+                  "key": "license_key",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "description": {
+                    "content": "The instance ID returned when activating a license key",
+                    "type": "text/plain"
+                  },
+                  "key": "instance_id",
+                  "value": "<string>"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            }
+          ],
+          "body": "\"\"",
+          "cookie": [],
+          "_postman_previewlanguage": "json"
+        }
+      ],
+      "event": [],
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      }
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.lemonsqueezy.com",
+      "key": "baseUrl"
+    }
+  ],
+  "info": {
+    "_postman_id": "7dbdd5c1-ec58-4fa7-b716-7795be4ad0bf",
+    "name": "Lemon Squeezy License API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "## Step 1: Fork this collection\n\n[![](https://run.pstmn.io/button.svg)](https://god.gw.postman.com/run-collection/24909116-16bc36f7-5cc6-4131-9269-5ee1cb0c2380?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D24909116-16bc36f7-5cc6-4131-9269-5ee1cb0c2380%26entityType%3Dcollection%26workspaceId%3D5d229114-c0b1-40ec-8bab-f171fbda8aaf)\n\n## Step 2: Make your first API call\n\nFollow our [API documentation](https://docs.lemonsqueezy.com/help/licensing/license-api) to make your first API call.",
+      "type": "text/plain"
+    }
+  }
+}

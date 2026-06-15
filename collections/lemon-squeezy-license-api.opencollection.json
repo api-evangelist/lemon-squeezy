@@ -1,0 +1,82 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy License API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Lemon Squeezy Activate a license key",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.lemonsqueezy.com/v1/licenses/activate",
+        "body": {
+          "type": "form-urlencoded",
+          "data": [
+            {
+              "name": "license_key",
+              "value": ""
+            },
+            {
+              "name": "instance_name",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "docs": "Activate a license key and receive an instance ID in return."
+    },
+    {
+      "info": {
+        "name": "Lemon Squeezy Validate a license key",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.lemonsqueezy.com/v1/licenses/validate",
+        "body": {
+          "type": "form-urlencoded",
+          "data": [
+            {
+              "name": "license_key",
+              "value": ""
+            },
+            {
+              "name": "instance_id",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "docs": "Validate a license key or license key instance."
+    },
+    {
+      "info": {
+        "name": "Lemon Squeezy Deactivate a license key instance",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://api.lemonsqueezy.com/v1/licenses/deactivate",
+        "body": {
+          "type": "form-urlencoded",
+          "data": [
+            {
+              "name": "license_key",
+              "value": ""
+            },
+            {
+              "name": "instance_id",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "docs": "Deactivate a license key instance."
+    }
+  ],
+  "bundled": true
+}

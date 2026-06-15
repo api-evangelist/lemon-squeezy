@@ -1,0 +1,800 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Me",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve the authenticated user",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/users/me"
+          },
+          "docs": "Lemon Squeezy Retrieve the authenticated user"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Stores",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a store",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/stores/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a store"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all stores",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/stores"
+          },
+          "docs": "Lemon Squeezy List all stores"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Customers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/customers/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a customer"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all customers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/customers"
+          },
+          "docs": "Lemon Squeezy List all customers"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Products",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a product",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/products/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a product"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all products",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/products"
+          },
+          "docs": "Lemon Squeezy List all products"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Variants",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a variant",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/variants/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a variant"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all variants",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/variants"
+          },
+          "docs": "Lemon Squeezy List all variants"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Prices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a price",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/prices/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a price"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all prices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/prices"
+          },
+          "docs": "Lemon Squeezy List all prices"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a file",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/files/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a file"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all files",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/files"
+          },
+          "docs": "Lemon Squeezy List all files"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve an order",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/orders/1"
+          },
+          "docs": "Lemon Squeezy Retrieve an order"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/orders"
+          },
+          "docs": "Lemon Squeezy List all orders"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Affiliates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve an affiliate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/affiliates/1"
+          },
+          "docs": "Lemon Squeezy Retrieve an affiliate"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all affiliates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/affiliates"
+          },
+          "docs": "Lemon Squeezy List all affiliates"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve an order item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/order-items/1"
+          },
+          "docs": "Lemon Squeezy Retrieve an order item"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all order items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/order-items"
+          },
+          "docs": "Lemon Squeezy List all order items"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a subscription item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-items/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a subscription item"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Update a subscription item",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-items/1",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lemon Squeezy Update a subscription item"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all subscription items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-items"
+          },
+          "docs": "Lemon Squeezy List all subscription items"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Subscriptions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscriptions/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a subscription"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Update a subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.lemonsqueezy.com/v1/subscriptions/1",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lemon Squeezy Update a subscription"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Cancel a Subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.lemonsqueezy.com/v1/subscriptions/1"
+          },
+          "docs": "Lemon Squeezy Cancel a Subscription"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all subscriptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscriptions"
+          },
+          "docs": "Lemon Squeezy List all subscriptions"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Current",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a subscription items current usage",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-items/1/current-usage"
+          },
+          "docs": "Lemon Squeezy Retrieve a subscription items current usage"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Invoices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a subscription invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-invoices/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a subscription invoice"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all subscription invoices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-invoices"
+          },
+          "docs": "Lemon Squeezy List all subscription invoices"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Records",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a usage-record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/usage-records/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a usage-record"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all usage records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/usage-records"
+          },
+          "docs": "Lemon Squeezy List all usage records"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Create a usage record",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/usage-records",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lemon Squeezy Create a usage record"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Discounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a discount",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/discounts/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a discount"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Delete a discount",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.lemonsqueezy.com/v1/discounts/1"
+          },
+          "docs": "Lemon Squeezy Delete a discount"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all discounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/discounts"
+          },
+          "docs": "Lemon Squeezy List all discounts"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Create a discount",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/discounts",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lemon Squeezy Create a discount"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Discount",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a discount redemption",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/discount-redemptions/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a discount redemption"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all discount redemptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/discount-redemptions"
+          },
+          "docs": "Lemon Squeezy List all discount redemptions"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Keys",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a license key",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/license-keys/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a license key"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all license keys",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/license-keys"
+          },
+          "docs": "Lemon Squeezy List all license keys"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Instances",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a license key instance",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/license-key-instances/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a license key instance"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all license key instances",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/license-key-instances"
+          },
+          "docs": "Lemon Squeezy List all license key instances"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "7c41",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a checkout",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/checkouts/ac470bd4-7c41-474d-b6cd-0f296f5be02a"
+          },
+          "docs": "Lemon Squeezy Retrieve a checkout"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Checkouts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy List all checkouts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/checkouts"
+          },
+          "docs": "Lemon Squeezy List all checkouts"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Create a checkout",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/checkouts",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lemon Squeezy Create a checkout"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a webhook"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Update a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks/1",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lemon Squeezy Update a webhook"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Delete a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks/1"
+          },
+          "docs": "Lemon Squeezy Delete a webhook"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks"
+          },
+          "docs": "Lemon Squeezy List all webhooks"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Create a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lemon Squeezy Create a webhook"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Health",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Health",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/health"
+          },
+          "docs": "Lemon Squeezy Health"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Default",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy 404",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/404"
+          },
+          "docs": "Lemon Squeezy 404"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

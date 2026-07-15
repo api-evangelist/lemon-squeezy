@@ -49,6 +49,8 @@ apis:
       - url: openapi/lemon-squeezy-license-api-openapi.yml
         type: OpenAPI
 common:
+  - type: AgenticAccess
+    url: agentic-access/lemon-squeezy-agentic-access.yml
   - type: DomainSecurity
     url: security/lemon-squeezy-domain-security.yml
   - type: Authentication

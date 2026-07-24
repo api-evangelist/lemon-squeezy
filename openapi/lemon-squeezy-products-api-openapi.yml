@@ -1,6 +1,6 @@
 openapi: 3.0.0
 info:
-  title: Lemon Squeezy 7c41 License API
+  title: Lemon Squeezy 7c41 Products API
   description: '
 
     Welcome to Lemon Squeezy! Whether you''re launching a brand new store, a
@@ -14,43 +14,23 @@ servers:
 security:
 - bearerAuth: []
 tags:
-- name: License
+- name: Products
 paths:
-  /v1/license-keys/1:
+  /v1/products/1:
     get:
       tags:
-      - License
-      summary: Lemon Squeezy Retrieve a license key
+      - Products
+      summary: Lemon Squeezy Retrieve a product
       responses:
         '200':
           description: Successful response
           content:
             application/json: {}
-  /v1/license-keys:
+  /v1/products:
     get:
       tags:
-      - License
-      summary: Lemon Squeezy List all license keys
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /v1/license-key-instances/1:
-    get:
-      tags:
-      - License
-      summary: Lemon Squeezy Retrieve a license key instance
-      responses:
-        '200':
-          description: Successful response
-          content:
-            application/json: {}
-  /v1/license-key-instances:
-    get:
-      tags:
-      - License
-      summary: Lemon Squeezy List all license key instances
+      - Products
+      summary: Lemon Squeezy List all products
       responses:
         '200':
           description: Successful response

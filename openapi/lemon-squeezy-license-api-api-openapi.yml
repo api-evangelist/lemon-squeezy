@@ -1,0 +1,133 @@
+openapi: 3.0.1
+info:
+  title: Lemon Squeezy Checkouts License API API
+  description: The Lemon Squeezy API is a REST API based on the JSON:API specification. It exposes the resources of a Lemon Squeezy merchant-of-record account - stores, products, variants, prices, files, orders, order items, customers, subscriptions, subscription invoices, subscription items, usage records, license keys, license key instances, checkouts, discounts, discount redemptions, and webhooks. All requests use Bearer API key authentication and must send the Accept and Content-Type headers application/vnd.api+json.
+  termsOfService: https://www.lemonsqueezy.com/terms
+  contact:
+    name: Lemon Squeezy Support
+    url: https://docs.lemonsqueezy.com
+  version: v1
+servers:
+- url: https://api.lemonsqueezy.com/v1
+security:
+- api_key: []
+tags:
+- name: License API
+paths:
+  /licenses/activate:
+    post:
+      operationId: activateLicenseKey
+      tags:
+      - License API
+      summary: Activate a license key
+      description: Public License API endpoint. Activates a license key and creates a new license key instance. Submitted as application/x-www-form-urlencoded with license_key and instance_name.
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+              - license_key
+              - instance_name
+              properties:
+                license_key:
+                  type: string
+                instance_name:
+                  type: string
+      responses:
+        '200':
+          description: License key activation result.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LicenseApiResponse'
+  /licenses/validate:
+    post:
+      operationId: validateLicenseKey
+      tags:
+      - License API
+      summary: Validate a license key
+      description: Public License API endpoint. Validates a license key, optionally for a specific instance_id.
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+              - license_key
+              properties:
+                license_key:
+                  type: string
+                instance_id:
+                  type: string
+      responses:
+        '200':
+          description: License key validation result.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LicenseApiResponse'
+  /licenses/deactivate:
+    post:
+      operationId: deactivateLicenseKey
+      tags:
+      - License API
+      summary: Deactivate a license key
+      description: Public License API endpoint. Deactivates a license key instance by license_key and instance_id.
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+              - license_key
+              - instance_id
+              properties:
+                license_key:
+                  type: string
+                instance_id:
+                  type: string
+      responses:
+        '200':
+          description: License key deactivation result.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LicenseApiResponse'
+components:
+  schemas:
+    LicenseApiResponse:
+      type: object
+      description: Response from the public License API endpoints.
+      properties:
+        activated:
+          type: boolean
+          nullable: true
+        valid:
+          type: boolean
+          nullable: true
+        deactivated:
+          type: boolean
+          nullable: true
+        error:
+          type: string
+          nullable: true
+        license_key:
+          type: object
+          additionalProperties: true
+        instance:
+          type: object
+          nullable: true
+          additionalProperties: true
+        meta:
+          type: object
+          additionalProperties: true
+  securitySchemes:
+    api_key:
+      type: http
+      scheme: bearer
+      bearerFormat: apiKey
+      description: Bearer authentication using a Lemon Squeezy API key. Requests must also send Accept and Content-Type headers of application/vnd.api+json.

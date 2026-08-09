@@ -1,0 +1,2140 @@
+{
+  "item": [
+    {
+      "id": "e7f414ea-62da-45d2-a45f-254a68b989a1",
+      "name": "Stores",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3b5e6321-c780-42b3-881d-ddb3815b92b8",
+          "name": "List all stores",
+          "request": {
+            "name": "List all stores",
+            "url": {
+              "path": [
+                "v1",
+                "stores"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "d3d075b0-2395-45d2-b096-1049bc65ed2d",
+          "name": "Retrieve a store",
+          "request": {
+            "name": "Retrieve a store",
+            "url": {
+              "path": [
+                "v1",
+                "stores",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "caaae8c4-d257-4a1c-8fa2-e05f48bceab8",
+      "name": "Products",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "746c3bd4-2277-4334-929e-0a5082c49174",
+          "name": "List all products",
+          "request": {
+            "name": "List all products",
+            "url": {
+              "path": [
+                "v1",
+                "products"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "af7ea338-7849-4b86-a39e-f3831ebd8f52",
+          "name": "Retrieve a product",
+          "request": {
+            "name": "Retrieve a product",
+            "url": {
+              "path": [
+                "v1",
+                "products",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "759f8aad-4ec1-4ee4-bede-f3f114b7b5b2",
+      "name": "Variants",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "be20cbfe-1fe5-485a-b9ad-a42d45e3b404",
+          "name": "List all variants",
+          "request": {
+            "name": "List all variants",
+            "url": {
+              "path": [
+                "v1",
+                "variants"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "20c9b340-5d54-485d-9bb0-5e6c37225c5d",
+          "name": "Retrieve a variant",
+          "request": {
+            "name": "Retrieve a variant",
+            "url": {
+              "path": [
+                "v1",
+                "variants",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "0ab4aeee-7d32-45d5-a0b0-d867bf600973",
+      "name": "Prices",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4fc3dc2c-c66c-423d-9775-914dd31aaf32",
+          "name": "List all prices",
+          "request": {
+            "name": "List all prices",
+            "url": {
+              "path": [
+                "v1",
+                "prices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "a08feabe-d6d2-40a8-ae43-b6c537b7bd04",
+          "name": "Retrieve a price",
+          "request": {
+            "name": "Retrieve a price",
+            "url": {
+              "path": [
+                "v1",
+                "prices",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "2e8684c5-3ca8-46fb-a0c5-f3206e9d4660",
+      "name": "Files",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "67d865c8-c9e3-4149-8af7-06a06a17a12a",
+          "name": "List all files",
+          "request": {
+            "name": "List all files",
+            "url": {
+              "path": [
+                "v1",
+                "files"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "2afa057f-a6bc-4cd6-aa21-6fc7d53db2b9",
+          "name": "Retrieve a file",
+          "request": {
+            "name": "Retrieve a file",
+            "url": {
+              "path": [
+                "v1",
+                "files",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "97c9b4e9-f7f8-4fc8-93fa-90c281a8361a",
+      "name": "Orders",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ca373473-1ef4-4505-85a3-dfd0657c1c02",
+          "name": "List all orders",
+          "request": {
+            "name": "List all orders",
+            "url": {
+              "path": [
+                "v1",
+                "orders"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "c8df230f-ae27-4328-a3a5-6ff253afbc9e",
+          "name": "Retrieve an order",
+          "request": {
+            "name": "Retrieve an order",
+            "url": {
+              "path": [
+                "v1",
+                "orders",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "a37972ce-2791-4b1f-8174-6b6570d71543",
+          "name": "Issue an order refund",
+          "request": {
+            "name": "Issue an order refund",
+            "url": {
+              "path": [
+                "v1",
+                "orders",
+                "{id}",
+                "refund"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "id": "e9b89e02-6799-4b90-95a8-2c2b6925e729",
+          "name": "Generate an order invoice",
+          "request": {
+            "name": "Generate an order invoice",
+            "url": {
+              "path": [
+                "v1",
+                "orders",
+                "{id}",
+                "generate-invoice"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "c1aca7ae-045a-4abf-b97a-7fb994f4ff74",
+      "name": "Order Items",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "b5532c18-3257-40d7-bf68-91fc4ee49f11",
+          "name": "List all order items",
+          "request": {
+            "name": "List all order items",
+            "url": {
+              "path": [
+                "v1",
+                "order-items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "c8fa0690-f2f2-44ed-a0d0-62eaeee4cb5f",
+          "name": "Retrieve an order item",
+          "request": {
+            "name": "Retrieve an order item",
+            "url": {
+              "path": [
+                "v1",
+                "order-items",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "f9d6597e-ebc5-4702-aed1-5436e561038a",
+      "name": "Customers",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "a291e6c1-3630-4fee-8797-b8ba36266ef5",
+          "name": "List all customers",
+          "request": {
+            "name": "List all customers",
+            "url": {
+              "path": [
+                "v1",
+                "customers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "71bb172e-c4b6-4afc-a24f-6d04ad49807a",
+          "name": "Create a customer",
+          "request": {
+            "name": "Create a customer",
+            "url": {
+              "path": [
+                "v1",
+                "customers"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "id": "d00bf6c0-89a8-479f-b0f9-6d68fa3ebd20",
+          "name": "Retrieve a customer",
+          "request": {
+            "name": "Retrieve a customer",
+            "url": {
+              "path": [
+                "v1",
+                "customers",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "5bc15e32-9711-4786-93a3-969440dc7a2a",
+          "name": "Update a customer",
+          "request": {
+            "name": "Update a customer",
+            "url": {
+              "path": [
+                "v1",
+                "customers",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "13f9887b-cead-4458-85ab-67ae701c4386",
+      "name": "Subscriptions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "5ff1616f-16aa-4b5f-a677-23a8c66e089d",
+          "name": "List all subscriptions",
+          "request": {
+            "name": "List all subscriptions",
+            "url": {
+              "path": [
+                "v1",
+                "subscriptions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "2f23446f-c957-4e23-b66b-78efa10cd308",
+          "name": "Retrieve a subscription",
+          "request": {
+            "name": "Retrieve a subscription",
+            "url": {
+              "path": [
+                "v1",
+                "subscriptions",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "176a6b3b-cbad-48e4-b5e0-609fcb4ed7d4",
+          "name": "Update a subscription",
+          "request": {
+            "name": "Update a subscription",
+            "url": {
+              "path": [
+                "v1",
+                "subscriptions",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "id": "00ff8b86-57ee-4016-8f81-4261b76cfca0",
+          "name": "Cancel a subscription",
+          "request": {
+            "name": "Cancel a subscription",
+            "url": {
+              "path": [
+                "v1",
+                "subscriptions",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "c2c5d9cd-d18a-495a-a9a3-5d234fb45679",
+      "name": "Subscription Invoices",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "d2fd1c83-3966-46fb-a9af-e1b48dbd7217",
+          "name": "List all subscription invoices",
+          "request": {
+            "name": "List all subscription invoices",
+            "url": {
+              "path": [
+                "v1",
+                "subscription-invoices"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "7618f90b-458f-44fa-a751-9d84742d5edf",
+          "name": "Retrieve a subscription invoice",
+          "request": {
+            "name": "Retrieve a subscription invoice",
+            "url": {
+              "path": [
+                "v1",
+                "subscription-invoices",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "833dfef0-ea35-4157-be04-197a0c64128e",
+          "name": "Issue a subscription invoice refund",
+          "request": {
+            "name": "Issue a subscription invoice refund",
+            "url": {
+              "path": [
+                "v1",
+                "subscription-invoices",
+                "{id}",
+                "refund"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "a2c183e5-69fe-40ec-9a1a-cbf40800852b",
+      "name": "Subscription Items",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ecafaf99-a49f-4e31-8b1d-127db12a29ea",
+          "name": "List all subscription items",
+          "request": {
+            "name": "List all subscription items",
+            "url": {
+              "path": [
+                "v1",
+                "subscription-items"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "7e68414c-ed32-457c-bbef-6dafa4998aec",
+          "name": "Retrieve a subscription item",
+          "request": {
+            "name": "Retrieve a subscription item",
+            "url": {
+              "path": [
+                "v1",
+                "subscription-items",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "90db1373-028c-4a30-9666-306c4dd4b0db",
+          "name": "Update a subscription item",
+          "request": {
+            "name": "Update a subscription item",
+            "url": {
+              "path": [
+                "v1",
+                "subscription-items",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "id": "4df98c97-7cf7-4b0f-9340-9cf977f0320b",
+          "name": "Retrieve a subscription item's current usage",
+          "request": {
+            "name": "Retrieve a subscription item's current usage",
+            "url": {
+              "path": [
+                "v1",
+                "subscription-items",
+                "{id}",
+                "current-usage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "6ccd5ebd-d31a-447f-9a23-07972eed4ae8",
+      "name": "Usage Records",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "9ca0a12c-6a37-44a8-b15f-f954d5082499",
+          "name": "List all usage records",
+          "request": {
+            "name": "List all usage records",
+            "url": {
+              "path": [
+                "v1",
+                "usage-records"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "6a92f15b-1f65-4820-898b-18e35b7bbe2d",
+          "name": "Create a usage record",
+          "request": {
+            "name": "Create a usage record",
+            "url": {
+              "path": [
+                "v1",
+                "usage-records"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "id": "bd14e779-18fc-4882-a748-49eecfa381a1",
+          "name": "Retrieve a usage record",
+          "request": {
+            "name": "Retrieve a usage record",
+            "url": {
+              "path": [
+                "v1",
+                "usage-records",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "bd46c68e-d3a4-4b19-bc0c-fa603d3340c5",
+      "name": "License Keys",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "ec624fbb-dd62-4992-b24e-5cc450a2f9e3",
+          "name": "List all license keys",
+          "request": {
+            "name": "List all license keys",
+            "url": {
+              "path": [
+                "v1",
+                "license-keys"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "d599ec8f-fad3-4698-9628-da478fcff7c4",
+          "name": "Retrieve a license key",
+          "request": {
+            "name": "Retrieve a license key",
+            "url": {
+              "path": [
+                "v1",
+                "license-keys",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "2c228b52-9e44-4c17-be5e-5196e1f50b74",
+          "name": "Update a license key",
+          "request": {
+            "name": "Update a license key",
+            "url": {
+              "path": [
+                "v1",
+                "license-keys",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "c0e1dba7-7ba5-41d7-81b2-a0ef27dcc2e2",
+      "name": "License Key Instances",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "fd3d22a1-291d-49a3-bc39-70b5fcb813f7",
+          "name": "List all license key instances",
+          "request": {
+            "name": "List all license key instances",
+            "url": {
+              "path": [
+                "v1",
+                "license-key-instances"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "fdcde42f-7bf6-4de5-9ca8-3230ab20a5fc",
+          "name": "Retrieve a license key instance",
+          "request": {
+            "name": "Retrieve a license key instance",
+            "url": {
+              "path": [
+                "v1",
+                "license-key-instances",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "d6d4a085-80a5-447b-bf09-62c9f971eb87",
+      "name": "License API",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "8ef6dff1-b17f-4a52-97a9-99edd0c34dd2",
+          "name": "Activate a license key",
+          "request": {
+            "name": "Activate a license key",
+            "url": {
+              "path": [
+                "v1",
+                "licenses",
+                "activate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "license_key",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "id": "e3dee0c4-ba82-4b77-875c-1cac5848aa1a",
+          "name": "Validate a license key",
+          "request": {
+            "name": "Validate a license key",
+            "url": {
+              "path": [
+                "v1",
+                "licenses",
+                "validate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "license_key",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "id": "8067f9cd-bb7c-47f1-bd2c-78cef7944f7d",
+          "name": "Deactivate a license key",
+          "request": {
+            "name": "Deactivate a license key",
+            "url": {
+              "path": [
+                "v1",
+                "licenses",
+                "deactivate"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/x-www-form-urlencoded"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "license_key",
+                  "value": "",
+                  "type": "text"
+                }
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "a7cb4452-0439-49ea-912e-7525621a3921",
+      "name": "Checkouts",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e0210e7f-88f9-40a6-ae25-cf83bc8e7438",
+          "name": "List all checkouts",
+          "request": {
+            "name": "List all checkouts",
+            "url": {
+              "path": [
+                "v1",
+                "checkouts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "7e0e1319-3c4b-4988-a2df-906646b2ee2f",
+          "name": "Create a checkout",
+          "request": {
+            "name": "Create a checkout",
+            "url": {
+              "path": [
+                "v1",
+                "checkouts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "id": "040c3aff-9b17-4dd1-9141-07d92116039c",
+          "name": "Retrieve a checkout",
+          "request": {
+            "name": "Retrieve a checkout",
+            "url": {
+              "path": [
+                "v1",
+                "checkouts",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "bbc1ba51-2dcc-45ab-9a6f-c7954a594994",
+      "name": "Discounts",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "3ab5588e-cca2-46be-a0c7-9a1ec44a9feb",
+          "name": "List all discounts",
+          "request": {
+            "name": "List all discounts",
+            "url": {
+              "path": [
+                "v1",
+                "discounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "c5c8fc46-a82a-4916-8b79-703b3b1831f0",
+          "name": "Create a discount",
+          "request": {
+            "name": "Create a discount",
+            "url": {
+              "path": [
+                "v1",
+                "discounts"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "id": "f1b248e8-a5fa-4c27-abe6-024d7059f59f",
+          "name": "Retrieve a discount",
+          "request": {
+            "name": "Retrieve a discount",
+            "url": {
+              "path": [
+                "v1",
+                "discounts",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "affd2c91-8f82-438a-b5c3-c67892783b77",
+          "name": "Delete a discount",
+          "request": {
+            "name": "Delete a discount",
+            "url": {
+              "path": [
+                "v1",
+                "discounts",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "a44cf34e-28a7-40ac-9368-154b3b83ab00",
+      "name": "Discount Redemptions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "4d78d913-5445-47eb-80f5-e834bfbecb75",
+          "name": "List all discount redemptions",
+          "request": {
+            "name": "List all discount redemptions",
+            "url": {
+              "path": [
+                "v1",
+                "discount-redemptions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "69b2cd72-a295-4698-bf89-02ce2d5f2263",
+          "name": "Retrieve a discount redemption",
+          "request": {
+            "name": "Retrieve a discount redemption",
+            "url": {
+              "path": [
+                "v1",
+                "discount-redemptions",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "id": "cadb0b47-f6b1-4e87-bc1e-93a9fda2403e",
+      "name": "Webhooks",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "877c77d6-28b9-4cf7-9a44-89d3684e3c4a",
+          "name": "List all webhooks",
+          "request": {
+            "name": "List all webhooks",
+            "url": {
+              "path": [
+                "v1",
+                "webhooks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "4dc182fe-7964-4d95-a71e-e2687b131a0c",
+          "name": "Create a webhook",
+          "request": {
+            "name": "Create a webhook",
+            "url": {
+              "path": [
+                "v1",
+                "webhooks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "id": "eef4a85b-8321-41c0-8d10-f3e42f281cbc",
+          "name": "Retrieve a webhook",
+          "request": {
+            "name": "Retrieve a webhook",
+            "url": {
+              "path": [
+                "v1",
+                "webhooks",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": []
+        },
+        {
+          "id": "f7d5b068-5794-47dc-843f-f5b52e2e7d0d",
+          "name": "Update a webhook",
+          "request": {
+            "name": "Update a webhook",
+            "url": {
+              "path": [
+                "v1",
+                "webhooks",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"data\": {}\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "id": "035923f5-0d05-45f8-8613-0fd92d11bd20",
+          "name": "Delete a webhook",
+          "request": {
+            "name": "Delete a webhook",
+            "url": {
+              "path": [
+                "v1",
+                "webhooks",
+                "{id}"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.lemonsqueezy.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "8c9c91d6-37e5-45e5-92d7-ae6132a84777",
+    "name": "Lemon Squeezy API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Lemon Squeezy API is a REST API based on the JSON:API specification for managing a merchant-of-record store - stores, products, variants, prices, orders, customers, subscriptions, license keys, checkouts, discounts, and webhooks. Base URL https://api.lemonsqueezy.com/v1. Bearer API key auth with application/vnd.api+json headers.\n\nContact Support:\n Lemon Squeezy\n https://docs.lemonsqueezy.com",
+      "type": "text/plain"
+    }
+  }
+}

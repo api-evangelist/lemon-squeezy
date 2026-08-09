@@ -1,0 +1,1215 @@
+openapi: 3.0.1
+info:
+  title: Lemon Squeezy API
+  description: >-
+    The Lemon Squeezy API is a REST API based on the JSON:API specification. It
+    exposes the resources of a Lemon Squeezy merchant-of-record account - stores,
+    products, variants, prices, files, orders, order items, customers,
+    subscriptions, subscription invoices, subscription items, usage records,
+    license keys, license key instances, checkouts, discounts, discount
+    redemptions, and webhooks. All requests use Bearer API key authentication and
+    must send the Accept and Content-Type headers application/vnd.api+json.
+  termsOfService: https://www.lemonsqueezy.com/terms
+  contact:
+    name: Lemon Squeezy Support
+    url: https://docs.lemonsqueezy.com
+  version: 'v1'
+servers:
+  - url: https://api.lemonsqueezy.com/v1
+paths:
+  /stores:
+    get:
+      operationId: listStores
+      tags:
+        - Stores
+      summary: List all stores
+      description: Returns a paginated list of stores connected to the account.
+      parameters:
+        - $ref: '#/components/parameters/PageNumber'
+        - $ref: '#/components/parameters/PageSize'
+      responses:
+        '200':
+          description: A list of stores.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /stores/{id}:
+    get:
+      operationId: retrieveStore
+      tags:
+        - Stores
+      summary: Retrieve a store
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A store object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /products:
+    get:
+      operationId: listProducts
+      tags:
+        - Products
+      summary: List all products
+      parameters:
+        - $ref: '#/components/parameters/PageNumber'
+        - $ref: '#/components/parameters/PageSize'
+        - name: filter[store_id]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of products.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /products/{id}:
+    get:
+      operationId: retrieveProduct
+      tags:
+        - Products
+      summary: Retrieve a product
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A product object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /variants:
+    get:
+      operationId: listVariants
+      tags:
+        - Variants
+      summary: List all variants
+      parameters:
+        - name: filter[product_id]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of variants.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /variants/{id}:
+    get:
+      operationId: retrieveVariant
+      tags:
+        - Variants
+      summary: Retrieve a variant
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A variant object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /prices:
+    get:
+      operationId: listPrices
+      tags:
+        - Prices
+      summary: List all prices
+      parameters:
+        - name: filter[variant_id]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of prices.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /prices/{id}:
+    get:
+      operationId: retrievePrice
+      tags:
+        - Prices
+      summary: Retrieve a price
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A price object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /files:
+    get:
+      operationId: listFiles
+      tags:
+        - Files
+      summary: List all files
+      parameters:
+        - name: filter[variant_id]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of files.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /files/{id}:
+    get:
+      operationId: retrieveFile
+      tags:
+        - Files
+      summary: Retrieve a file
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A file object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /orders:
+    get:
+      operationId: listOrders
+      tags:
+        - Orders
+      summary: List all orders
+      parameters:
+        - name: filter[store_id]
+          in: query
+          schema:
+            type: string
+        - name: filter[user_email]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of orders.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /orders/{id}:
+    get:
+      operationId: retrieveOrder
+      tags:
+        - Orders
+      summary: Retrieve an order
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: An order object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /orders/{id}/refund:
+    post:
+      operationId: refundOrder
+      tags:
+        - Orders
+      summary: Issue an order refund
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '200':
+          description: The refunded order object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /orders/{id}/generate-invoice:
+    post:
+      operationId: generateOrderInvoice
+      tags:
+        - Orders
+      summary: Generate an order invoice
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A signed invoice download URL.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /order-items:
+    get:
+      operationId: listOrderItems
+      tags:
+        - Order Items
+      summary: List all order items
+      parameters:
+        - name: filter[order_id]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of order items.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /order-items/{id}:
+    get:
+      operationId: retrieveOrderItem
+      tags:
+        - Order Items
+      summary: Retrieve an order item
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: An order item object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /customers:
+    get:
+      operationId: listCustomers
+      tags:
+        - Customers
+      summary: List all customers
+      parameters:
+        - name: filter[store_id]
+          in: query
+          schema:
+            type: string
+        - name: filter[email]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of customers.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+    post:
+      operationId: createCustomer
+      tags:
+        - Customers
+      summary: Create a customer
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '201':
+          description: The created customer object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /customers/{id}:
+    get:
+      operationId: retrieveCustomer
+      tags:
+        - Customers
+      summary: Retrieve a customer
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A customer object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+    patch:
+      operationId: updateCustomer
+      tags:
+        - Customers
+      summary: Update a customer
+      description: Update a customer's attributes, or archive the customer.
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '200':
+          description: The updated customer object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /subscriptions:
+    get:
+      operationId: listSubscriptions
+      tags:
+        - Subscriptions
+      summary: List all subscriptions
+      parameters:
+        - name: filter[store_id]
+          in: query
+          schema:
+            type: string
+        - name: filter[product_id]
+          in: query
+          schema:
+            type: string
+        - name: filter[status]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of subscriptions.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /subscriptions/{id}:
+    get:
+      operationId: retrieveSubscription
+      tags:
+        - Subscriptions
+      summary: Retrieve a subscription
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A subscription object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+    patch:
+      operationId: updateSubscription
+      tags:
+        - Subscriptions
+      summary: Update a subscription
+      description: >-
+        Update a subscription to change the plan (variant), pause, resume,
+        cancel, or change the billing anchor.
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '200':
+          description: The updated subscription object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+    delete:
+      operationId: cancelSubscription
+      tags:
+        - Subscriptions
+      summary: Cancel a subscription
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: The cancelled subscription object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /subscription-invoices:
+    get:
+      operationId: listSubscriptionInvoices
+      tags:
+        - Subscription Invoices
+      summary: List all subscription invoices
+      parameters:
+        - name: filter[subscription_id]
+          in: query
+          schema:
+            type: string
+        - name: filter[status]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of subscription invoices.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /subscription-invoices/{id}:
+    get:
+      operationId: retrieveSubscriptionInvoice
+      tags:
+        - Subscription Invoices
+      summary: Retrieve a subscription invoice
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A subscription invoice object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /subscription-invoices/{id}/refund:
+    post:
+      operationId: refundSubscriptionInvoice
+      tags:
+        - Subscription Invoices
+      summary: Issue a subscription invoice refund
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '200':
+          description: The refunded subscription invoice object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /subscription-items:
+    get:
+      operationId: listSubscriptionItems
+      tags:
+        - Subscription Items
+      summary: List all subscription items
+      parameters:
+        - name: filter[subscription_id]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of subscription items.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /subscription-items/{id}:
+    get:
+      operationId: retrieveSubscriptionItem
+      tags:
+        - Subscription Items
+      summary: Retrieve a subscription item
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A subscription item object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+    patch:
+      operationId: updateSubscriptionItem
+      tags:
+        - Subscription Items
+      summary: Update a subscription item
+      description: Update the quantity of a quantity-based or usage-based subscription item.
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '200':
+          description: The updated subscription item object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /subscription-items/{id}/current-usage:
+    get:
+      operationId: retrieveSubscriptionItemCurrentUsage
+      tags:
+        - Subscription Items
+      summary: Retrieve a subscription item's current usage
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: The current usage for a usage-based subscription item.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /usage-records:
+    get:
+      operationId: listUsageRecords
+      tags:
+        - Usage Records
+      summary: List all usage records
+      parameters:
+        - name: filter[subscription_item_id]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of usage records.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+    post:
+      operationId: createUsageRecord
+      tags:
+        - Usage Records
+      summary: Create a usage record
+      description: Report usage for a usage-based subscription item.
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '201':
+          description: The created usage record object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /usage-records/{id}:
+    get:
+      operationId: retrieveUsageRecord
+      tags:
+        - Usage Records
+      summary: Retrieve a usage record
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A usage record object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /license-keys:
+    get:
+      operationId: listLicenseKeys
+      tags:
+        - License Keys
+      summary: List all license keys
+      parameters:
+        - name: filter[store_id]
+          in: query
+          schema:
+            type: string
+        - name: filter[order_id]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of license keys.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /license-keys/{id}:
+    get:
+      operationId: retrieveLicenseKey
+      tags:
+        - License Keys
+      summary: Retrieve a license key
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A license key object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+    patch:
+      operationId: updateLicenseKey
+      tags:
+        - License Keys
+      summary: Update a license key
+      description: Update a license key's activation limit, expiration date, or status.
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '200':
+          description: The updated license key object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /license-key-instances:
+    get:
+      operationId: listLicenseKeyInstances
+      tags:
+        - License Key Instances
+      summary: List all license key instances
+      parameters:
+        - name: filter[license_key_id]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of license key instances.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /license-key-instances/{id}:
+    get:
+      operationId: retrieveLicenseKeyInstance
+      tags:
+        - License Key Instances
+      summary: Retrieve a license key instance
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A license key instance object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /licenses/activate:
+    post:
+      operationId: activateLicenseKey
+      tags:
+        - License API
+      summary: Activate a license key
+      description: >-
+        Public License API endpoint. Activates a license key and creates a new
+        license key instance. Submitted as application/x-www-form-urlencoded with
+        license_key and instance_name.
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+                - license_key
+                - instance_name
+              properties:
+                license_key:
+                  type: string
+                instance_name:
+                  type: string
+      responses:
+        '200':
+          description: License key activation result.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LicenseApiResponse'
+  /licenses/validate:
+    post:
+      operationId: validateLicenseKey
+      tags:
+        - License API
+      summary: Validate a license key
+      description: >-
+        Public License API endpoint. Validates a license key, optionally for a
+        specific instance_id.
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+                - license_key
+              properties:
+                license_key:
+                  type: string
+                instance_id:
+                  type: string
+      responses:
+        '200':
+          description: License key validation result.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LicenseApiResponse'
+  /licenses/deactivate:
+    post:
+      operationId: deactivateLicenseKey
+      tags:
+        - License API
+      summary: Deactivate a license key
+      description: >-
+        Public License API endpoint. Deactivates a license key instance by
+        license_key and instance_id.
+      requestBody:
+        required: true
+        content:
+          application/x-www-form-urlencoded:
+            schema:
+              type: object
+              required:
+                - license_key
+                - instance_id
+              properties:
+                license_key:
+                  type: string
+                instance_id:
+                  type: string
+      responses:
+        '200':
+          description: License key deactivation result.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LicenseApiResponse'
+  /checkouts:
+    get:
+      operationId: listCheckouts
+      tags:
+        - Checkouts
+      summary: List all checkouts
+      parameters:
+        - name: filter[store_id]
+          in: query
+          schema:
+            type: string
+        - name: filter[variant_id]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of checkouts.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+    post:
+      operationId: createCheckout
+      tags:
+        - Checkouts
+      summary: Create a checkout
+      description: >-
+        Create a custom checkout with prefilled customer data, custom price,
+        product options, and checkout options. Returns a hosted checkout URL.
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '201':
+          description: The created checkout object including its URL.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /checkouts/{id}:
+    get:
+      operationId: retrieveCheckout
+      tags:
+        - Checkouts
+      summary: Retrieve a checkout
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A checkout object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /discounts:
+    get:
+      operationId: listDiscounts
+      tags:
+        - Discounts
+      summary: List all discounts
+      parameters:
+        - name: filter[store_id]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of discounts.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+    post:
+      operationId: createDiscount
+      tags:
+        - Discounts
+      summary: Create a discount
+      description: Create a percentage or fixed-amount discount code.
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '201':
+          description: The created discount object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /discounts/{id}:
+    get:
+      operationId: retrieveDiscount
+      tags:
+        - Discounts
+      summary: Retrieve a discount
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A discount object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+    delete:
+      operationId: deleteDiscount
+      tags:
+        - Discounts
+      summary: Delete a discount
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '204':
+          description: The discount was deleted.
+  /discount-redemptions:
+    get:
+      operationId: listDiscountRedemptions
+      tags:
+        - Discount Redemptions
+      summary: List all discount redemptions
+      parameters:
+        - name: filter[discount_id]
+          in: query
+          schema:
+            type: string
+        - name: filter[order_id]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of discount redemptions.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /discount-redemptions/{id}:
+    get:
+      operationId: retrieveDiscountRedemption
+      tags:
+        - Discount Redemptions
+      summary: Retrieve a discount redemption
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A discount redemption object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /webhooks:
+    get:
+      operationId: listWebhooks
+      tags:
+        - Webhooks
+      summary: List all webhooks
+      parameters:
+        - name: filter[store_id]
+          in: query
+          schema:
+            type: string
+      responses:
+        '200':
+          description: A list of webhooks.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+    post:
+      operationId: createWebhook
+      tags:
+        - Webhooks
+      summary: Create a webhook
+      description: >-
+        Create a webhook endpoint that receives signed event callbacks. Specify
+        the URL, a signing secret, and the events to subscribe to.
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '201':
+          description: The created webhook object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+  /webhooks/{id}:
+    get:
+      operationId: retrieveWebhook
+      tags:
+        - Webhooks
+      summary: Retrieve a webhook
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A webhook object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+    patch:
+      operationId: updateWebhook
+      tags:
+        - Webhooks
+      summary: Update a webhook
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '200':
+          description: The updated webhook object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+    delete:
+      operationId: deleteWebhook
+      tags:
+        - Webhooks
+      summary: Delete a webhook
+      parameters:
+        - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '204':
+          description: The webhook was deleted.
+components:
+  securitySchemes:
+    api_key:
+      type: http
+      scheme: bearer
+      bearerFormat: apiKey
+      description: >-
+        Bearer authentication using a Lemon Squeezy API key. Requests must also
+        send Accept and Content-Type headers of application/vnd.api+json.
+  parameters:
+    ResourceId:
+      name: id
+      in: path
+      required: true
+      description: The resource ID.
+      schema:
+        type: string
+    PageNumber:
+      name: page[number]
+      in: query
+      description: The page of results to return.
+      schema:
+        type: integer
+        minimum: 1
+    PageSize:
+      name: page[size]
+      in: query
+      description: The number of records to return per page (max 100).
+      schema:
+        type: integer
+        minimum: 1
+        maximum: 100
+  schemas:
+    JsonApiResourceObject:
+      type: object
+      description: A single JSON:API resource object.
+      properties:
+        type:
+          type: string
+          description: The resource type, e.g. stores, products, subscriptions.
+        id:
+          type: string
+          description: The unique resource ID.
+        attributes:
+          type: object
+          description: The resource's attributes.
+          additionalProperties: true
+        relationships:
+          type: object
+          description: Related resources.
+          additionalProperties: true
+        links:
+          type: object
+          additionalProperties:
+            type: string
+    JsonApiResource:
+      type: object
+      description: A JSON:API document containing a single resource object.
+      properties:
+        jsonapi:
+          type: object
+          properties:
+            version:
+              type: string
+        data:
+          $ref: '#/components/schemas/JsonApiResourceObject'
+        links:
+          type: object
+          additionalProperties:
+            type: string
+    JsonApiCollection:
+      type: object
+      description: A JSON:API document containing a collection of resource objects.
+      properties:
+        jsonapi:
+          type: object
+          properties:
+            version:
+              type: string
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/JsonApiResourceObject'
+        links:
+          type: object
+          description: Pagination links (first, last, prev, next).
+          additionalProperties:
+            type: string
+        meta:
+          type: object
+          properties:
+            page:
+              type: object
+              properties:
+                currentPage:
+                  type: integer
+                from:
+                  type: integer
+                lastPage:
+                  type: integer
+                perPage:
+                  type: integer
+                to:
+                  type: integer
+                total:
+                  type: integer
+    LicenseApiResponse:
+      type: object
+      description: Response from the public License API endpoints.
+      properties:
+        activated:
+          type: boolean
+          nullable: true
+        valid:
+          type: boolean
+          nullable: true
+        deactivated:
+          type: boolean
+          nullable: true
+        error:
+          type: string
+          nullable: true
+        license_key:
+          type: object
+          additionalProperties: true
+        instance:
+          type: object
+          nullable: true
+          additionalProperties: true
+        meta:
+          type: object
+          additionalProperties: true
+    Error:
+      type: object
+      description: A JSON:API error document.
+      properties:
+        errors:
+          type: array
+          items:
+            type: object
+            properties:
+              status:
+                type: string
+              title:
+                type: string
+              detail:
+                type: string
+security:
+  - api_key: []
+tags:
+  - name: Stores
+  - name: Products
+  - name: Variants
+  - name: Prices
+  - name: Files
+  - name: Orders
+  - name: Order Items
+  - name: Customers
+  - name: Subscriptions
+  - name: Subscription Invoices
+  - name: Subscription Items
+  - name: Usage Records
+  - name: License Keys
+  - name: License Key Instances
+  - name: License API
+  - name: Checkouts
+  - name: Discounts
+  - name: Discount Redemptions
+  - name: Webhooks

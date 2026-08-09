@@ -1,0 +1,138 @@
+openapi: 3.0.1
+info:
+  title: Lemon Squeezy Checkouts Order Items API
+  description: The Lemon Squeezy API is a REST API based on the JSON:API specification. It exposes the resources of a Lemon Squeezy merchant-of-record account - stores, products, variants, prices, files, orders, order items, customers, subscriptions, subscription invoices, subscription items, usage records, license keys, license key instances, checkouts, discounts, discount redemptions, and webhooks. All requests use Bearer API key authentication and must send the Accept and Content-Type headers application/vnd.api+json.
+  termsOfService: https://www.lemonsqueezy.com/terms
+  contact:
+    name: Lemon Squeezy Support
+    url: https://docs.lemonsqueezy.com
+  version: v1
+servers:
+- url: https://api.lemonsqueezy.com/v1
+security:
+- api_key: []
+tags:
+- name: Order Items
+paths:
+  /order-items:
+    get:
+      operationId: listOrderItems
+      tags:
+      - Order Items
+      summary: List all order items
+      parameters:
+      - name: filter[order_id]
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A list of order items.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+  /order-items/{id}:
+    get:
+      operationId: retrieveOrderItem
+      tags:
+      - Order Items
+      summary: Retrieve an order item
+      parameters:
+      - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: An order item object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+components:
+  schemas:
+    JsonApiResource:
+      type: object
+      description: A JSON:API document containing a single resource object.
+      properties:
+        jsonapi:
+          type: object
+          properties:
+            version:
+              type: string
+        data:
+          $ref: '#/components/schemas/JsonApiResourceObject'
+        links:
+          type: object
+          additionalProperties:
+            type: string
+    JsonApiResourceObject:
+      type: object
+      description: A single JSON:API resource object.
+      properties:
+        type:
+          type: string
+          description: The resource type, e.g. stores, products, subscriptions.
+        id:
+          type: string
+          description: The unique resource ID.
+        attributes:
+          type: object
+          description: The resource's attributes.
+          additionalProperties: true
+        relationships:
+          type: object
+          description: Related resources.
+          additionalProperties: true
+        links:
+          type: object
+          additionalProperties:
+            type: string
+    JsonApiCollection:
+      type: object
+      description: A JSON:API document containing a collection of resource objects.
+      properties:
+        jsonapi:
+          type: object
+          properties:
+            version:
+              type: string
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/JsonApiResourceObject'
+        links:
+          type: object
+          description: Pagination links (first, last, prev, next).
+          additionalProperties:
+            type: string
+        meta:
+          type: object
+          properties:
+            page:
+              type: object
+              properties:
+                currentPage:
+                  type: integer
+                from:
+                  type: integer
+                lastPage:
+                  type: integer
+                perPage:
+                  type: integer
+                to:
+                  type: integer
+                total:
+                  type: integer
+  parameters:
+    ResourceId:
+      name: id
+      in: path
+      required: true
+      description: The resource ID.
+      schema:
+        type: string
+  securitySchemes:
+    api_key:
+      type: http
+      scheme: bearer
+      bearerFormat: apiKey
+      description: Bearer authentication using a Lemon Squeezy API key. Requests must also send Accept and Content-Type headers of application/vnd.api+json.

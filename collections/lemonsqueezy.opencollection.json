@@ -1,0 +1,848 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Stores",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all stores",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/stores"
+          },
+          "docs": "List all stores"
+        },
+        {
+          "info": {
+            "name": "Retrieve a store",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/stores/{id}"
+          },
+          "docs": "Retrieve a store"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Products",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all products",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/products"
+          },
+          "docs": "List all products"
+        },
+        {
+          "info": {
+            "name": "Retrieve a product",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/products/{id}"
+          },
+          "docs": "Retrieve a product"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Variants",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all variants",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/variants"
+          },
+          "docs": "List all variants"
+        },
+        {
+          "info": {
+            "name": "Retrieve a variant",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/variants/{id}"
+          },
+          "docs": "Retrieve a variant"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Prices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all prices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/prices"
+          },
+          "docs": "List all prices"
+        },
+        {
+          "info": {
+            "name": "Retrieve a price",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/prices/{id}"
+          },
+          "docs": "Retrieve a price"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Files",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all files",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/files"
+          },
+          "docs": "List all files"
+        },
+        {
+          "info": {
+            "name": "Retrieve a file",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/files/{id}"
+          },
+          "docs": "Retrieve a file"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/orders"
+          },
+          "docs": "List all orders"
+        },
+        {
+          "info": {
+            "name": "Retrieve an order",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/orders/{id}"
+          },
+          "docs": "Retrieve an order"
+        },
+        {
+          "info": {
+            "name": "Issue an order refund",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/orders/{id}/refund",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Issue an order refund"
+        },
+        {
+          "info": {
+            "name": "Generate an order invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/orders/{id}/generate-invoice",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Generate an order invoice"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Order Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all order items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/order-items"
+          },
+          "docs": "List all order items"
+        },
+        {
+          "info": {
+            "name": "Retrieve an order item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/order-items/{id}"
+          },
+          "docs": "Retrieve an order item"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Customers",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all customers",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/customers"
+          },
+          "docs": "List all customers"
+        },
+        {
+          "info": {
+            "name": "Create a customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/customers",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a customer"
+        },
+        {
+          "info": {
+            "name": "Retrieve a customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/customers/{id}"
+          },
+          "docs": "Retrieve a customer"
+        },
+        {
+          "info": {
+            "name": "Update a customer",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.lemonsqueezy.com/v1/customers/{id}",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a customer"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Subscriptions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all subscriptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscriptions"
+          },
+          "docs": "List all subscriptions"
+        },
+        {
+          "info": {
+            "name": "Retrieve a subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscriptions/{id}"
+          },
+          "docs": "Retrieve a subscription"
+        },
+        {
+          "info": {
+            "name": "Update a subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.lemonsqueezy.com/v1/subscriptions/{id}",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a subscription"
+        },
+        {
+          "info": {
+            "name": "Cancel a subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.lemonsqueezy.com/v1/subscriptions/{id}"
+          },
+          "docs": "Cancel a subscription"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Subscription Invoices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all subscription invoices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-invoices"
+          },
+          "docs": "List all subscription invoices"
+        },
+        {
+          "info": {
+            "name": "Retrieve a subscription invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-invoices/{id}"
+          },
+          "docs": "Retrieve a subscription invoice"
+        },
+        {
+          "info": {
+            "name": "Issue a subscription invoice refund",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-invoices/{id}/refund",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Issue a subscription invoice refund"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Subscription Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all subscription items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-items"
+          },
+          "docs": "List all subscription items"
+        },
+        {
+          "info": {
+            "name": "Retrieve a subscription item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-items/{id}"
+          },
+          "docs": "Retrieve a subscription item"
+        },
+        {
+          "info": {
+            "name": "Update a subscription item",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-items/{id}",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a subscription item"
+        },
+        {
+          "info": {
+            "name": "Retrieve a subscription item's current usage",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-items/{id}/current-usage"
+          },
+          "docs": "Retrieve a subscription item's current usage"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Usage Records",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all usage records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/usage-records"
+          },
+          "docs": "List all usage records"
+        },
+        {
+          "info": {
+            "name": "Create a usage record",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/usage-records",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a usage record"
+        },
+        {
+          "info": {
+            "name": "Retrieve a usage record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/usage-records/{id}"
+          },
+          "docs": "Retrieve a usage record"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "License Keys",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all license keys",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/license-keys"
+          },
+          "docs": "List all license keys"
+        },
+        {
+          "info": {
+            "name": "Retrieve a license key",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/license-keys/{id}"
+          },
+          "docs": "Retrieve a license key"
+        },
+        {
+          "info": {
+            "name": "Update a license key",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.lemonsqueezy.com/v1/license-keys/{id}",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a license key"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "License Key Instances",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all license key instances",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/license-key-instances"
+          },
+          "docs": "List all license key instances"
+        },
+        {
+          "info": {
+            "name": "Retrieve a license key instance",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/license-key-instances/{id}"
+          },
+          "docs": "Retrieve a license key instance"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "License API",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Activate a license key",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/licenses/activate",
+            "body": {
+              "type": "urlencoded",
+              "data": []
+            }
+          },
+          "docs": "Activate a license key"
+        },
+        {
+          "info": {
+            "name": "Validate a license key",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/licenses/validate",
+            "body": {
+              "type": "urlencoded",
+              "data": []
+            }
+          },
+          "docs": "Validate a license key"
+        },
+        {
+          "info": {
+            "name": "Deactivate a license key",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/licenses/deactivate",
+            "body": {
+              "type": "urlencoded",
+              "data": []
+            }
+          },
+          "docs": "Deactivate a license key"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Checkouts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all checkouts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/checkouts"
+          },
+          "docs": "List all checkouts"
+        },
+        {
+          "info": {
+            "name": "Create a checkout",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/checkouts",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a checkout"
+        },
+        {
+          "info": {
+            "name": "Retrieve a checkout",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/checkouts/{id}"
+          },
+          "docs": "Retrieve a checkout"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Discounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all discounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/discounts"
+          },
+          "docs": "List all discounts"
+        },
+        {
+          "info": {
+            "name": "Create a discount",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/discounts",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a discount"
+        },
+        {
+          "info": {
+            "name": "Retrieve a discount",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/discounts/{id}"
+          },
+          "docs": "Retrieve a discount"
+        },
+        {
+          "info": {
+            "name": "Delete a discount",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.lemonsqueezy.com/v1/discounts/{id}"
+          },
+          "docs": "Delete a discount"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Discount Redemptions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all discount redemptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/discount-redemptions"
+          },
+          "docs": "List all discount redemptions"
+        },
+        {
+          "info": {
+            "name": "Retrieve a discount redemption",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/discount-redemptions/{id}"
+          },
+          "docs": "Retrieve a discount redemption"
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks"
+          },
+          "docs": "List all webhooks"
+        },
+        {
+          "info": {
+            "name": "Create a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a webhook"
+        },
+        {
+          "info": {
+            "name": "Retrieve a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks/{id}"
+          },
+          "docs": "Retrieve a webhook"
+        },
+        {
+          "info": {
+            "name": "Update a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks/{id}",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update a webhook"
+        },
+        {
+          "info": {
+            "name": "Delete a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks/{id}"
+          },
+          "docs": "Delete a webhook"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

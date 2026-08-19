@@ -1,0 +1,61 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy Checkouts Order Items API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Order Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all order items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/order-items",
+            "params": [
+              {
+                "name": "filter[order_id]",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all order items"
+        },
+        {
+          "info": {
+            "name": "Retrieve an order item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/order-items/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The resource ID."
+              }
+            ]
+          },
+          "docs": "Retrieve an order item"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

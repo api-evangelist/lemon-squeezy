@@ -1,0 +1,66 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy Checkouts Discount Redemptions API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Discount Redemptions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all discount redemptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/discount-redemptions",
+            "params": [
+              {
+                "name": "filter[discount_id]",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "filter[order_id]",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all discount redemptions"
+        },
+        {
+          "info": {
+            "name": "Retrieve a discount redemption",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/discount-redemptions/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The resource ID."
+              }
+            ]
+          },
+          "docs": "Retrieve a discount redemption"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

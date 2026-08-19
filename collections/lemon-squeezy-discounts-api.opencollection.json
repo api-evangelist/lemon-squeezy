@@ -1,0 +1,72 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy 7c41 Discounts API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Discounts",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a discount",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/discounts/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a discount"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Delete a discount",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.lemonsqueezy.com/v1/discounts/1"
+          },
+          "docs": "Lemon Squeezy Delete a discount"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all discounts",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/discounts"
+          },
+          "docs": "Lemon Squeezy List all discounts"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Create a discount",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/discounts",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lemon Squeezy Create a discount"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

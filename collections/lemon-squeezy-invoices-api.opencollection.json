@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy 7c41 Invoices API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Invoices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a subscription invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-invoices/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a subscription invoice"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all subscription invoices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-invoices"
+          },
+          "docs": "Lemon Squeezy List all subscription invoices"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

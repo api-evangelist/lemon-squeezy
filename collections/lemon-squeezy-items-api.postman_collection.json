@@ -1,23 +1,23 @@
 {
   "item": [
     {
-      "id": "4c749602-400a-400d-9476-59592d4489c2",
-      "name": "License",
+      "id": "fcf2759f-1ca6-4c8e-9484-5ab20e13d80d",
+      "name": "Items",
       "description": {
         "content": "",
         "type": "text/plain"
       },
       "item": [
         {
-          "id": "1658187d-8f40-4bee-b107-844797db1163",
-          "name": "Lemon Squeezy Retrieve a license key",
+          "id": "be51c76e-ed5a-4d21-9d92-b4913252230f",
+          "name": "Lemon Squeezy Retrieve an order item",
           "request": {
-            "name": "Lemon Squeezy Retrieve a license key",
+            "name": "Lemon Squeezy Retrieve an order item",
             "description": {},
             "url": {
               "path": [
                 "v1",
-                "license-keys",
+                "order-items",
                 "1"
               ],
               "host": [
@@ -37,13 +37,13 @@
           },
           "response": [
             {
-              "id": "031cea4a-91b3-4e0e-b28d-a75eb6807486",
+              "id": "dbb9c0a8-6e6a-4a8e-8310-a16bfb785918",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
                   "path": [
                     "v1",
-                    "license-keys",
+                    "order-items",
                     "1"
                   ],
                   "host": [
@@ -88,15 +88,15 @@
           }
         },
         {
-          "id": "7cdb4143-a372-4701-8902-c452f97d2c28",
-          "name": "Lemon Squeezy List all license keys",
+          "id": "1989ce31-1f27-4e0a-a39c-5e3b24a47e21",
+          "name": "Lemon Squeezy List all order items",
           "request": {
-            "name": "Lemon Squeezy List all license keys",
+            "name": "Lemon Squeezy List all order items",
             "description": {},
             "url": {
               "path": [
                 "v1",
-                "license-keys"
+                "order-items"
               ],
               "host": [
                 "{{baseUrl}}"
@@ -115,13 +115,13 @@
           },
           "response": [
             {
-              "id": "d448dd58-1932-4f5a-bd9e-5b6dac3ce423",
+              "id": "4d013307-8518-46b0-b2fa-fab463ad51d4",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
                   "path": [
                     "v1",
-                    "license-keys"
+                    "order-items"
                   ],
                   "host": [
                     "{{baseUrl}}"
@@ -165,15 +165,15 @@
           }
         },
         {
-          "id": "df79fe50-7abb-4377-ba99-29c1e9be008b",
-          "name": "Lemon Squeezy Retrieve a license key instance",
+          "id": "7ce88ea1-2695-46cc-aee3-675cf226d657",
+          "name": "Lemon Squeezy Retrieve a subscription item",
           "request": {
-            "name": "Lemon Squeezy Retrieve a license key instance",
+            "name": "Lemon Squeezy Retrieve a subscription item",
             "description": {},
             "url": {
               "path": [
                 "v1",
-                "license-key-instances",
+                "subscription-items",
                 "1"
               ],
               "host": [
@@ -193,13 +193,13 @@
           },
           "response": [
             {
-              "id": "e2f76470-e283-4506-8100-a8a537a58847",
+              "id": "3ecffea8-d8c9-4231-8b1f-38a4320902ff",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
                   "path": [
                     "v1",
-                    "license-key-instances",
+                    "subscription-items",
                     "1"
                   ],
                   "host": [
@@ -244,15 +244,115 @@
           }
         },
         {
-          "id": "67dfadbf-c577-4df9-b395-831f1b6fc872",
-          "name": "Lemon Squeezy List all license key instances",
+          "id": "a83fc0d1-5d85-4a58-ba6f-1aa82a7781fc",
+          "name": "Lemon Squeezy Update a subscription item",
           "request": {
-            "name": "Lemon Squeezy List all license key instances",
+            "name": "Lemon Squeezy Update a subscription item",
             "description": {},
             "url": {
               "path": [
                 "v1",
-                "license-key-instances"
+                "subscription-items",
+                "1"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "cbbd3a90-c47f-40f8-97c2-5f00ead8170a",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "subscription-items",
+                    "1"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"type\": \"subscription-items\",\n    \"attributes\": {\n      \"quantity\": 5\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "e55f72ba-828e-497d-a501-1579266d3ea5",
+          "name": "Lemon Squeezy List all subscription items",
+          "request": {
+            "name": "Lemon Squeezy List all subscription items",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "subscription-items"
               ],
               "host": [
                 "{{baseUrl}}"
@@ -271,13 +371,94 @@
           },
           "response": [
             {
-              "id": "aed7ee59-177f-4c80-9809-a5427a189774",
+              "id": "2f821a1e-5823-4c76-86e3-1894668a8b80",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
                   "path": [
                     "v1",
-                    "license-key-instances"
+                    "subscription-items"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "cd55108e-6b52-444d-b127-9ee311639f54",
+          "name": "Lemon Squeezy Retrieve a subscription items current usage",
+          "request": {
+            "name": "Lemon Squeezy Retrieve a subscription items current usage",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "subscription-items",
+                "1",
+                "current-usage"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b6a492c2-2bc7-4f47-9668-36defdb767d4",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "subscription-items",
+                    "1",
+                    "current-usage"
                   ],
                   "host": [
                     "{{baseUrl}}"
@@ -342,8 +523,8 @@
     ]
   },
   "info": {
-    "_postman_id": "8720bf6a-b142-42b2-8011-b4d3ddbbfc19",
-    "name": "Lemon Squeezy 7c41 License API",
+    "_postman_id": "c04f2aa5-4bec-4dc2-8b34-4fe7e2a14e04",
+    "name": "Lemon Squeezy 7c41 Items API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": {
       "content": "\nWelcome to Lemon Squeezy! Whether you're launching a brand new store, a\nnewsletter, or you're interested in using Lemon Squeezy as your ecommerce\nplatform, you can find everything you need to know here.",

@@ -1,0 +1,89 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy Checkouts Subscription Invoices API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Subscription Invoices",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "List all subscription invoices",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-invoices",
+            "params": [
+              {
+                "name": "filter[subscription_id]",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "filter[status]",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "List all subscription invoices"
+        },
+        {
+          "info": {
+            "name": "Retrieve a subscription invoice",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-invoices/:id",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The resource ID."
+              }
+            ]
+          },
+          "docs": "Retrieve a subscription invoice"
+        },
+        {
+          "info": {
+            "name": "Issue a subscription invoice refund",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-invoices/:id/refund",
+            "params": [
+              {
+                "name": "id",
+                "value": "",
+                "type": "path",
+                "description": "The resource ID."
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Issue a subscription invoice refund"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

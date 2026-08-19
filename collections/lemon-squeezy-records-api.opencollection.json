@@ -1,0 +1,61 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy 7c41 Records API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Records",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a usage-record",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/usage-records/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a usage-record"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all usage records",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/usage-records"
+          },
+          "docs": "Lemon Squeezy List all usage records"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Create a usage record",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/usage-records",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lemon Squeezy Create a usage record"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,94 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy 7c41 Items API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Items",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve an order item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/order-items/1"
+          },
+          "docs": "Lemon Squeezy Retrieve an order item"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all order items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/order-items"
+          },
+          "docs": "Lemon Squeezy List all order items"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a subscription item",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-items/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a subscription item"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Update a subscription item",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-items/1",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lemon Squeezy Update a subscription item"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all subscription items",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-items"
+          },
+          "docs": "Lemon Squeezy List all subscription items"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a subscription items current usage",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscription-items/1/current-usage"
+          },
+          "docs": "Lemon Squeezy Retrieve a subscription items current usage"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

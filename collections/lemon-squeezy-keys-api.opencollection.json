@@ -1,7 +1,7 @@
 {
   "opencollection": "1.0.0",
   "info": {
-    "name": "Lemon Squeezy 7c41 License API",
+    "name": "Lemon Squeezy 7c41 Keys API",
     "version": "1.0.0"
   },
   "request": {
@@ -13,7 +13,7 @@
   "items": [
     {
       "info": {
-        "name": "License",
+        "name": "Keys",
         "type": "folder"
       },
       "items": [

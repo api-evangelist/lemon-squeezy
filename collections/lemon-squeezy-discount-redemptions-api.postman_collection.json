@@ -1,0 +1,229 @@
+{
+  "item": [
+    {
+      "id": "c46600ab-829e-41d8-b16d-1c662d77476e",
+      "name": "Discount Redemptions",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "941aa1d4-bc84-46ad-afdd-850c0f76153b",
+          "name": "List all discount redemptions",
+          "request": {
+            "name": "List all discount redemptions",
+            "description": {},
+            "url": {
+              "path": [
+                "discount-redemptions"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "filter[discount_id]",
+                  "value": "<string>"
+                },
+                {
+                  "disabled": false,
+                  "key": "filter[order_id]",
+                  "value": "<string>"
+                }
+              ],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "a4dfba4d-67be-464b-8bf2-0d7b820ab497",
+              "name": "A list of discount redemptions.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "discount-redemptions"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "filter[discount_id]",
+                      "value": "<string>"
+                    },
+                    {
+                      "key": "filter[order_id]",
+                      "value": "<string>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.api+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/vnd.api+json"
+                }
+              ],
+              "body": "{\n  \"jsonapi\": {\n    \"version\": \"string\"\n  },\n  \"data\": [\n    {\n      \"type\": \"string\",\n      \"id\": \"string\",\n      \"attributes\": {\n        \"key_0\": \"string\",\n        \"key_1\": 6496.0765423332405\n      },\n      \"relationships\": {\n        \"key_0\": 3725,\n        \"key_1\": 9818.356316995967,\n        \"key_2\": false\n      },\n      \"links\": {\n        \"key_0\": \"string\"\n      }\n    },\n    {\n      \"type\": \"string\",\n      \"id\": \"string\",\n      \"attributes\": {\n        \"key_0\": 9269.916847192471,\n        \"key_1\": false,\n        \"key_2\": \"string\"\n      },\n      \"relationships\": {\n        \"key_0\": 6447\n      },\n      \"links\": {\n        \"key_0\": \"string\",\n        \"key_1\": \"string\"\n      }\n    }\n  ],\n  \"links\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\"\n  },\n  \"meta\": {\n    \"page\": {\n      \"currentPage\": 4532,\n      \"from\": 6927,\n      \"lastPage\": 2546,\n      \"perPage\": 5952,\n      \"to\": 1855,\n      \"total\": 7776\n    }\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3ddc79b5-18cc-4736-a925-7d21a5533740",
+          "name": "Retrieve a discount redemption",
+          "request": {
+            "name": "Retrieve a discount redemption",
+            "description": {},
+            "url": {
+              "path": [
+                "discount-redemptions",
+                ":id"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<string>",
+                  "key": "id",
+                  "description": "(Required) The resource ID."
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/vnd.api+json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "edaf21c3-aa1b-4184-815b-cbef02b9efe8",
+              "name": "A discount redemption object.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "discount-redemptions",
+                    ":id"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<string>",
+                      "key": "id",
+                      "description": "(Required) The resource ID."
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/vnd.api+json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/vnd.api+json"
+                }
+              ],
+              "body": "{\n  \"jsonapi\": {\n    \"version\": \"string\"\n  },\n  \"data\": {\n    \"type\": \"string\",\n    \"id\": \"string\",\n    \"attributes\": {\n      \"key_0\": \"string\",\n      \"key_1\": 2809.6726461121225\n    },\n    \"relationships\": {\n      \"key_0\": \"string\",\n      \"key_1\": 9430\n    },\n    \"links\": {\n      \"key_0\": \"string\"\n    }\n  },\n  \"links\": {\n    \"key_0\": \"string\",\n    \"key_1\": \"string\",\n    \"key_2\": \"string\",\n    \"key_3\": \"string\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://api.lemonsqueezy.com/v1",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5b68764d-7667-43f8-98cc-3771a1716557",
+    "name": "Lemon Squeezy Checkouts Discount Redemptions API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "The Lemon Squeezy API is a REST API based on the JSON:API specification. It exposes the resources of a Lemon Squeezy merchant-of-record account - stores, products, variants, prices, files, orders, order items, customers, subscriptions, subscription invoices, subscription items, usage records, license keys, license key instances, checkouts, discounts, discount redemptions, and webhooks. All requests use Bearer API key authentication and must send the Accept and Content-Type headers application/vnd.api+json.\n\nContact Support:\n Name: Lemon Squeezy Support",
+      "type": "text/plain"
+    }
+  }
+}

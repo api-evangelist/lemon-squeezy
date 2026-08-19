@@ -1,0 +1,72 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy 7c41 Subscriptions API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Subscriptions",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscriptions/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a subscription"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Update a subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.lemonsqueezy.com/v1/subscriptions/1",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lemon Squeezy Update a subscription"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Cancel a Subscription",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.lemonsqueezy.com/v1/subscriptions/1"
+          },
+          "docs": "Lemon Squeezy Cancel a Subscription"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all subscriptions",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/subscriptions"
+          },
+          "docs": "Lemon Squeezy List all subscriptions"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

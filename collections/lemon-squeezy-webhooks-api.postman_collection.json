@@ -1,23 +1,23 @@
 {
   "item": [
     {
-      "id": "4c749602-400a-400d-9476-59592d4489c2",
-      "name": "License",
+      "id": "8843ebe8-72cd-40d9-9a42-002f293500a5",
+      "name": "Webhooks",
       "description": {
         "content": "",
         "type": "text/plain"
       },
       "item": [
         {
-          "id": "1658187d-8f40-4bee-b107-844797db1163",
-          "name": "Lemon Squeezy Retrieve a license key",
+          "id": "20f61727-6b84-45bc-b0fa-355aa79fb1f9",
+          "name": "Lemon Squeezy Retrieve a webhook",
           "request": {
-            "name": "Lemon Squeezy Retrieve a license key",
+            "name": "Lemon Squeezy Retrieve a webhook",
             "description": {},
             "url": {
               "path": [
                 "v1",
-                "license-keys",
+                "webhooks",
                 "1"
               ],
               "host": [
@@ -37,13 +37,13 @@
           },
           "response": [
             {
-              "id": "031cea4a-91b3-4e0e-b28d-a75eb6807486",
+              "id": "3c727cb0-b0ef-4bc9-9969-09ba0c396d6e",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
                   "path": [
                     "v1",
-                    "license-keys",
+                    "webhooks",
                     "1"
                   ],
                   "host": [
@@ -88,92 +88,15 @@
           }
         },
         {
-          "id": "7cdb4143-a372-4701-8902-c452f97d2c28",
-          "name": "Lemon Squeezy List all license keys",
+          "id": "eac6686a-2fa7-40d9-91c2-7805c8647ed0",
+          "name": "Lemon Squeezy Update a webhook",
           "request": {
-            "name": "Lemon Squeezy List all license keys",
+            "name": "Lemon Squeezy Update a webhook",
             "description": {},
             "url": {
               "path": [
                 "v1",
-                "license-keys"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
-              {
-                "key": "Accept",
-                "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "d448dd58-1932-4f5a-bd9e-5b6dac3ce423",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "v1",
-                    "license-keys"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
-              },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "\"\"",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "df79fe50-7abb-4377-ba99-29c1e9be008b",
-          "name": "Lemon Squeezy Retrieve a license key instance",
-          "request": {
-            "name": "Lemon Squeezy Retrieve a license key instance",
-            "description": {},
-            "url": {
-              "path": [
-                "v1",
-                "license-key-instances",
+                "webhooks",
                 "1"
               ],
               "host": [
@@ -184,22 +107,35 @@
             },
             "header": [
               {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "method": "GET",
-            "auth": null
+            "method": "PATCH",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
           },
           "response": [
             {
-              "id": "e2f76470-e283-4506-8100-a8a537a58847",
+              "id": "4ff30a05-5730-4640-807d-3372c1b27908",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
                   "path": [
                     "v1",
-                    "license-key-instances",
+                    "webhooks",
                     "1"
                   ],
                   "host": [
@@ -222,7 +158,94 @@
                     "value": "application/json"
                   }
                 ],
-                "method": "GET",
+                "method": "PATCH",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"type\": \"webhooks\",\n    \"attributes\": {\n      \"events\": [\n        \"order_created\",\n        \"order_refunded\",\n        \"subscription_created\",\n        \"subscription_updated\",\n        \"subscription_expired\"\n      ]\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b03e5e67-10ea-4f79-9590-51f07b77e4d2",
+          "name": "Lemon Squeezy Delete a webhook",
+          "request": {
+            "name": "Lemon Squeezy Delete a webhook",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "webhooks",
+                "1"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "fa2874c5-ba13-401d-a50c-036f18603943",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "webhooks",
+                    "1"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "DELETE",
                 "body": {}
               },
               "status": "OK",
@@ -244,15 +267,15 @@
           }
         },
         {
-          "id": "67dfadbf-c577-4df9-b395-831f1b6fc872",
-          "name": "Lemon Squeezy List all license key instances",
+          "id": "e1e5ce86-2cb3-483e-8884-75cecb7a5504",
+          "name": "Lemon Squeezy List all webhooks",
           "request": {
-            "name": "Lemon Squeezy List all license key instances",
+            "name": "Lemon Squeezy List all webhooks",
             "description": {},
             "url": {
               "path": [
                 "v1",
-                "license-key-instances"
+                "webhooks"
               ],
               "host": [
                 "{{baseUrl}}"
@@ -271,13 +294,13 @@
           },
           "response": [
             {
-              "id": "aed7ee59-177f-4c80-9809-a5427a189774",
+              "id": "ef409bec-c34c-425a-ae3e-987529dbda8e",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
                   "path": [
                     "v1",
-                    "license-key-instances"
+                    "webhooks"
                   ],
                   "host": [
                     "{{baseUrl}}"
@@ -301,6 +324,104 @@
                 ],
                 "method": "GET",
                 "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "\"\"",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "b2461741-dde9-45f3-ba9e-d408714274b3",
+          "name": "Lemon Squeezy Create a webhook",
+          "request": {
+            "name": "Lemon Squeezy Create a webhook",
+            "description": {},
+            "url": {
+              "path": [
+                "v1",
+                "webhooks"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b2aa1f75-77b7-4842-8da5-6a87cc5e9953",
+              "name": "Successful response",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "v1",
+                    "webhooks"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"type\": \"webhooks\",\n    \"attributes\": {\n      \"url\": \"https://mysite.com/webhooks/\",\n      \"events\": [\n        \"order_created\",\n        \"subscription_created\",\n        \"subscription_updated\",\n        \"subscription_expired\"\n      ],\n      \"secret\": \"SIGNING_SECRET\"\n    },\n    \"relationships\": {\n      \"store\": {\n        \"data\": {\n          \"type\": \"stores\"\n        }\n      }\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
               },
               "status": "OK",
               "code": 200,
@@ -342,8 +463,8 @@
     ]
   },
   "info": {
-    "_postman_id": "8720bf6a-b142-42b2-8011-b4d3ddbbfc19",
-    "name": "Lemon Squeezy 7c41 License API",
+    "_postman_id": "5c909829-9204-435f-9aac-7bbcebe11d3b",
+    "name": "Lemon Squeezy 7c41 Webhooks API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": {
       "content": "\nWelcome to Lemon Squeezy! Whether you're launching a brand new store, a\nnewsletter, or you're interested in using Lemon Squeezy as your ecommerce\nplatform, you can find everything you need to know here.",

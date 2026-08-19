@@ -1,0 +1,96 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy Checkouts License API API",
+    "version": "v1"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "License API",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Activate a license key",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/licenses/activate",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "license_key",
+                  "value": ""
+                },
+                {
+                  "name": "instance_name",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Public License API endpoint. Activates a license key and creates a new license key instance. Submitted as application/x-www-form-urlencoded with license_key and instance_name."
+        },
+        {
+          "info": {
+            "name": "Validate a license key",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/licenses/validate",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "license_key",
+                  "value": ""
+                },
+                {
+                  "name": "instance_id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Public License API endpoint. Validates a license key, optionally for a specific instance_id."
+        },
+        {
+          "info": {
+            "name": "Deactivate a license key",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/licenses/deactivate",
+            "body": {
+              "type": "form-urlencoded",
+              "data": [
+                {
+                  "name": "license_key",
+                  "value": ""
+                },
+                {
+                  "name": "instance_id",
+                  "value": ""
+                }
+              ]
+            }
+          },
+          "docs": "Public License API endpoint. Deactivates a license key instance by license_key and instance_id."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

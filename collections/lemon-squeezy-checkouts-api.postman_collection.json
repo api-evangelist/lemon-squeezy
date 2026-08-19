@@ -1,24 +1,24 @@
 {
   "item": [
     {
-      "id": "4c749602-400a-400d-9476-59592d4489c2",
-      "name": "License",
+      "id": "4d400664-6969-4092-9ae3-b998236b95cc",
+      "name": "Checkouts",
       "description": {
         "content": "",
         "type": "text/plain"
       },
       "item": [
         {
-          "id": "1658187d-8f40-4bee-b107-844797db1163",
-          "name": "Lemon Squeezy Retrieve a license key",
+          "id": "6f74f888-a998-47cf-8e7d-874ce6c5621e",
+          "name": "Lemon Squeezy Retrieve a checkout",
           "request": {
-            "name": "Lemon Squeezy Retrieve a license key",
+            "name": "Lemon Squeezy Retrieve a checkout",
             "description": {},
             "url": {
               "path": [
                 "v1",
-                "license-keys",
-                "1"
+                "checkouts",
+                "ac470bd4-7c41-474d-b6cd-0f296f5be02a"
               ],
               "host": [
                 "{{baseUrl}}"
@@ -37,14 +37,14 @@
           },
           "response": [
             {
-              "id": "031cea4a-91b3-4e0e-b28d-a75eb6807486",
+              "id": "f7cdd99f-29a2-4bb1-8dfa-edf5a0e37786",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
                   "path": [
                     "v1",
-                    "license-keys",
-                    "1"
+                    "checkouts",
+                    "ac470bd4-7c41-474d-b6cd-0f296f5be02a"
                   ],
                   "host": [
                     "{{baseUrl}}"
@@ -88,15 +88,15 @@
           }
         },
         {
-          "id": "7cdb4143-a372-4701-8902-c452f97d2c28",
-          "name": "Lemon Squeezy List all license keys",
+          "id": "6e183220-03a7-4e7e-a63d-26a9aebd33e4",
+          "name": "Lemon Squeezy List all checkouts",
           "request": {
-            "name": "Lemon Squeezy List all license keys",
+            "name": "Lemon Squeezy List all checkouts",
             "description": {},
             "url": {
               "path": [
                 "v1",
-                "license-keys"
+                "checkouts"
               ],
               "host": [
                 "{{baseUrl}}"
@@ -115,13 +115,13 @@
           },
           "response": [
             {
-              "id": "d448dd58-1932-4f5a-bd9e-5b6dac3ce423",
+              "id": "8e202820-1613-4c0b-aa53-46df7ef58e82",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
                   "path": [
                     "v1",
-                    "license-keys"
+                    "checkouts"
                   ],
                   "host": [
                     "{{baseUrl}}"
@@ -165,16 +165,15 @@
           }
         },
         {
-          "id": "df79fe50-7abb-4377-ba99-29c1e9be008b",
-          "name": "Lemon Squeezy Retrieve a license key instance",
+          "id": "e292ef79-842e-4dd9-bfa0-69532c0cf8bb",
+          "name": "Lemon Squeezy Create a checkout",
           "request": {
-            "name": "Lemon Squeezy Retrieve a license key instance",
+            "name": "Lemon Squeezy Create a checkout",
             "description": {},
             "url": {
               "path": [
                 "v1",
-                "license-key-instances",
-                "1"
+                "checkouts"
               ],
               "host": [
                 "{{baseUrl}}"
@@ -184,100 +183,35 @@
             },
             "header": [
               {
-                "key": "Accept",
+                "key": "Content-Type",
                 "value": "application/json"
-              }
-            ],
-            "method": "GET",
-            "auth": null
-          },
-          "response": [
-            {
-              "id": "e2f76470-e283-4506-8100-a8a537a58847",
-              "name": "Successful response",
-              "originalRequest": {
-                "url": {
-                  "path": [
-                    "v1",
-                    "license-key-instances",
-                    "1"
-                  ],
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "query": [],
-                  "variable": []
-                },
-                "header": [
-                  {
-                    "description": {
-                      "content": "Added as a part of security scheme: bearer",
-                      "type": "text/plain"
-                    },
-                    "key": "Authorization",
-                    "value": "Bearer <token>"
-                  },
-                  {
-                    "key": "Accept",
-                    "value": "application/json"
-                  }
-                ],
-                "method": "GET",
-                "body": {}
               },
-              "status": "OK",
-              "code": 200,
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "body": "\"\"",
-              "cookie": [],
-              "_postman_previewlanguage": "json"
-            }
-          ],
-          "event": [],
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          }
-        },
-        {
-          "id": "67dfadbf-c577-4df9-b395-831f1b6fc872",
-          "name": "Lemon Squeezy List all license key instances",
-          "request": {
-            "name": "Lemon Squeezy List all license key instances",
-            "description": {},
-            "url": {
-              "path": [
-                "v1",
-                "license-key-instances"
-              ],
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "query": [],
-              "variable": []
-            },
-            "header": [
               {
                 "key": "Accept",
                 "value": "application/json"
               }
             ],
-            "method": "GET",
-            "auth": null
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "<object>",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
           },
           "response": [
             {
-              "id": "aed7ee59-177f-4c80-9809-a5427a189774",
+              "id": "57203db9-5a12-48f0-8ccc-2212a1f4b0e0",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
                   "path": [
                     "v1",
-                    "license-key-instances"
+                    "checkouts"
                   ],
                   "host": [
                     "{{baseUrl}}"
@@ -299,8 +233,16 @@
                     "value": "application/json"
                   }
                 ],
-                "method": "GET",
-                "body": {}
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"data\": {\n    \"type\": \"checkouts\",\n    \"relationships\": {\n      \"store\": {\n        \"data\": {\n          \"type\": \"stores\"\n        }\n      },\n      \"variant\": {\n        \"data\": {\n          \"type\": \"variants\"\n        }\n      }\n    },\n    \"attributes\": {\n      \"custom_price\": 2000\n    }\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
               },
               "status": "OK",
               "code": 200,
@@ -342,8 +284,8 @@
     ]
   },
   "info": {
-    "_postman_id": "8720bf6a-b142-42b2-8011-b4d3ddbbfc19",
-    "name": "Lemon Squeezy 7c41 License API",
+    "_postman_id": "c7ba916a-8e29-4a65-9582-2d82d96c3895",
+    "name": "Lemon Squeezy 7c41 Checkouts API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": {
       "content": "\nWelcome to Lemon Squeezy! Whether you're launching a brand new store, a\nnewsletter, or you're interested in using Lemon Squeezy as your ecommerce\nplatform, you can find everything you need to know here.",

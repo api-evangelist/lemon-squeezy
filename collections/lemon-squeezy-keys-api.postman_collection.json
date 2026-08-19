@@ -1,15 +1,15 @@
 {
   "item": [
     {
-      "id": "4c749602-400a-400d-9476-59592d4489c2",
-      "name": "License",
+      "id": "34e0c279-e37e-4bdf-b96f-68ae19347a76",
+      "name": "Keys",
       "description": {
         "content": "",
         "type": "text/plain"
       },
       "item": [
         {
-          "id": "1658187d-8f40-4bee-b107-844797db1163",
+          "id": "5cb38918-aa46-4db3-93b3-1e5a683a9ff3",
           "name": "Lemon Squeezy Retrieve a license key",
           "request": {
             "name": "Lemon Squeezy Retrieve a license key",
@@ -37,7 +37,7 @@
           },
           "response": [
             {
-              "id": "031cea4a-91b3-4e0e-b28d-a75eb6807486",
+              "id": "b0d4363d-37bf-470c-b0df-365b831d3aae",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
@@ -88,7 +88,7 @@
           }
         },
         {
-          "id": "7cdb4143-a372-4701-8902-c452f97d2c28",
+          "id": "fe862bdf-8d88-4912-bbc4-ed26bda3b54f",
           "name": "Lemon Squeezy List all license keys",
           "request": {
             "name": "Lemon Squeezy List all license keys",
@@ -115,7 +115,7 @@
           },
           "response": [
             {
-              "id": "d448dd58-1932-4f5a-bd9e-5b6dac3ce423",
+              "id": "463100da-98ac-4ac4-9003-0af46e2866b3",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
@@ -165,7 +165,7 @@
           }
         },
         {
-          "id": "df79fe50-7abb-4377-ba99-29c1e9be008b",
+          "id": "f08f16b3-63d6-40a0-9a2f-80f0efbc1ccc",
           "name": "Lemon Squeezy Retrieve a license key instance",
           "request": {
             "name": "Lemon Squeezy Retrieve a license key instance",
@@ -193,7 +193,7 @@
           },
           "response": [
             {
-              "id": "e2f76470-e283-4506-8100-a8a537a58847",
+              "id": "0197cf75-9ad2-4b28-be53-73fb4bfe95ca",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
@@ -244,7 +244,7 @@
           }
         },
         {
-          "id": "67dfadbf-c577-4df9-b395-831f1b6fc872",
+          "id": "c04aa644-c077-4714-b2f4-fac26bcec15f",
           "name": "Lemon Squeezy List all license key instances",
           "request": {
             "name": "Lemon Squeezy List all license key instances",
@@ -271,7 +271,7 @@
           },
           "response": [
             {
-              "id": "aed7ee59-177f-4c80-9809-a5427a189774",
+              "id": "9bdd55e4-4136-4ba4-96fc-f110633adf56",
               "name": "Successful response",
               "originalRequest": {
                 "url": {
@@ -342,8 +342,8 @@
     ]
   },
   "info": {
-    "_postman_id": "8720bf6a-b142-42b2-8011-b4d3ddbbfc19",
-    "name": "Lemon Squeezy 7c41 License API",
+    "_postman_id": "54d963a6-ed33-4b72-9d75-57065b0fcee6",
+    "name": "Lemon Squeezy 7c41 Keys API",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "description": {
       "content": "\nWelcome to Lemon Squeezy! Whether you're launching a brand new store, a\nnewsletter, or you're interested in using Lemon Squeezy as your ecommerce\nplatform, you can find everything you need to know here.",

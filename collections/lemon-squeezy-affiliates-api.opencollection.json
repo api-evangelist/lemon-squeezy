@@ -1,0 +1,46 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy 7c41 Affiliates API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Affiliates",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve an affiliate",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/affiliates/1"
+          },
+          "docs": "Lemon Squeezy Retrieve an affiliate"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all affiliates",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/affiliates"
+          },
+          "docs": "Lemon Squeezy List all affiliates"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

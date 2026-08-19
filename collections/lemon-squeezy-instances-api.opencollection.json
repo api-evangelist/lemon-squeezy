@@ -1,7 +1,7 @@
 {
   "opencollection": "1.0.0",
   "info": {
-    "name": "Lemon Squeezy 7c41 License API",
+    "name": "Lemon Squeezy 7c41 Instances API",
     "version": "1.0.0"
   },
   "request": {
@@ -13,32 +13,10 @@
   "items": [
     {
       "info": {
-        "name": "License",
+        "name": "Instances",
         "type": "folder"
       },
       "items": [
-        {
-          "info": {
-            "name": "Lemon Squeezy Retrieve a license key",
-            "type": "http"
-          },
-          "http": {
-            "method": "GET",
-            "url": "https://api.lemonsqueezy.com/v1/license-keys/1"
-          },
-          "docs": "Lemon Squeezy Retrieve a license key"
-        },
-        {
-          "info": {
-            "name": "Lemon Squeezy List all license keys",
-            "type": "http"
-          },
-          "http": {
-            "method": "GET",
-            "url": "https://api.lemonsqueezy.com/v1/license-keys"
-          },
-          "docs": "Lemon Squeezy List all license keys"
-        },
         {
           "info": {
             "name": "Lemon Squeezy Retrieve a license key instance",

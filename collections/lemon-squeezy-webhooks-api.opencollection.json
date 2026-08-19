@@ -1,0 +1,87 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Lemon Squeezy 7c41 Webhooks API",
+    "version": "1.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Webhooks",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Lemon Squeezy Retrieve a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks/1"
+          },
+          "docs": "Lemon Squeezy Retrieve a webhook"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Update a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "PATCH",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks/1",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lemon Squeezy Update a webhook"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Delete a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks/1"
+          },
+          "docs": "Lemon Squeezy Delete a webhook"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy List all webhooks",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks"
+          },
+          "docs": "Lemon Squeezy List all webhooks"
+        },
+        {
+          "info": {
+            "name": "Lemon Squeezy Create a webhook",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://api.lemonsqueezy.com/v1/webhooks",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Lemon Squeezy Create a webhook"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

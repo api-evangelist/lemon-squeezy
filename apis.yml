@@ -25,7 +25,7 @@ tags:
 url: https://raw.githubusercontent.com/apis-json/artisanal/main/apis/lemon-squeezy.yml
 created: '2024-01-01'
 modified: '2026-08-08'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: lemon-squeezy:lemon-squeezy-license-api
   name: Lemon Squeezy License API

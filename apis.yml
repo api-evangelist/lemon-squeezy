@@ -20,6 +20,10 @@ image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/lemon-sque
 access: 3rd-Party
 tags:
 - Digital Products
+- E-Commerce
+- Product
+tags_raw:
+- Digital Products
 - Ecommerce
 - Products
 url: https://raw.githubusercontent.com/apis-json/artisanal/main/apis/lemon-squeezy.yml
@@ -133,6 +137,8 @@ apis:
   description: The Files API from Lemon Squeezy — 2 operation(s) for files.
   humanURL: https://docs.lemonsqueezy.com/api
   tags:
+  - File
+  tags_raw:
   - Files
   properties:
   - type: OpenAPI
@@ -177,6 +183,8 @@ apis:
   description: The Items API from Lemon Squeezy — 5 operation(s) for items.
   humanURL: https://docs.lemonsqueezy.com/api
   tags:
+  - Item
+  tags_raw:
   - Items
   properties:
   - type: OpenAPI
@@ -243,6 +251,8 @@ apis:
   description: The Orders API from Lemon Squeezy — 2 operation(s) for orders.
   humanURL: https://docs.lemonsqueezy.com/api
   tags:
+  - Order
+  tags_raw:
   - Orders
   properties:
   - type: OpenAPI
@@ -265,6 +275,8 @@ apis:
   description: The Products API from Lemon Squeezy — 2 operation(s) for products.
   humanURL: https://docs.lemonsqueezy.com/api
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
@@ -320,6 +332,8 @@ apis:
   description: The Subscriptions API from Lemon Squeezy — 2 operation(s) for subscriptions.
   humanURL: https://docs.lemonsqueezy.com/api
   tags:
+  - Subscription
+  tags_raw:
   - Subscriptions
   properties:
   - type: OpenAPI
@@ -342,6 +356,8 @@ apis:
   description: The Users API from Lemon Squeezy — 1 operation(s) for users.
   humanURL: https://docs.lemonsqueezy.com/api
   tags:
+  - User
+  tags_raw:
   - Users
   properties:
   - type: OpenAPI
@@ -364,6 +380,8 @@ apis:
   description: The Webhooks API from Lemon Squeezy — 2 operation(s) for webhooks.
   humanURL: https://docs.lemonsqueezy.com/api
   tags:
+  - Webhook
+  tags_raw:
   - Webhooks
   properties:
   - type: OpenAPI

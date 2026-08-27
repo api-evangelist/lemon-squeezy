@@ -388,6 +388,81 @@ apis:
     url: openapi/lemon-squeezy-webhooks-api-openapi.yml
   - type: Documentation
     url: https://docs.lemonsqueezy.com/api
+- aid: lemon-squeezy:lemon-squeezy-discount-redemptions-api
+  name: Lemon Squeezy Discount Redemptions API
+  description: >-
+    The Discount Redemptions API from Lemon Squeezy — 2 operation(s) for discount redemptions.
+  humanURL: https://docs.lemonsqueezy.com/api/license-api
+  tags:
+  - Discount Redemptions
+  properties:
+  - type: OpenAPI
+    url: openapi/lemon-squeezy-discount-redemptions-api-openapi.yml
+- aid: lemon-squeezy:lemon-squeezy-license-api-api
+  name: Lemon Squeezy License API
+  description: The License API API from Lemon Squeezy — 3 operation(s) for license api.
+  humanURL: https://docs.lemonsqueezy.com/api/license-api
+  tags:
+  - License API
+  properties:
+  - type: OpenAPI
+    url: openapi/lemon-squeezy-license-api-api-openapi.yml
+- aid: lemon-squeezy:lemon-squeezy-license-key-instances-api
+  name: Lemon Squeezy License Key Instances API
+  description: >-
+    The License Key Instances API from Lemon Squeezy — 2 operation(s) for license key instances.
+  humanURL: https://docs.lemonsqueezy.com/api/license-api
+  tags:
+  - License Key Instances
+  properties:
+  - type: OpenAPI
+    url: openapi/lemon-squeezy-license-key-instances-api-openapi.yml
+- aid: lemon-squeezy:lemon-squeezy-license-keys-api
+  name: Lemon Squeezy License Keys API
+  description: The License Keys API from Lemon Squeezy — 2 operation(s) for license keys.
+  humanURL: https://docs.lemonsqueezy.com/api/license-api
+  tags:
+  - License Keys
+  properties:
+  - type: OpenAPI
+    url: openapi/lemon-squeezy-license-keys-api-openapi.yml
+- aid: lemon-squeezy:lemon-squeezy-order-items-api
+  name: Lemon Squeezy Order Items API
+  description: The Order Items API from Lemon Squeezy — 2 operation(s) for order items.
+  humanURL: https://docs.lemonsqueezy.com/api/license-api
+  tags:
+  - Order Items
+  properties:
+  - type: OpenAPI
+    url: openapi/lemon-squeezy-order-items-api-openapi.yml
+- aid: lemon-squeezy:lemon-squeezy-subscription-invoices-api
+  name: Lemon Squeezy Subscription Invoices API
+  description: >-
+    The Subscription Invoices API from Lemon Squeezy — 3 operation(s) for subscription invoices.
+  humanURL: https://docs.lemonsqueezy.com/api/license-api
+  tags:
+  - Subscription Invoices
+  properties:
+  - type: OpenAPI
+    url: openapi/lemon-squeezy-subscription-invoices-api-openapi.yml
+- aid: lemon-squeezy:lemon-squeezy-subscription-items-api
+  name: Lemon Squeezy Subscription Items API
+  description: The Subscription Items API from Lemon Squeezy — 3 operation(s) for subscription items.
+  humanURL: https://docs.lemonsqueezy.com/api/license-api
+  tags:
+  - Subscription Items
+  properties:
+  - type: OpenAPI
+    url: openapi/lemon-squeezy-subscription-items-api-openapi.yml
+- aid: lemon-squeezy:lemon-squeezy-usage-records-api
+  name: Lemon Squeezy Usage Records API
+  description: The Usage Records API from Lemon Squeezy — 2 operation(s) for usage records.
+  humanURL: https://docs.lemonsqueezy.com/api/license-api
+  tags:
+  - Usage Records
+  properties:
+  - type: OpenAPI
+    url: openapi/lemon-squeezy-usage-records-api-openapi.yml
 common:
 - type: AgenticAccess
   url: agentic-access/lemon-squeezy-agentic-access.yml

@@ -3,6 +3,18 @@ name: Lemon Squeezy
 description: Lemon Squeezy is on a mission to make selling digital products easy-peasy. We know first-hand
   the challenges of selling digital goods globally and are here to shake that up for the better.
 kind: contract
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: true
+  label: Hosted service · you call their endpoint
+  confidence: high
+  source:
+  - openapi
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: paid
   onboarding: self-serve
@@ -464,6 +476,9 @@ apis:
   - type: OpenAPI
     url: openapi/lemon-squeezy-usage-records-api-openapi.yml
 common:
+- type: CapabilityMap
+  url: capabilities/lemon-squeezy-capability-edges.yml
+  name: Lemon Squeezy Business Capability Map
 - type: AgenticAccess
   url: agentic-access/lemon-squeezy-agentic-access.yml
 - type: DomainSecurity

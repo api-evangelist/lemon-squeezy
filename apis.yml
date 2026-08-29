@@ -225,17 +225,6 @@ apis:
     url: openapi/lemon-squeezy-lemon-squeezy-api-api-openapi.yml
   - type: Documentation
     url: https://docs.lemonsqueezy.com/api
-- aid: lemon-squeezy:lemon-squeezy-licenses-api
-  name: Lemon Squeezy Licenses API
-  description: The Licenses API from Lemon Squeezy — 3 operation(s) for licenses.
-  humanURL: https://docs.lemonsqueezy.com/api
-  tags:
-  - Licenses
-  properties:
-  - type: OpenAPI
-    url: openapi/lemon-squeezy-licenses-api-openapi.yml
-  - type: Documentation
-    url: https://docs.lemonsqueezy.com/api
 - aid: lemon-squeezy:lemon-squeezy-me-api
   name: Lemon Squeezy Me API
   description: The Me API from Lemon Squeezy — 1 operation(s) for me.

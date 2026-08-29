@@ -1,6 +1,6 @@
-openapi: 3.0.1
+openapi: 3.2.0
 info:
-  title: Lemon Squeezy Checkouts License Keys API
+  title: Lemon Squeezy License Keys API
   description: The Lemon Squeezy API is a REST API based on the JSON:API specification. It exposes the resources of a Lemon Squeezy merchant-of-record account - stores, products, variants, prices, files, orders, order items, customers, subscriptions, subscription invoices, subscription items, usage records, license keys, license key instances, checkouts, discounts, discount redemptions, and webhooks. All requests use Bearer API key authentication and must send the Accept and Content-Type headers application/vnd.api+json.
   termsOfService: https://www.lemonsqueezy.com/terms
   contact:
@@ -74,21 +74,6 @@ paths:
                 $ref: '#/components/schemas/JsonApiResource'
 components:
   schemas:
-    JsonApiResource:
-      type: object
-      description: A JSON:API document containing a single resource object.
-      properties:
-        jsonapi:
-          type: object
-          properties:
-            version:
-              type: string
-        data:
-          $ref: '#/components/schemas/JsonApiResourceObject'
-        links:
-          type: object
-          additionalProperties:
-            type: string
     JsonApiResourceObject:
       type: object
       description: A single JSON:API resource object.
@@ -147,6 +132,21 @@ components:
                   type: integer
                 total:
                   type: integer
+    JsonApiResource:
+      type: object
+      description: A JSON:API document containing a single resource object.
+      properties:
+        jsonapi:
+          type: object
+          properties:
+            version:
+              type: string
+        data:
+          $ref: '#/components/schemas/JsonApiResourceObject'
+        links:
+          type: object
+          additionalProperties:
+            type: string
   parameters:
     ResourceId:
       name: id

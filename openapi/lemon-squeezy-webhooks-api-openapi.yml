@@ -1,18 +1,11 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  title: Lemon Squeezy 7c41 Webhooks API
-  description: '
-
-    Welcome to Lemon Squeezy! Whether you''re launching a brand new store, a
-
-    newsletter, or you''re interested in using Lemon Squeezy as your ecommerce
-
-    platform, you can find everything you need to know here.'
-  version: 1.0.0
+  title: Lemon Squeezy Webhooks API
+  version: '1.0'
+  description: 'Operations tagged Webhooks across 2 of this provider''s published API definitions: lemon-squeezy-api-openapi.yml, lemon-squeezy-openapi.yml. Each path carries the servers of the definition it was published in.'
 servers:
 - url: https://api.lemonsqueezy.com
-security:
-- bearerAuth: []
+- url: https://api.lemonsqueezy.com/v1
 tags:
 - name: Webhooks
 paths:
@@ -26,6 +19,8 @@ paths:
           description: Successful response
           content:
             application/json: {}
+      security:
+      - bearerAuth: []
     patch:
       tags:
       - Webhooks
@@ -51,6 +46,8 @@ paths:
           description: Successful response
           content:
             application/json: {}
+      security:
+      - bearerAuth: []
     delete:
       tags:
       - Webhooks
@@ -60,6 +57,10 @@ paths:
           description: Successful response
           content:
             application/json: {}
+      security:
+      - bearerAuth: []
+    servers:
+    - url: https://api.lemonsqueezy.com
   /v1/webhooks:
     get:
       tags:
@@ -70,6 +71,8 @@ paths:
           description: Successful response
           content:
             application/json: {}
+      security:
+      - bearerAuth: []
     post:
       tags:
       - Webhooks
@@ -100,8 +103,198 @@ paths:
           description: Successful response
           content:
             application/json: {}
+      security:
+      - bearerAuth: []
+    servers:
+    - url: https://api.lemonsqueezy.com
+  /webhooks:
+    get:
+      operationId: listWebhooks
+      tags:
+      - Webhooks
+      summary: List all webhooks
+      parameters:
+      - name: filter[store_id]
+        in: query
+        schema:
+          type: string
+      responses:
+        '200':
+          description: A list of webhooks.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiCollection'
+      security:
+      - api_key: []
+    post:
+      operationId: createWebhook
+      tags:
+      - Webhooks
+      summary: Create a webhook
+      description: Create a webhook endpoint that receives signed event callbacks. Specify the URL, a signing secret, and the events to subscribe to.
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '201':
+          description: The created webhook object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+      security:
+      - api_key: []
+    servers:
+    - url: https://api.lemonsqueezy.com/v1
+  /webhooks/{id}:
+    get:
+      operationId: retrieveWebhook
+      tags:
+      - Webhooks
+      summary: Retrieve a webhook
+      parameters:
+      - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '200':
+          description: A webhook object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+      security:
+      - api_key: []
+    patch:
+      operationId: updateWebhook
+      tags:
+      - Webhooks
+      summary: Update a webhook
+      parameters:
+      - $ref: '#/components/parameters/ResourceId'
+      requestBody:
+        required: true
+        content:
+          application/vnd.api+json:
+            schema:
+              $ref: '#/components/schemas/JsonApiResource'
+      responses:
+        '200':
+          description: The updated webhook object.
+          content:
+            application/vnd.api+json:
+              schema:
+                $ref: '#/components/schemas/JsonApiResource'
+      security:
+      - api_key: []
+    delete:
+      operationId: deleteWebhook
+      tags:
+      - Webhooks
+      summary: Delete a webhook
+      parameters:
+      - $ref: '#/components/parameters/ResourceId'
+      responses:
+        '204':
+          description: The webhook was deleted.
+      security:
+      - api_key: []
+    servers:
+    - url: https://api.lemonsqueezy.com/v1
 components:
+  schemas:
+    JsonApiResourceObject:
+      type: object
+      description: A single JSON:API resource object.
+      properties:
+        type:
+          type: string
+          description: The resource type, e.g. stores, products, subscriptions.
+        id:
+          type: string
+          description: The unique resource ID.
+        attributes:
+          type: object
+          description: The resource's attributes.
+          additionalProperties: true
+        relationships:
+          type: object
+          description: Related resources.
+          additionalProperties: true
+        links:
+          type: object
+          additionalProperties:
+            type: string
+    JsonApiCollection:
+      type: object
+      description: A JSON:API document containing a collection of resource objects.
+      properties:
+        jsonapi:
+          type: object
+          properties:
+            version:
+              type: string
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/JsonApiResourceObject'
+        links:
+          type: object
+          description: Pagination links (first, last, prev, next).
+          additionalProperties:
+            type: string
+        meta:
+          type: object
+          properties:
+            page:
+              type: object
+              properties:
+                currentPage:
+                  type: integer
+                from:
+                  type: integer
+                lastPage:
+                  type: integer
+                perPage:
+                  type: integer
+                to:
+                  type: integer
+                total:
+                  type: integer
+    JsonApiResource:
+      type: object
+      description: A JSON:API document containing a single resource object.
+      properties:
+        jsonapi:
+          type: object
+          properties:
+            version:
+              type: string
+        data:
+          $ref: '#/components/schemas/JsonApiResourceObject'
+        links:
+          type: object
+          additionalProperties:
+            type: string
+  parameters:
+    ResourceId:
+      name: id
+      in: path
+      required: true
+      description: The resource ID.
+      schema:
+        type: string
   securitySchemes:
     bearerAuth:
       type: http
       scheme: bearer
+    api_key:
+      type: http
+      scheme: bearer
+      bearerFormat: apiKey
+      description: Bearer authentication using a Lemon Squeezy API key. Requests must also send Accept and Content-Type headers of application/vnd.api+json.
+x-refined-from:
+- lemon-squeezy-api-openapi.yml
+- lemon-squeezy-openapi.yml

@@ -41,7 +41,7 @@ tags_raw:
 - Products
 url: https://raw.githubusercontent.com/apis-json/artisanal/main/apis/lemon-squeezy.yml
 created: '2024-01-01'
-modified: '2026-08-08'
+modified: '2026-09-16'
 specificationVersion: '0.23'
 apis:
 - aid: lemon-squeezy:lemon-squeezy-license-api
@@ -216,7 +216,7 @@ apis:
   - type: Documentation
     url: https://docs.lemonsqueezy.com/api
 - aid: lemon-squeezy:lemon-squeezy-lemon-squeezy-api-api
-  name: Lemon Squeezy Lemon Squeezy API API
+  name: Lemon Squeezy Lemon Squeezy API
   description: The Lemon Squeezy API API from Lemon Squeezy — 1 operation(s) for lemon squeezy api.
   humanURL: https://docs.lemonsqueezy.com/api
   tags:
@@ -392,8 +392,7 @@ apis:
     url: https://docs.lemonsqueezy.com/api
 - aid: lemon-squeezy:lemon-squeezy-discount-redemptions-api
   name: Lemon Squeezy Discount Redemptions API
-  description: >-
-    The Discount Redemptions API from Lemon Squeezy — 2 operation(s) for discount redemptions.
+  description: The Discount Redemptions API from Lemon Squeezy — 2 operation(s) for discount redemptions.
   humanURL: https://docs.lemonsqueezy.com/api/license-api
   tags:
   - Discount Redemptions
@@ -411,8 +410,7 @@ apis:
     url: openapi/lemon-squeezy-license-api-api-openapi.yml
 - aid: lemon-squeezy:lemon-squeezy-license-key-instances-api
   name: Lemon Squeezy License Key Instances API
-  description: >-
-    The License Key Instances API from Lemon Squeezy — 2 operation(s) for license key instances.
+  description: The License Key Instances API from Lemon Squeezy — 2 operation(s) for license key instances.
   humanURL: https://docs.lemonsqueezy.com/api/license-api
   tags:
   - License Key Instances
@@ -439,8 +437,7 @@ apis:
     url: openapi/lemon-squeezy-order-items-api-openapi.yml
 - aid: lemon-squeezy:lemon-squeezy-subscription-invoices-api
   name: Lemon Squeezy Subscription Invoices API
-  description: >-
-    The Subscription Invoices API from Lemon Squeezy — 3 operation(s) for subscription invoices.
+  description: The Subscription Invoices API from Lemon Squeezy — 3 operation(s) for subscription invoices.
   humanURL: https://docs.lemonsqueezy.com/api/license-api
   tags:
   - Subscription Invoices

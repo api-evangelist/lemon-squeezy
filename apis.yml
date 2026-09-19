@@ -95,6 +95,8 @@ apis:
   description: The Checkouts API from Lemon Squeezy — 2 operation(s) for checkouts.
   humanURL: https://docs.lemonsqueezy.com/api
   tags:
+  - Checkout
+  tags_raw:
   - Checkouts
   properties:
   - type: OpenAPI
@@ -128,6 +130,8 @@ apis:
   description: The Discount API from Lemon Squeezy — 2 operation(s) for discount.
   humanURL: https://docs.lemonsqueezy.com/api
   tags:
+  - Discounts
+  tags_raw:
   - Discount
   properties:
   - type: OpenAPI

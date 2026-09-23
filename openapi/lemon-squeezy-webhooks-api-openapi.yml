@@ -21,6 +21,8 @@ paths:
             application/json: {}
       security:
       - bearerAuth: []
+      operationId: getV1Webhooks1
+      x-operation-id-source: derived
     patch:
       tags:
       - Webhooks
@@ -48,6 +50,8 @@ paths:
             application/json: {}
       security:
       - bearerAuth: []
+      operationId: patchV1Webhooks1
+      x-operation-id-source: derived
     delete:
       tags:
       - Webhooks
@@ -59,6 +63,8 @@ paths:
             application/json: {}
       security:
       - bearerAuth: []
+      operationId: deleteV1Webhooks1
+      x-operation-id-source: derived
     servers:
     - url: https://api.lemonsqueezy.com
   /v1/webhooks:
@@ -73,6 +79,8 @@ paths:
             application/json: {}
       security:
       - bearerAuth: []
+      operationId: getV1Webhooks
+      x-operation-id-source: derived
     post:
       tags:
       - Webhooks
@@ -105,6 +113,8 @@ paths:
             application/json: {}
       security:
       - bearerAuth: []
+      operationId: postV1Webhooks
+      x-operation-id-source: derived
     servers:
     - url: https://api.lemonsqueezy.com
   /webhooks:
@@ -205,6 +215,21 @@ paths:
     - url: https://api.lemonsqueezy.com/v1
 components:
   schemas:
+    JsonApiResource:
+      type: object
+      description: A JSON:API document containing a single resource object.
+      properties:
+        jsonapi:
+          type: object
+          properties:
+            version:
+              type: string
+        data:
+          $ref: '#/components/schemas/JsonApiResourceObject'
+        links:
+          type: object
+          additionalProperties:
+            type: string
     JsonApiResourceObject:
       type: object
       description: A single JSON:API resource object.
@@ -263,21 +288,6 @@ components:
                   type: integer
                 total:
                   type: integer
-    JsonApiResource:
-      type: object
-      description: A JSON:API document containing a single resource object.
-      properties:
-        jsonapi:
-          type: object
-          properties:
-            version:
-              type: string
-        data:
-          $ref: '#/components/schemas/JsonApiResourceObject'
-        links:
-          type: object
-          additionalProperties:
-            type: string
   parameters:
     ResourceId:
       name: id

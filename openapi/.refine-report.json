@@ -63,7 +63,8 @@
     "tag 'Stores' spans 2 source specs (lemon-squeezy-api-openapi.yml, lemon-squeezy-openapi.yml): per-path servers applied",
     "tag 'Subscriptions' spans 2 source specs (lemon-squeezy-api-openapi.yml, lemon-squeezy-openapi.yml): per-path servers applied",
     "tag 'Variants' spans 2 source specs (lemon-squeezy-api-openapi.yml, lemon-squeezy-openapi.yml): per-path servers applied",
-    "tag 'Webhooks' spans 2 source specs (lemon-squeezy-api-openapi.yml, lemon-squeezy-openapi.yml): per-path servers applied"
+    "tag 'Webhooks' spans 2 source specs (lemon-squeezy-api-openapi.yml, lemon-squeezy-openapi.yml): per-path servers applied",
+    "apis.yml register: already-registered"
   ],
   "skipped": [
     "lemon-squeezy-7c41-api-openapi.yml: previously refined output, superseded by openapi/_original/",
@@ -86,7 +87,6 @@
     "lemon-squeezy-license-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "lemon-squeezy-license-key-instances-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "lemon-squeezy-license-keys-api-openapi.yml: previously refined output, superseded by openapi/_original/",
-    "lemon-squeezy-licenses-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "lemon-squeezy-me-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "lemon-squeezy-order-api-openapi.yml: previously refined output, superseded by openapi/_original/",
     "lemon-squeezy-order-items-api-openapi.yml: previously refined output, superseded by openapi/_original/",

@@ -21,6 +21,8 @@ paths:
             application/json: {}
       security:
       - bearerAuth: []
+      operationId: getV1Customers1
+      x-operation-id-source: derived
     servers:
     - url: https://api.lemonsqueezy.com
   /v1/customers:
@@ -35,6 +37,8 @@ paths:
             application/json: {}
       security:
       - bearerAuth: []
+      operationId: getV1Customers
+      x-operation-id-source: derived
     servers:
     - url: https://api.lemonsqueezy.com
   /customers:
@@ -127,6 +131,21 @@ paths:
     - url: https://api.lemonsqueezy.com/v1
 components:
   schemas:
+    JsonApiResource:
+      type: object
+      description: A JSON:API document containing a single resource object.
+      properties:
+        jsonapi:
+          type: object
+          properties:
+            version:
+              type: string
+        data:
+          $ref: '#/components/schemas/JsonApiResourceObject'
+        links:
+          type: object
+          additionalProperties:
+            type: string
     JsonApiResourceObject:
       type: object
       description: A single JSON:API resource object.
@@ -185,21 +204,6 @@ components:
                   type: integer
                 total:
                   type: integer
-    JsonApiResource:
-      type: object
-      description: A JSON:API document containing a single resource object.
-      properties:
-        jsonapi:
-          type: object
-          properties:
-            version:
-              type: string
-        data:
-          $ref: '#/components/schemas/JsonApiResourceObject'
-        links:
-          type: object
-          additionalProperties:
-            type: string
   parameters:
     ResourceId:
       name: id

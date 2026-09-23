@@ -21,6 +21,8 @@ paths:
             application/json: {}
       security:
       - bearerAuth: []
+      operationId: getV1Products1
+      x-operation-id-source: derived
     servers:
     - url: https://api.lemonsqueezy.com
   /v1/products:
@@ -35,6 +37,8 @@ paths:
             application/json: {}
       security:
       - bearerAuth: []
+      operationId: getV1Products
+      x-operation-id-source: derived
     servers:
     - url: https://api.lemonsqueezy.com
   /products:
@@ -82,6 +86,21 @@ paths:
     - url: https://api.lemonsqueezy.com/v1
 components:
   schemas:
+    JsonApiResource:
+      type: object
+      description: A JSON:API document containing a single resource object.
+      properties:
+        jsonapi:
+          type: object
+          properties:
+            version:
+              type: string
+        data:
+          $ref: '#/components/schemas/JsonApiResourceObject'
+        links:
+          type: object
+          additionalProperties:
+            type: string
     JsonApiResourceObject:
       type: object
       description: A single JSON:API resource object.
@@ -100,21 +119,6 @@ components:
           type: object
           description: Related resources.
           additionalProperties: true
-        links:
-          type: object
-          additionalProperties:
-            type: string
-    JsonApiResource:
-      type: object
-      description: A JSON:API document containing a single resource object.
-      properties:
-        jsonapi:
-          type: object
-          properties:
-            version:
-              type: string
-        data:
-          $ref: '#/components/schemas/JsonApiResourceObject'
         links:
           type: object
           additionalProperties:
@@ -156,13 +160,6 @@ components:
                 total:
                   type: integer
   parameters:
-    PageNumber:
-      name: page[number]
-      in: query
-      description: The page of results to return.
-      schema:
-        type: integer
-        minimum: 1
     PageSize:
       name: page[size]
       in: query
@@ -171,6 +168,13 @@ components:
         type: integer
         minimum: 1
         maximum: 100
+    PageNumber:
+      name: page[number]
+      in: query
+      description: The page of results to return.
+      schema:
+        type: integer
+        minimum: 1
     ResourceId:
       name: id
       in: path

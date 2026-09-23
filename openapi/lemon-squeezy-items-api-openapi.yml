@@ -1,9 +1,7 @@
 openapi: 3.2.0
 info:
   title: Lemon Squeezy Items API
-  description: '
-
-    Welcome to Lemon Squeezy! Whether you''re launching a brand new store, a
+  description: 'Welcome to Lemon Squeezy! Whether you''re launching a brand new store, a
 
     newsletter, or you''re interested in using Lemon Squeezy as your ecommerce
 
@@ -26,6 +24,8 @@ paths:
           description: Successful response
           content:
             application/json: {}
+      operationId: getV1OrderItems1
+      x-operation-id-source: derived
   /v1/order-items:
     get:
       tags:
@@ -36,6 +36,8 @@ paths:
           description: Successful response
           content:
             application/json: {}
+      operationId: getV1OrderItems
+      x-operation-id-source: derived
   /v1/subscription-items/1:
     get:
       tags:
@@ -46,6 +48,8 @@ paths:
           description: Successful response
           content:
             application/json: {}
+      operationId: getV1SubscriptionItems1
+      x-operation-id-source: derived
     patch:
       tags:
       - Items
@@ -66,6 +70,8 @@ paths:
           description: Successful response
           content:
             application/json: {}
+      operationId: patchV1SubscriptionItems1
+      x-operation-id-source: derived
   /v1/subscription-items:
     get:
       tags:
@@ -76,6 +82,8 @@ paths:
           description: Successful response
           content:
             application/json: {}
+      operationId: getV1SubscriptionItems
+      x-operation-id-source: derived
   /v1/subscription-items/1/current-usage:
     get:
       tags:
@@ -86,6 +94,8 @@ paths:
           description: Successful response
           content:
             application/json: {}
+      operationId: getV1SubscriptionItems1CurrentUsage
+      x-operation-id-source: derived
 components:
   securitySchemes:
     bearerAuth:

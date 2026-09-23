@@ -1,9 +1,7 @@
 openapi: 3.2.0
 info:
   title: Lemon Squeezy Discount API
-  description: '
-
-    Welcome to Lemon Squeezy! Whether you''re launching a brand new store, a
+  description: 'Welcome to Lemon Squeezy! Whether you''re launching a brand new store, a
 
     newsletter, or you''re interested in using Lemon Squeezy as your ecommerce
 
@@ -26,6 +24,8 @@ paths:
           description: Successful response
           content:
             application/json: {}
+      operationId: getV1DiscountRedemptions1
+      x-operation-id-source: derived
   /v1/discount-redemptions:
     get:
       tags:
@@ -36,6 +36,8 @@ paths:
           description: Successful response
           content:
             application/json: {}
+      operationId: getV1DiscountRedemptions
+      x-operation-id-source: derived
 components:
   securitySchemes:
     bearerAuth:

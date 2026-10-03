@@ -83,6 +83,43 @@ paths:
     - url: https://api.lemonsqueezy.com/v1
 components:
   schemas:
+    JsonApiResourceObject:
+      type: object
+      description: A single JSON:API resource object.
+      properties:
+        type:
+          type: string
+          description: The resource type, e.g. stores, products, subscriptions.
+        id:
+          type: string
+          description: The unique resource ID.
+        attributes:
+          type: object
+          description: The resource's attributes.
+          additionalProperties: true
+        relationships:
+          type: object
+          description: Related resources.
+          additionalProperties: true
+        links:
+          type: object
+          additionalProperties:
+            type: string
+    JsonApiResource:
+      type: object
+      description: A JSON:API document containing a single resource object.
+      properties:
+        jsonapi:
+          type: object
+          properties:
+            version:
+              type: string
+        data:
+          $ref: '#/components/schemas/JsonApiResourceObject'
+        links:
+          type: object
+          additionalProperties:
+            type: string
     JsonApiCollection:
       type: object
       description: A JSON:API document containing a collection of resource objects.
@@ -119,44 +156,21 @@ components:
                   type: integer
                 total:
                   type: integer
-    JsonApiResource:
-      type: object
-      description: A JSON:API document containing a single resource object.
-      properties:
-        jsonapi:
-          type: object
-          properties:
-            version:
-              type: string
-        data:
-          $ref: '#/components/schemas/JsonApiResourceObject'
-        links:
-          type: object
-          additionalProperties:
-            type: string
-    JsonApiResourceObject:
-      type: object
-      description: A single JSON:API resource object.
-      properties:
-        type:
-          type: string
-          description: The resource type, e.g. stores, products, subscriptions.
-        id:
-          type: string
-          description: The unique resource ID.
-        attributes:
-          type: object
-          description: The resource's attributes.
-          additionalProperties: true
-        relationships:
-          type: object
-          description: Related resources.
-          additionalProperties: true
-        links:
-          type: object
-          additionalProperties:
-            type: string
   parameters:
+    PageNumber:
+      name: page[number]
+      in: query
+      description: The page of results to return.
+      schema:
+        type: integer
+        minimum: 1
+    ResourceId:
+      name: id
+      in: path
+      required: true
+      description: The resource ID.
+      schema:
+        type: string
     PageSize:
       name: page[size]
       in: query
@@ -165,20 +179,6 @@ components:
         type: integer
         minimum: 1
         maximum: 100
-    ResourceId:
-      name: id
-      in: path
-      required: true
-      description: The resource ID.
-      schema:
-        type: string
-    PageNumber:
-      name: page[number]
-      in: query
-      description: The page of results to return.
-      schema:
-        type: integer
-        minimum: 1
   securitySchemes:
     bearerAuth:
       type: http

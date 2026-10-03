@@ -48,43 +48,15 @@ paths:
               schema:
                 $ref: '#/components/schemas/JsonApiResource'
 components:
+  parameters:
+    ResourceId:
+      name: id
+      in: path
+      required: true
+      description: The resource ID.
+      schema:
+        type: string
   schemas:
-    JsonApiCollection:
-      type: object
-      description: A JSON:API document containing a collection of resource objects.
-      properties:
-        jsonapi:
-          type: object
-          properties:
-            version:
-              type: string
-        data:
-          type: array
-          items:
-            $ref: '#/components/schemas/JsonApiResourceObject'
-        links:
-          type: object
-          description: Pagination links (first, last, prev, next).
-          additionalProperties:
-            type: string
-        meta:
-          type: object
-          properties:
-            page:
-              type: object
-              properties:
-                currentPage:
-                  type: integer
-                from:
-                  type: integer
-                lastPage:
-                  type: integer
-                perPage:
-                  type: integer
-                to:
-                  type: integer
-                total:
-                  type: integer
     JsonApiResourceObject:
       type: object
       description: A single JSON:API resource object.
@@ -122,14 +94,42 @@ components:
           type: object
           additionalProperties:
             type: string
-  parameters:
-    ResourceId:
-      name: id
-      in: path
-      required: true
-      description: The resource ID.
-      schema:
-        type: string
+    JsonApiCollection:
+      type: object
+      description: A JSON:API document containing a collection of resource objects.
+      properties:
+        jsonapi:
+          type: object
+          properties:
+            version:
+              type: string
+        data:
+          type: array
+          items:
+            $ref: '#/components/schemas/JsonApiResourceObject'
+        links:
+          type: object
+          description: Pagination links (first, last, prev, next).
+          additionalProperties:
+            type: string
+        meta:
+          type: object
+          properties:
+            page:
+              type: object
+              properties:
+                currentPage:
+                  type: integer
+                from:
+                  type: integer
+                lastPage:
+                  type: integer
+                perPage:
+                  type: integer
+                to:
+                  type: integer
+                total:
+                  type: integer
   securitySchemes:
     api_key:
       type: http

@@ -124,3 +124,30 @@ plans:
     elements:
       - name: Volume-based effective rate reduction
       - name: Negotiated terms
+x-canonical:
+  generated: '2026-10-08'
+  vocabulary: all/0-working/economics/plans-canonical.yml
+  models:
+  - metered
+  - subscription
+  units:
+  - period
+  - transaction
+  plans:
+  - name: Pay As You Go
+    access: other
+    model: metered
+    model_how: stated
+    units:
+    - other
+    - transaction
+    periods:
+    - per-use
+  - name: Custom (Volume)
+    access: enterprise
+    model: subscription
+    model_how: derived
+    units:
+    - period
+    periods:
+    - year

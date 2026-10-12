@@ -1,0 +1,443 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/lemon-squeezy/integrations
+checked:
+- https://composio.dev/toolkits/lemon-squeezy
+- https://monid.ai/tools/lemon-squeezy
+- https://n8n.io/integrations/lemon-squeezy/
+- https://zapier.com/apps/lemon-squeezy/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: lemon-squeezy
+  url: https://zapier.com/apps/lemon-squeezy/integrations
+  external_url: https://www.lemonsqueezy.com/
+  partner_tier: SILVER
+  triggers:
+  - key: license_key_created
+    label: License Key Created
+  - key: license_key_updated
+    label: License Key Updated
+  - key: order_created
+    label: Order Created
+  - key: order_refunded
+    label: Order Refunded
+  - key: subscription_cancelled
+    label: Subscription Cancelled
+  - key: subscription_created
+    label: Subscription Created
+  - key: subscription_expired
+    label: Subscription Expired
+  - key: subscription_paused
+    label: Subscription Paused
+  - key: subscription_payment_failed
+    label: Subscription Payment Failed
+  - key: subscription_payment_recovered
+    label: Subscription Payment Recovered
+  - key: subscription_payment_success
+    label: Subscription Payment Success
+  - key: subscription_resumed
+    label: Subscription Resumed
+  - key: subscription_unpaused
+    label: Subscription Un-Paused
+  - key: subscription_updated
+    label: Subscription Updated
+  actions: []
+  searches: []
+edges:
+- partner_name: MailerLite
+  partner: mailerlite
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/mailerlite
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.mailerlite.com/?utm_source=zapier&utm_medium=partner&utm_campaign=profile&utm_term=learn_more&utm_content=integrations
+- partner_name: Kajabi
+  partner: kajabi
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/kajabi
+  direction: third-party
+  category: eCommerce
+  partner_url: http://kajabi.com/
+- partner_name: Circle
+  partner: circle-community
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/circle
+  direction: third-party
+  category: CRM (Customer Relationship Management)
+  partner_url: https://circle.so/
+- partner_name: Airtable
+  partner: airtable
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/airtable
+  direction: third-party
+  category: Databases
+  partner_url: https://airtable.com/
+- partner_name: Slack
+  partner: slack
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/slack
+  direction: third-party
+  category: Team Chat
+  partner_url: https://slack.com/
+- partner_name: Gmail
+  partner: gmail
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/gmail
+  direction: third-party
+  category: Email
+  partner_url: https://mail.google.com/
+- partner_name: Loops
+  partner: loops
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/loops
+  direction: third-party
+  category: Email Newsletters
+  partner_url: https://loops.so/
+- partner_name: Brevo
+  partner: brevo
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/brevo
+  direction: third-party
+  category: Email Newsletters
+  partner_url: https://www.sendinblue.com/?utm_medium=plugin&utm_source=zapier
+- partner_name: Notion
+  partner: notion
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/notion
+  direction: third-party
+  category: Task Management
+  partner_url: https://www.notion.so/
+- partner_name: Mailchimp
+  partner: mailchimp
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/mailchimp
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://mailchimp.com/
+- partner_name: beehiiv
+  partner: beehiiv
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/beehiiv
+  direction: third-party
+  category: Email Newsletters
+  partner_url: http://beehiiv.link/zapier
+- partner_name: MemberPress
+  partner: memberpress
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/memberpress
+  direction: third-party
+  category: WordPress
+  partner_url: https://memberpress.com/?utm_source=zapier.com&utm_medium=button&utm_campaign=zapier-partnership
+- partner_name: WordPress
+  partner: wordpress
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/wordpress
+  direction: third-party
+  category: Website Builders
+  partner_url: https://wordpress.org/
+- partner_name: systeme.io
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/systemeio
+  direction: third-party
+  category: Marketing
+  partner_url: https://systeme.io/
+- partner_name: Podia
+  partner: podia
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/podia
+  direction: third-party
+  category: Online Courses
+  partner_url: https://www.podia.com/
+- partner_name: WooCommerce
+  partner: woocommerce
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/woocommerce
+  direction: third-party
+  category: eCommerce
+  partner_url: https://woocommerce.com/products/woocommerce-zapier/?utm_source=zapier&utm_medium=website&utm_campaign=integration
+- partner_name: Flodesk
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/flodesk
+  direction: third-party
+  category: Email Newsletters
+  partner_url: https://flodesk.com/
+- partner_name: Facebook Conversions
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/facebook-conversions
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://developers.facebook.com/docs/marketing-api/server-side-api/guides/zapier-integration
+- partner_name: Teachery
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/teachery
+  direction: third-party
+  category: Online Courses
+  partner_url: https://www.teachery.co/
+- partner_name: Discord
+  partner: discord
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/discord
+  direction: third-party
+  category: Team Chat
+  partner_url: https://discordapp.com/
+- partner_name: Firebase / Firestore
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/firebase
+  direction: third-party
+  category: Databases
+  partner_url: http://www.firebase.com/
+- partner_name: Google Ads
+  partner: google-ads
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/google-ads
+  direction: third-party
+  category: Ads & Conversion
+  partner_url: https://ads.google.com/
+- partner_name: HubSpot
+  partner: hubspot
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/hubspot
+  direction: third-party
+  category: Marketing Automation
+  partner_url: http://www.hubspot.com/
+- partner_name: Thinkific
+  partner: thinkific
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/thinkific
+  direction: third-party
+  category: Online Courses
+  partner_url: http://www.thinkific.com/
+- partner_name: LeadConnector
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/leadconnector
+  direction: third-party
+  category: Marketing Automation
+  partner_url: https://www.leadconnectorhq.com/
+- partner_name: Kit
+  partner: convertkit
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/kit
+  direction: third-party
+  category: Drip Emails
+  partner_url: https://kit.com/
+- partner_name: WhatsApp Notifications
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/whatsapp-notifications
+  direction: third-party
+  category: Communication
+  partner_url: null
+- partner_name: Bubble
+  partner: bubble
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/bubble
+  direction: third-party
+  category: App Builder
+  partner_url: https://bubble.io/
+- partner_name: Skool
+  partner: skool
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/skool
+  direction: third-party
+  category: Education
+  partner_url: https://skool.com/
+- partner_name: LearnDash
+  partner: null
+  partner_match: null
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/lemon-squeezy/integrations/learndash
+  direction: third-party
+  category: Online Courses
+  partner_url: https://www.learndash.com/
+templates:
+- title: Send Slack channel messages for new Lemon Squeezy orders
+  url: https://zapier.com/apps/lemon-squeezy/integrations/slack/1141363/send-slack-channel-messages-for-new-lemon-squeezy-orders
+  apps:
+  - lemon-squeezy
+  - slack
+- title: Send Senja testimonial requests for new Lemon Squeezy orders
+  url: https://zapier.com/apps/lemon-squeezy/integrations/senja/255609587/send-senja-testimonial-requests-for-new-lemon-squeezy-orders
+  apps:
+  - lemon-squeezy
+  - delay
+  - senja
+- title: Create Facebook Conversions events from new Lemon Squeezy orders
+  url: https://zapier.com/apps/facebook-conversions/integrations/lemon-squeezy/1617684/create-facebook-conversions-events-from-new-lemon-squeezy-orders
+  apps:
+  - lemon-squeezy
+  - facebook-conversions
+- title: Send channel messages in Discord for new orders created in Lemon Squeezy
+  url: https://zapier.com/apps/discord/integrations/lemon-squeezy/1141423/send-channel-messages-in-discord-for-new-orders-created-in-lemon-squeezy
+  apps:
+  - lemon-squeezy
+  - discord
+- title: Create MailerLite group subscribers from new Lemon Squeezy orders
+  url: https://zapier.com/apps/lemon-squeezy/integrations/mailerlite/1385977/create-mailerlite-group-subscribers-from-new-lemon-squeezy-orders
+  apps:
+  - lemon-squeezy
+  - mailerlite
+- title: Create or update contacts and grant access to courses in systeme.io when new orders are created in Lemon
+    Squeezy
+  url: https://zapier.com/apps/lemon-squeezy/integrations/systemeio/1704557/create-or-update-contacts-and-grant-access-to-courses-in-systemeio-when-new-orders-are-created-in-lemon-squeezy
+  apps:
+  - lemon-squeezy
+  - systemeio
+- title: Create new Notion database items from newly created Lemon Squeezy orders
+  url: https://zapier.com/apps/lemon-squeezy/integrations/notion/1331809/create-new-notion-database-items-from-newly-created-lemon-squeezy-orders
+  apps:
+  - lemon-squeezy
+  - notion
+- title: Create records in Airtable when new subscriptions are created in Lemon Squeezy
+  url: https://zapier.com/apps/airtable/integrations/lemon-squeezy/1570816/create-records-in-airtable-when-new-subscriptions-are-created-in-lemon-squeezy
+  apps:
+  - lemon-squeezy
+  - airtable
+- title: Send notifications in Pushcut for new orders created in Lemon Squeezy
+  url: https://zapier.com/apps/lemon-squeezy/integrations/pushcut/1253247/send-notifications-in-pushcut-for-new-orders-created-in-lemon-squeezy
+  apps:
+  - lemon-squeezy
+  - pushcut
+- title: Send WhatsApp Notifications messages when new orders are created in Lemon Squeezy
+  url: https://zapier.com/apps/lemon-squeezy/integrations/whatsapp-notifications/1604854/send-whatsapp-notifications-messages-when-new-orders-are-created-in-lemon-squeezy
+  apps:
+  - lemon-squeezy
+  - whatsapp-notifications
+- title: Create new Ghost members from new orders in Lemon Squeezy
+  url: https://zapier.com/apps/ghost/integrations/lemon-squeezy/1687752/create-new-ghost-members-from-new-orders-in-lemon-squeezy
+  apps:
+  - lemon-squeezy
+  - ghost
+- title: Create Slack channel messages for new Lemon Squeezy orders
+  url: https://zapier.com/apps/lemon-squeezy/integrations/slack/1226437/create-slack-channel-messages-for-new-lemon-squeezy-orders
+  apps:
+  - lemon-squeezy
+  - slack
+template_total: 199

@@ -84,14 +84,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/JsonApiResource'
 components:
-  parameters:
-    ResourceId:
-      name: id
-      in: path
-      required: true
-      description: The resource ID.
-      schema:
-        type: string
   schemas:
     JsonApiResource:
       type: object
@@ -166,6 +158,14 @@ components:
           type: object
           additionalProperties:
             type: string
+  parameters:
+    ResourceId:
+      name: id
+      in: path
+      required: true
+      description: The resource ID.
+      schema:
+        type: string
   securitySchemes:
     api_key:
       type: http

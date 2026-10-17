@@ -131,14 +131,6 @@ paths:
     servers:
     - url: https://api.lemonsqueezy.com/v1
 components:
-  parameters:
-    ResourceId:
-      name: id
-      in: path
-      required: true
-      description: The resource ID.
-      schema:
-        type: string
   schemas:
     JsonApiResource:
       type: object
@@ -213,6 +205,14 @@ components:
           type: object
           additionalProperties:
             type: string
+  parameters:
+    ResourceId:
+      name: id
+      in: path
+      required: true
+      description: The resource ID.
+      schema:
+        type: string
   securitySchemes:
     bearerAuth:
       type: http

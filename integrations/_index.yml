@@ -387,6 +387,19 @@
   source: edge
   status: pending-partner-spec
   arazzo: null
+- slug: lemon-squeezy-wordpress-own
+  label: WordPress (own)
+  partner: wordpress
+  partner_name: WordPress (own)
+  category: WordPress plugin
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://wordpress.org/plugins/lemon-squeezy/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
 - slug: lemon-squeezy-zapier
   label: Zapier
   partner: zapier
@@ -419,7 +432,7 @@
   type: marketplace
   marketplace: pipedream-components
   channel: open-source-node
-  evidence: https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/lemon_squeezy
+  evidence: https://github.com/PipedreamHQ/pipedream/tree/d5872355ef27b4efa769f05352f2820c299a456e/components/lemon_squeezy
   source: edge
   relationship: ipaas-bridge
   contract_reference:
@@ -436,18 +449,5 @@
     actions: true
     sources: true
     builder: Pipedream repo (component)
-  status: not-a-workflow
-  arazzo: null
-- slug: lemon-squeezy-wordpress-own
-  label: WordPress (own)
-  partner: wordpress
-  partner_name: WordPress (own)
-  category: WordPress plugin
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://wordpress.org/plugins/lemon-squeezy/
-  source: edge
-  relationship: platform-app
   status: not-a-workflow
   arazzo: null
